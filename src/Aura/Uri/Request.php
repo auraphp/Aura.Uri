@@ -27,7 +27,7 @@ class Request
      * 
      */
     public $env;
-    
+
     /**
      * 
      * Imported $_GET values.
@@ -36,7 +36,7 @@ class Request
      * 
      */
     public $get;
-    
+
     /**
      * 
      * Imported $_POST values.
@@ -45,7 +45,7 @@ class Request
      * 
      */
     public $post;
-    
+
     /**
      * 
      * Imported $_COOKIE values.
@@ -54,7 +54,7 @@ class Request
      * 
      */
     public $cookie;
-    
+
     /**
      * 
      * Imported $_SERVER values.
@@ -63,7 +63,7 @@ class Request
      * 
      */
     public $server;
-    
+
     /**
      * 
      * Imported $_FILES values.
@@ -72,7 +72,7 @@ class Request
      * 
      */
     public $files;
-    
+
     /**
      * 
      * Imported $_SERVER['HTTP_*'] values.
@@ -84,7 +84,7 @@ class Request
      * 
      */
     public $http;
-    
+
     /**
      * 
      * Imported $_SERVER['argv'] values.
@@ -93,7 +93,7 @@ class Request
      * 
      */
     public $argv;
-    
+
     /**
      * 
      * Tasks to complete object construction.
@@ -105,7 +105,7 @@ class Request
     {
         $this->reset();
     }
-    
+
     /**
      * 
      * Retrieves an **unfiltered** value by key from the [[Request::$get | ]] property,
@@ -121,9 +121,9 @@ class Request
      */
     public function get($key = null, $alt = null)
     {
-        return $this->_getValue('get', $key, $alt);
+        return $this->getValue('get', $key, $alt);
     }
-    
+
     /**
      * 
      * Retrieves an **unfiltered** value by key from the [[Request::$post | ]] property,
@@ -139,9 +139,9 @@ class Request
      */
     public function post($key = null, $alt = null)
     {
-        return $this->_getValue('post', $key, $alt);
+        return $this->getValue('post', $key, $alt);
     }
-    
+
     /**
      * 
      * Retrieves an **unfiltered** value by key from the [[Request::$cookie | ]] property,
@@ -157,9 +157,9 @@ class Request
      */
     public function cookie($key = null, $alt = null)
     {
-        return $this->_getValue('cookie', $key, $alt);
+        return $this->getValue('cookie', $key, $alt);
     }
-    
+
     /**
      * 
      * Retrieves an **unfiltered** value by key from the [[Request::$env | ]] property,
@@ -175,9 +175,9 @@ class Request
      */
     public function env($key = null, $alt = null)
     {
-        return $this->_getValue('env', $key, $alt);
+        return $this->getValue('env', $key, $alt);
     }
-    
+
     /**
      * 
      * Retrieves an **unfiltered** value by key from the [[Request::$server | ]] property,
@@ -193,9 +193,9 @@ class Request
      */
     public function server($key = null, $alt = null)
     {
-        return $this->_getValue('server', $key, $alt);
+        return $this->getValue('server', $key, $alt);
     }
-    
+
     /**
      * 
      * Retrieves an **unfiltered** value by key from the [[Request::$files | ]] property,
@@ -211,9 +211,9 @@ class Request
      */
     public function files($key = null, $alt = null)
     {
-        return $this->_getValue('files', $key, $alt);
+        return $this->getValue('files', $key, $alt);
     }
-    
+
     /**
      * 
      * Retrieves an **unfiltered** value by key from the [[Request::$argv | ]] property,
@@ -229,9 +229,9 @@ class Request
      */
     public function argv($key = null, $alt = null)
     {
-        return $this->_getValue('argv', $key, $alt);
+        return $this->getValue('argv', $key, $alt);
     }
-    
+
     /**
      * 
      * Retrieves an **unfiltered** value by key from the [[Request::$http | ]] property,
@@ -250,9 +250,9 @@ class Request
         if ($key !== null) {
             $key = strtolower($key);
         }
-        return $this->_getValue('http', $key, $alt);
+        return $this->getValue('http', $key, $alt);
     }
-    
+
     /**
      * 
      * Retrieves an **unfiltered** value by key from the [[Request::$post | ]] *and* 
@@ -270,49 +270,49 @@ class Request
      */
     public function postAndFiles($key = null, $alt = null)
     {
-        $post  = $this->_getValue('post',  $key, false);
-        $files = $this->_getValue('files', $key, false);
-        
+        $post  = $this->getValue('post',  $key, false);
+        $files = $this->getValue('files', $key, false);
+
         // no matches in post or files
         if (! $post && ! $files) {
             return $alt;
         }
-        
+
         // match in post, not in files
         if ($post && ! $files) {
             return $post;
         }
-        
+
         // match in files, not in post
         if (! $post && $files) {
             return $files;
         }
-        
+
         // are either or both arrays?
         $post_array  = is_array($post);
         $files_array = is_array($files);
-        
+
         // both are arrays, merge them
         if ($post_array && $files_array) {
             return array_merge($post, $files);
         }
-        
+
         // post array but single files, append to post
         if ($post_array && ! $files_array) {
             array_push($post, $files);
             return $post;
         }
-        
+
         // files array but single post, append to files
         if (! $post_array && $files_array) {
             array_push($files, $post);
             return $files;
         }
-        
+
         // now what?
         throw new \InvalidArgumentException("Could not find '{$key}' in POST or FILES.");
     }
-    
+
     /**
      * 
      * Is this a secure SSL request?
@@ -325,7 +325,7 @@ class Request
         return $this->server('HTTPS') == 'on'
             || $this->server('SERVER_PORT') == 443;
     }
-    
+
     /**
      * 
      * Is this a command-line request?
@@ -337,7 +337,7 @@ class Request
     {
         return PHP_SAPI == 'cli';
     }
-    
+
     /**
      * 
      * Is this a 'GET' request?
@@ -349,7 +349,7 @@ class Request
     {
         return $this->server('REQUEST_METHOD') == 'GET';
     }
-    
+
     /**
      * 
      * Is this a 'POST' request?
@@ -361,7 +361,7 @@ class Request
     {
         return $this->server('REQUEST_METHOD') == 'POST';
     }
-    
+
     /**
      * 
      * Is this a 'PUT' request? Supports Google's X-HTTP-Method-Override
@@ -373,13 +373,13 @@ class Request
     public function isPut()
     {
         $is_put      = $this->server('REQUEST_METHOD') == 'PUT';
-        
+
         $is_override = $this->server('REQUEST_METHOD') == 'POST' &&
                        $this->http('X-HTTP-Method-Override') == 'PUT';
-        
+
         return ($is_put || $is_override);
     }
-    
+
     /**
      * 
      * Is this a 'DELETE' request? Supports Google's X-HTTP-Method-Override
@@ -392,13 +392,13 @@ class Request
     public function isDelete()
     {
         $is_delete   = $this->server('REQUEST_METHOD') == 'DELETE';
-        
+
         $is_override = $this->server('REQUEST_METHOD') == 'POST' &&
                        $this->http('X-HTTP-Method-Override') == 'DELETE';
-        
+
         return ($is_delete || $is_override);
     }
-    
+
     /**
      * 
      * Is this an XmlHttpRequest?
@@ -415,7 +415,7 @@ class Request
     {
         return strtolower($this->http('X-Requested-With')) == 'xmlhttprequest';
     }
-    
+
     /**
      * 
      * Reloads properties from the superglobal arrays.
@@ -427,24 +427,24 @@ class Request
      */
     public function reset()
     {
-    	// work around http://www.php.net/manual/en/ini.core.php#ini.auto-globals-jit
-    	if (ini_get('auto_globals_jit') === '1' && ini_get('register_globals') !== '1' && ini_get('register_long_arrays') !== '1') {
-    		// 'touch' these superglobals to ensure they are loaded
-    		$server = $_SERVER;
-    		$env = $_ENV;
-    	}
-    	
-    	// load the "real" request vars
+        // work around http://www.php.net/manual/en/ini.core.php#ini.auto-globals-jit
+        if (ini_get('auto_globals_jit') === '1' && ini_get('register_globals') !== '1' && ini_get('register_long_arrays') !== '1') {
+            // 'touch' these superglobals to ensure they are loaded
+            $server = $_SERVER;
+            $env = $_ENV;
+        }
+
+        // load the "real" request vars
         $vars = array('env', 'get', 'post', 'cookie', 'server', 'files');
         foreach ($vars as $key) {
             $var = '_' . strtoupper($key);
             if (isset($GLOBALS[$var])) {
-            	$this->$key = $GLOBALS[$var];
+                $this->$key = $GLOBALS[$var];
             } else {
                 $this->$key = array();
             }
         }
-        
+
         // dispel magic quotes if they are enabled.
         // http://talks.php.net/show/php-best-practices/26
         if (get_magic_quotes_gpc()) {
@@ -460,29 +460,29 @@ class Request
             }
             unset($in);
         }
-        
+
         // load the "fake" argv request var
         $this->argv = (array) $this->server('argv');
-        
+
         // load the "fake" http request var
         $this->http = array();
         foreach ($this->server as $key => $val) {
-            
+
             // only retain HTTP headers
             if (substr($key, 0, 5) == 'HTTP_') {
-                
+
                 // normalize the header key to lower-case
                 $nicekey = strtolower(
                     str_replace('_', '-', substr($key, 5))
                 );
-                
+
                 // strip control characters from keys and values
                 $nicekey = preg_replace('/[\x00-\x1F]/', '', $nicekey);
                 $this->http[$nicekey] = preg_replace('/[\x00-\x1F]/', '', $val);
-                
+
                 // no control characters wanted in $this->server for these
                 $this->server[$key] = $this->http[$nicekey];
-                
+
                 // disallow external setting of X-JSON headers.
                 if ($nicekey == 'x-json') {
                     unset($this->http[$nicekey]);
@@ -490,15 +490,15 @@ class Request
                 }
             }
         }
-        
+
         // rebuild the files array to make it look more like POST
         if ($this->files) {
             $files = $this->files;
             $this->files = array();
-            $this->_rebuildFiles($files, $this->files);
+            $this->rebuildFiles($files, $this->files);
         }
     }
-    
+
     /**
      * 
      * Recursive method to rebuild $_FILES structure to be more like $_POST.
@@ -512,16 +512,16 @@ class Request
      * @return void
      * 
      */
-    protected function _rebuildFiles($src, &$tgt)
+    protected function rebuildFiles($src, &$tgt)
     {
         // an array with these keys is a "target" for us (pre-sorted)
         $tgtkeys = array('error', 'name', 'size', 'tmp_name', 'type');
-        
+
         // the keys of the source array (sorted so that comparisons work
         // regardless of original order)
         $srckeys = array_keys((array) $src);
         sort($srckeys);
-        
+
         // is the source array a target?
         if ($srckeys == $tgtkeys) {
             // get error, name, size, etc
@@ -541,11 +541,11 @@ class Request
             // not a target, create sub-elements and rebuild them too
             foreach ($src as $key => $val) {
                 $tgt[$key] = array();
-                $this->_rebuildFiles($val, $tgt[$key], $key);
+                $this->rebuildFiles($val, $tgt[$key], $key);
             }
         }
     }
-    
+
     /**
      * 
      * Common method to get a request value and return it.
@@ -562,7 +562,7 @@ class Request
      * value.
      * 
      */
-    protected function _getValue($var, $key, $alt)
+    protected function getValue($var, $key, $alt)
     {
         // get the whole property, or just one key?
         if ($key === null) {
@@ -579,3 +579,4 @@ class Request
         }
     }
 }
+
