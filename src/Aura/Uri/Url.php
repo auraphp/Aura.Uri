@@ -24,11 +24,11 @@ class Url
      * @var array
      * 
      */
-    protected $config = array(
+    protected $config = [
         'host' => null,
-        'path' => null,
+        'path' => '/',
         'uri'  => null,
-    );
+    ];
 
     /**
      * 
@@ -117,7 +117,7 @@ class Url
      * exactly what you put in.
      * 
      * If you examine or modify the query elements, though, that will invoke
-     * parse_str() and http_buildquery(), so you may not get back *exactly*
+     * parse_str() and http_build_query(), so you may not get back *exactly*
      * what you set in the first place. In almost every case this won't
      * matter.
      * 
@@ -181,13 +181,22 @@ class Url
     );
 
     /**
-     * 
-     * Details about the request environment.
-     * 
-     * @var Request
-     * 
+     *
+     * Default URL elements
+     *
+     * @var array
+     *
      */
-    protected $request;
+    protected $default_elements = [
+        'scheme'   => null,
+        'user'     => null,
+        'pass'     => null,
+        'host'     => null,
+        'port'     => null,
+        'path'     => null,
+        'query'    => null,
+        'fragment' => null,
+    ];
 
     /**
      * 
@@ -196,29 +205,17 @@ class Url
      * @return void
      * 
      */
-    public function __construct($request = null)
+    public function __construct($arg = null)
     {
-        // get the current request environment.  may already have been set by
-        // extended classes.
-        if (! $this->request) {
-            if ($request instanceof Request) {
-                $this->request = $request;
-            } else {
-                $this->request = new Request();
-            }
+        if ($arg instanceof \Aura\Web\Context) {
+            $this->loadFromContextObject($arg);
         }
-
-        // fix the base path by adding leading and trailing slashes
-        if (trim($this->config['path']) == '') {
-            $this->config['path'] = '/';
+        elseif (is_string($arg) && strlen($arg) > 0) {
+        	$this->loadFromUrlString($arg);
         }
-        if ($this->config['path'][0] != '/') {
-            $this->config['path'] = '/' . $this->config['path'];
+        elseif (is_array($arg) && count($arg) > 0) {
+            $this->setConfig($arg);
         }
-        $this->config['path'] = rtrim($this->config['path'], '/') . '/';
-
-        // set properties
-        $this->set($this->config['uri']);
     }
 
     /** 
@@ -270,83 +267,104 @@ class Url
             return $this->query;
         }
     }
-
+    
     /**
-     * 
-     * Sets properties from a specified URI.
-     * 
-     * @param string $uri The URI to parse.  If null, defaults to the
-     * current URI.
-     * 
+     *
+     * Sets the Url class configuration options by an array
+     *
+     * @var array $config Array of configuration options to set
+     *
      * @return void
-     * 
+     *
      */
-    public function set($uri = null)
+    public function setConfig(array $config)
     {
-        // build a default scheme (with '://' in it)
-        $scheme = $this->request->isSsl() ? 'https://' : 'http://';
+        // fix the base path by adding leading and trailing slashes
+        if (trim($config['path']) == '') {
+            $config['path'] = '/';
+        }
+        if ($config['path'][0] != '/') {
+            $config['path'] = '/' . $config['path'];
+        }
+        $config['path'] = rtrim($config['path'], '/') . '/';
 
-        // get the current host, using a dummy host name if needed.
-        // we need a host name so that parse_url() works properly.
-        // we remove the dummy host name at the end of this method.
-        $host = $this->request->server('HTTP_HOST', 'example.com');
+        // set properties
+        $this->config = array_merge($this->config, $config);
+    }
 
-        // right now, we assume we don't have to force any values.
-        $forced = false;
+	/**
+     *
+     * Loads properties from an Aura\Web\Context object
+     *
+     * @var \Aura\Web\Context $context \Aura\Web\Context object to load
+     *
+     * @return void
+     *
+     */
+    public function loadFromContextObject(\Aura\Web\Context $context)
+	{
+		// build a default scheme (with '://' in it)
+        $scheme = $context->isSsl() ? 'https://' : 'http://';
 
-        // forcibly set to the current uri?
-        $uri = trim($uri);
-        if (! $uri) {
-
-            // we're forcing values
-            $forced = true;
-
-            // add the scheme and host
-            $uri = $scheme . $host;
-
-            // we need to see if mod_rewrite is turned on or off.
-            // if on, we can use REQUEST_URI as-is.
-            // if off, we need to use the script name, esp. for
-            // front-controller stuff.
-            // we make a guess based on the 'path' config key.
-            // if it ends in '.php' then we guess that mod_rewrite is
-            // off.
-            if (substr($this->config['path'], -5) == '.php/') {
-                // guess that mod_rewrite is off; build up from
-                // component parts.
-                $uri .= $this->request->server('SCRIPT_NAME')
-                      . $this->request->server('PATH_INFO')
-                      . '?' . $this->request->server('QUERY_STRING');
-            } else {
-                // guess that mod_rewrite is on
-                $uri .= $this->request->server('REQUEST_URI');
-            }
+        // get the current host, using the default host name if needed.
+        $host = $context->getServer('HTTP_HOST', $this->config['host']);
+        
+        // add the scheme and host
+        $uri = $scheme . $host;
+        
+        // we need to see if mod_rewrite is turned on or off.
+        // if on, we can use REQUEST_URI as-is.
+        // if off, we need to use the script name, esp. for
+        // front-controller stuff.
+        // we make a guess based on the 'path' config key.
+        // if it ends in '.php' then we guess that mod_rewrite is
+        // off.
+        if (substr($this->config['path'], -5) == '.php/') {
+            // guess that mod_rewrite is off; build up from
+            // component parts.
+            $uri .= $context->getServer('SCRIPT_NAME')
+                  . $context->getServer('PATH_INFO')
+                  . '?' . $context->getServer('QUERY_STRING');
+        } else {
+            // guess that mod_rewrite is on
+            $uri .= $context->getServer('REQUEST_URI');
         }
 
-        // forcibly add the scheme and host?
-        $pos = strpos($uri, '://');
-        if ($pos === false) {
-            $forced = true;
-            $uri = ltrim($uri, '/');
-            $uri = "$scheme$host/$uri";
-        }
+		$this->loadFromUrlString($uri);
+    }
+    
+    /**
+     *
+     * Loads properties by parsing an URL string
+     *
+     * @var string $url Url string to load
+     *
+     * @return void
+     *
+     */
+    public function loadFromUrlString($url)
+    {
+    	// parse the uri and merge with the defaults
+        $elem = $this->default_elements;
+        $elem = array_merge($elem, parse_url($url));
 
-        // default uri elements
-        $elem = array(
-            'scheme'   => null,
-            'user'     => null,
-            'pass'     => null,
-            'host'     => null,
-            'port'     => null,
-            'path'     => null,
-            'query'    => null,
-            'fragment' => null,
-        );
-
-        // parse the uri and merge with the defaults
-        $elem = array_merge($elem, parse_url($uri));
-
-        // strip the prefix from the path.
+        // load object properties
+        $this->loadFromArray($elem);
+	}
+	
+	/**
+     *
+     * Pre-processes, post-processes, and sets class properties based
+     * on an array from parse_url()
+     *
+     * @var array $elem Array of URL data to load
+     *
+     * @return void
+     *
+     */
+    protected function loadFromArray(array $elem)
+	{
+	    // strip the prefix from the path.
         // the conditions are ...
         // $elem['path'] == '/index.php/'
         // -- or --
@@ -375,27 +393,21 @@ class Url
         // extended processing of parsed elements into properties
         $this->setPath($elem['path']); // will also set $this->format
         $this->setQuery($elem['query']);
-
-        // if we had to force values, remove dummy placeholders
-        if ($forced && ! $this->request->server('HTTP_HOST')) {
-            $this->scheme = null;
-            $this->host   = null;
-        }
-
+        
         // finally, if we don't have a host, and there's a default,
         // use it
-        if (! $this->host) {
+        if (! $this->host && isset($this->config['host']) && ! empty($this->config['host'])) {
             $this->host = $this->config['host'];
         }
-    }
+	}
 
     /**
      * 
      * Returns a URI based on the object properties.
      * 
      * @param bool $full If true, returns a full URI with scheme,
-     * user, pass, host, and port.  Otherwise, just returns the
-     * path, format, query, and fragment.  Default false.
+     * user, pass, host, and port. Otherwise, just returns the
+     * path, format, query, and fragment. Default false.
      * 
      * @return string An action URI string.
      * 
@@ -437,26 +449,6 @@ class Url
 
     /**
      * 
-     * Returns a URI based on the specified string.
-     * 
-     * @param string $spec The URI specification.
-     * 
-     * @param bool $full If true, returns a full URI with scheme,
-     * user, pass, host, and port.  Otherwise, just returns the
-     * path, query, and fragment.  Default false.
-     * 
-     * @return string An action URI string.
-     * 
-     */
-    public function quick($spec, $full = false)
-    {
-        $uri = clone($this);
-        $uri->set($spec);
-        return $uri->get($full);
-    }
-
-    /**
-     * 
      * Sets the query string in the URI, for Uri::getQuery() and Uri::$query.
      * 
      * This will overwrite any previous values.
@@ -490,7 +482,7 @@ class Url
         // check against the protected property, not the virtual public one,
         // to avoid __get() when it's not needed.
         if (is_array($this->query)) {
-            return http_buildquery($this->query);
+            return http_build_query($this->query);
         } else {
             return $this->query_str;
         }
@@ -514,7 +506,7 @@ class Url
     {
         $spec = trim($spec, '/');
 
-        $this->path = array();
+        $this->path = [];
         if (! empty($spec)) {
             $this->path = explode('/', $spec);
         }
@@ -605,7 +597,7 @@ class Url
         }
         $keys = array_keys($this->encode_path);
         $vals = array_values($this->encode_path);
-        $out = array();
+        $out = [];
         foreach ((array) $spec as $elem) {
             $out[] = str_replace($keys, $vals, $elem);
         }

@@ -13,28 +13,58 @@ Getting Started
 Instantiation
 -------------
 
-The following is a simple example. Say that the page address is currently
-`http://anonymous::guest@example.com/path/to/index.php/foo/bar?baz=dib#anchor`.
-
-You can use Uri to parse this complex string very easily:
+When loading a Url object, you can populate the object properties from a URL string:
 
 ```php
-// create a URI object; this will automatically import the current
-// location, which is...
-// 
-// http://anonymous:guest@example.com/path/to/index.php/foo/bar.xml?baz=dib#anchor
-$uri = new \Aura\Uri\Url(new \Aura\Uri\Request);
+use Aura\Uri;
 
-// now the $uri properties are ...
+$url = new Uri\Url();
+
+// Load from a string...
+$url->loadFromUrlString('http://anonymous:guest@example.com/path/to/index.php/foo/bar.xml?baz=dib#anchor');
+
+// now the $url properties are ...
 // 
-// $uri->scheme   => 'http'
-// $uri->host     => 'example.com'
-// $uri->user     => 'anonymous'
-// $uri->pass     => 'guest'
-// $uri->path     => array('path', 'to', 'index.php', 'foo', 'bar')
-// $uri->format   => 'xml'
-// $uri->query    => array('baz' => 'dib')
-// $uri->fragment => 'anchor'
+// $url->scheme   => 'http'
+// $url->host     => 'example.com'
+// $url->user     => 'anonymous'
+// $url->pass     => 'guest'
+// $url->path     => array('path', 'to', 'index.php', 'foo', 'bar')
+// $url->format   => 'xml'
+// $url->query    => array('baz' => 'dib')
+// $url->fragment => 'anchor'
+```
+
+Alternately, Url can parse Context objects from Aura\Web.
+Suppose that the page address is currently
+`http://anonymous::guest@example.com/path/to/index.php/foo/bar?baz=dib#anchor`:
+
+```php
+use Aura\Uri;
+use Aura\Web;
+
+$url = new Uri\Url();
+
+// Parse an Aura\Web\Context object...
+$url->loadFromContextObject(new Web\Context($GLOBALS));
+
+// now the $url properties are ...
+// 
+// $url->scheme   => 'http'
+// $url->host     => 'example.com'
+// $url->path     => array('path', 'to', 'index.php', 'foo', 'bar')
+// $url->format   => 'xml'
+// $url->query    => array('baz' => 'dib')
+```
+
+You can pass either of these directly to the constructor, if you wish:
+
+```php
+use Aura\Uri;
+use Aura\Web;
+
+$url_from_string  = new Uri\Url('http://anonymous::guest@example.com/path/to/index.php/foo/bar?baz=dib#anchor');
+$url_from_context = new Uri\Url(new Web\Context($GLOBALS));
 ```
 
 Manipulation
@@ -45,37 +75,37 @@ can modify the component parts, then fetch a new URI string.
 
 ```php
 // change to 'https://'
-$uri->scheme = 'https';
+$url->scheme = 'https';
 
 // remove the username and password
-$uri->user = '';
-$uri->pass = '';
+$url->user = '';
+$url->pass = '';
 
 // change the value of 'baz' to 'zab'
-$uri->setQuery('baz', 'zab');
+$url->setQuery('baz', 'zab');
 
 // add a new query element called 'zim' with a value of 'gir'
-$uri->query['zim'] = 'gir';
+$url->query['zim'] = 'gir';
 
 // reset the path to something else entirely.
 // this will additionally set the format to 'php'.
-$uri->setPath('/something/else/entirely.php');
+$url->setPath('/something/else/entirely.php');
 
 // add another path element
-$uri->path[] = 'another';
+$url->path[] = 'another';
 
 // and fetch it to a string.
-$new_uri = $uri->get();
+$new_uri = $url->get();
 
 // the $new_uri string is as follows; notice how the format
 // is always applied to the last path-element.
 // /something/else/entirely/another.php?baz=zab&zim=gir#anchor
 
 // wait, there's no scheme or host!
-// we need to fetch the "full" URI.
-$full_uri = $uri->get(true);
+// we need to fetch the "full" URL.
+$full_url = $url->get(true);
 
-// the $full_uri string is:
+// the $full_url string is:
 // https://example.com/something/else/entirely/another.php?baz=zab&zim=gir#anchor
 ```
 
@@ -83,7 +113,8 @@ Properties
 ==========
 
 This class has a number of public properties, all related to
-the parsed URI processed by [[Uri::set()]]. They are ...
+the parsed URI processed by [[Uri::loadFromUrlString()]] and
+[[Uri::loadFromContextObject()]]. They are ...
 
 | Name       | Type    | Description
 | ---------- | ------- | --------------------------------------------------------------
