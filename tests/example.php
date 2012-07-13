@@ -13,11 +13,13 @@ echo time() . PHP_EOL . PHP_EOL;
 
 
 // Load from a Context object...
-$url = new Url(new Web\Context($GLOBALS));
+//$url = new Url(new Web\Context($GLOBALS));
+$factory = new Url\Factory();
+$url = $factory->newCurrent($GLOBALS);
 print_r($url);
 
 // now the $url properties are ...
-// 
+//
 // $url->scheme   => 'http'
 // $url->host     => 'example.com'
 // $url->path     => array('path', 'to', 'index.php', 'foo', 'bar')
@@ -26,11 +28,12 @@ print_r($url);
 
 
 // Load from a string...
-$url = new Url('http://anonymous:guest@example.com/path/to/index.php/foo/bar.xml?baz=dib#anchor');
+//$url = new Url('http://anonymous:guest@example.com/path/to/index.php/foo/bar.xml?baz=dib#anchor');
+$url = $factory->newInstance('http://anonymous:guest@example.com/path/to/index.php/foo/bar.xml?baz=dib#anchor');
 print_r($url);
 
 // now the $url properties are ...
-// 
+//
 // $url->scheme   => 'http'
 // $url->host     => 'example.com'
 // $url->user     => 'anonymous'

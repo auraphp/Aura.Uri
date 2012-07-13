@@ -211,7 +211,7 @@ class Url
             $this->loadFromContextObject($arg);
         }
         elseif (is_string($arg) && strlen($arg) > 0) {
-        	$this->loadFromUrlString($arg);
+            $this->loadFromUrlString($arg);
         }
         elseif (is_array($arg) && count($arg) > 0) {
             $this->setConfig($arg);
@@ -267,7 +267,7 @@ class Url
             return $this->query;
         }
     }
-    
+
     /**
      *
      * Sets the Url class configuration options by an array
@@ -292,7 +292,7 @@ class Url
         $this->config = array_merge($this->config, $config);
     }
 
-	/**
+    /**
      *
      * Loads properties from an Aura\Web\Context object
      *
@@ -302,16 +302,16 @@ class Url
      *
      */
     public function loadFromContextObject(\Aura\Web\Context $context)
-	{
-		// build a default scheme (with '://' in it)
+    {
+        // build a default scheme (with '://' in it)
         $scheme = $context->isSsl() ? 'https://' : 'http://';
 
         // get the current host, using the default host name if needed.
         $host = $context->getServer('HTTP_HOST', $this->config['host']);
-        
+
         // add the scheme and host
         $uri = $scheme . $host;
-        
+
         // we need to see if mod_rewrite is turned on or off.
         // if on, we can use REQUEST_URI as-is.
         // if off, we need to use the script name, esp. for
@@ -330,9 +330,9 @@ class Url
             $uri .= $context->getServer('REQUEST_URI');
         }
 
-		$this->loadFromUrlString($uri);
+        $this->loadFromUrlString($uri);
     }
-    
+
     /**
      *
      * Loads properties by parsing an URL string
@@ -344,15 +344,15 @@ class Url
      */
     public function loadFromUrlString($url)
     {
-    	// parse the uri and merge with the defaults
+        // parse the uri and merge with the defaults
         $elem = $this->default_elements;
         $elem = array_merge($elem, parse_url($url));
 
         // load object properties
         $this->loadFromArray($elem);
-	}
-	
-	/**
+    }
+
+    /**
      *
      * Pre-processes, post-processes, and sets class properties based
      * on an array from parse_url()
@@ -363,8 +363,8 @@ class Url
      *
      */
     protected function loadFromArray(array $elem)
-	{
-	    // strip the prefix from the path.
+    {
+        // strip the prefix from the path.
         // the conditions are ...
         // $elem['path'] == '/index.php/'
         // -- or --
@@ -393,13 +393,13 @@ class Url
         // extended processing of parsed elements into properties
         $this->setPath($elem['path']); // will also set $this->format
         $this->setQuery($elem['query']);
-        
+
         // finally, if we don't have a host, and there's a default,
         // use it
         if (! $this->host && isset($this->config['host']) && ! empty($this->config['host'])) {
             $this->host = $this->config['host'];
         }
-	}
+    }
 
     /**
      * 
