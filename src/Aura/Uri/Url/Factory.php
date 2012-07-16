@@ -20,34 +20,81 @@ use Aura\Web;
  */
 class Factory
 {
-
+    protected $current;
+    
+    public function __construct($server)
+    {
+        $https  = isset($server['HTTPS'])
+               && strtolower($server['HTTPS']) == 'on';
+               
+        $ssl    = isset($server['SERVER_PORT'])
+               && $server['SERVER_PORT'] == 443;
+        
+        if ($https || $ssl) {
+            $scheme = 'https';
+        } else {
+            $scheme = 'http';
+        }
+        
+        if (isset($server['HTTP_HOST'])) {
+            $host = $server['HTTP_HOST'];
+        } else {
+            $host = '';
+        }
+        
+        if (isset($server['REQUEST_URI'])) {
+            $resource = $server['REQUEST_URI'];
+        } else {
+            $resource = '';
+        }
+        
+        $this->current = $scheme . '://' . $host . $resource;
+    }
+    
     /**
      * 
      * Creates and returns a new Url object.
      * 
-     * @param unknown $arg URL string to load, or a Aura\Web\Context object
+     * @param string $spec The URL string to set from.
      * 
      * @return Aura\Uri\Url
      * 
      */
-    public function newInstance($arg = null)
+    public function newInstance($spec)
     {
-        return new Url($arg);
+        $elem = [
+            'scheme'   => null,
+            'user'     => null,
+            'pass'     => null,
+            'host'     => null,
+            'port'     => null,
+            'path'     => null,
+            'query'    => null,
+            'fragment' => null,
+        ];
+        
+        parse_url($spec, $elem);
+        
+        $path = new Path([]);
+        $path->setFromString($elem['path']);
+        
+        $query = new Query([]);
+        $query->setFromString($elem['query']);
+        
+        return new Url(
+            $elem['scheme'],
+            $elem['user'],
+            $elem['pass'],
+            $elem['host'],
+            $elem['port'],
+            $path,
+            $query,
+            $elem['fragment']
+        );
     }
-
-    /**
-     * 
-     * Creates and returns a new Url object based on the current page URL.
-     * Requires the Aura\Web module.
-     * 
-     * @param array $globals Array of globals ($GLOBALS)
-     * 
-     * @return Aura\Uri\Url
-     * 
-     */
-    public function newCurrent(array $globals)
+    
+    public function newCurrent()
     {
-        return new Url(new Web\Context($globals));
+        return $this->newInstance($this->current);
     }
 }
-
