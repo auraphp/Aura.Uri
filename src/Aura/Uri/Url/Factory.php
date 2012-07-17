@@ -9,7 +9,6 @@
 namespace Aura\Uri\Url;
 
 use Aura\Uri\Url;
-use Aura\Web;
 
 /**
  * 
