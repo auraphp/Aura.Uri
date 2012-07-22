@@ -1,6 +1,22 @@
 <?php
+/**
+ * 
+ * This file is part of the Aura project for PHP.
+ * 
+ * @package Aura.Uri
+ * 
+ * @license http://opensource.org/licenses/bsd-license.php BSD
+ * 
+ */
 namespace Aura\Uri;
 
+/**
+ * 
+ * Processing the query string
+ * 
+ * @package Aura.Uri
+ * 
+ */
 class Query extends \ArrayObject
 {
     /**
@@ -12,7 +28,7 @@ class Query extends \ArrayObject
      */
     public function __toString()
     {
-        return $this->buildString($this->toArray());
+        return $this->buildString($this->getArrayCopy());
     }
 
     /**
@@ -33,15 +49,25 @@ class Query extends \ArrayObject
         $this->exchangeArray($query);
     }
 
+    /**
+     *
+     * Build string from an array 
+     * 
+     * @param array $array
+     * 
+     * @param string $prefix Defaults to null
+     * 
+     * @return string Returns a string 
+     */
     protected function buildString(array $array, $prefix = null)
     {
         $elem = [];
         foreach ($array as $key => $val) {
-            
+
             $key = ($prefix)
                  ? $prefix . '[' . $key . ']'
                  : $key;
-            
+
             if (is_array($val)) {
                 $val = $this->buildString($val, $key);
             } else {
@@ -49,10 +75,11 @@ class Query extends \ArrayObject
                      ? ''
                      : urlencode($val);
             }
-            
+
             $elem[] = urlencode($key) . '=' . $val;
         }
-        
+
         return implode('&', $elem);
     }
 }
+ 

@@ -92,7 +92,7 @@ class Url
     protected $fragment;
 
     // authority = userinfo@host:port
-    
+
     /**
      * 
      * Constructor.
@@ -159,7 +159,7 @@ class Url
     {
         return $this->$key;
     }
-
+    //FIXME , the @param and the method differs ?
     /**
      * 
      * Returns a URI based on the object properties.
@@ -202,55 +202,120 @@ class Url
         // add the host and port, if any.
         $url .= (empty($this->host) ? '' : urlencode($this->host))
               . (empty($this->port) ? '' : ':' . (int) $this->port);
-        
+
         return $url . $this->get();
     }
 
+    /**
+     *
+     * set the scheme (for example 'http' or 'https').
+     * 
+     * @param string $scheme The scheme (for example 'http' or 'https').
+     * 
+     * @return Url the Url object
+     */
     public function setScheme($scheme)
     {
         $this->scheme = $scheme;
         return $this;
     }
 
+    /**
+     * 
+     * The username, if any.
+     *
+     * @param string $user
+     * 
+     * @return Url the Url object
+     */
     public function setUser($user)
     {
         $this->user = $user;
         return $this;
     }
 
+    /**
+     * 
+     * set the password, if any.
+     *
+     * @param string $pass The password, if any.
+     * 
+     * @return Url the Url object
+     */
     public function setPass($pass)
     {
         $this->pass = $pass;
         return $this;
     }
 
+    /**
+     *
+     * set the host specification (for example, 'example.com').
+     * 
+     * @param string $host the host name
+     * 
+     * @return Url the Url object
+     */
     public function setHost($host)
     {
         $this->host = $host;
         return $this;
     }
 
+    /**
+     *
+     * The port number (for example, '80').
+     * 
+     * @param int $port the port number
+     * 
+     * @return Url  the Url object
+     */
     public function setPort($port)
     {
         $this->port = $port;
         return $this;
     }
-    
+
+    /**
+     *
+     * the path elements including the format
+     * 
+     * @param Path $path Path object
+     * 
+     * @return Url the Url object
+     */
     public function setPath(Path $path)
     {
         $this->path = $path;
-        return $path;
+        return $this;
     }
-    
-    public function setQuery(Query $path)
+
+    /**
+     *
+     * A Query object
+     * 
+     * @param Query $query The query elements.
+     * 
+     * @return Url the Url object
+     */
+    public function setQuery(Query $query)
     {
-        $this->path = $path;
-        return $path;
+        $this->query = $query;
+        return $this;
     }
-    
+
+    /**
+     *
+     * The fragment portion (for example, the "foo" in "#foo").
+     * 
+     * @param string $fragment the fragment
+     * 
+     * @return Url the Url object
+     */
     public function setFragment($fragment)
     {
         $this->fragment = $fragment;
         return $this;
-    }    
+    }
 }
+ 

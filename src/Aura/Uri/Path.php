@@ -1,6 +1,22 @@
 <?php
+/**
+ * 
+ * This file is part of the Aura project for PHP.
+ * 
+ * @package Aura.Uri
+ * 
+ * @license http://opensource.org/licenses/bsd-license.php BSD
+ * 
+ */
 namespace Aura\Uri;
 
+/**
+ * 
+ * Manage the Path
+ * 
+ * @package Aura.Uri
+ * 
+ */
 class Path extends \ArrayObject
 {
     /**
@@ -12,7 +28,7 @@ class Path extends \ArrayObject
      * 
      */
     protected $format;
-    
+
     /**
      * 
      * Returns the path array as a string, including the format.
@@ -34,22 +50,24 @@ class Path extends \ArrayObject
 
         $keys = array_keys($encode);
         $vals = array_values($encode);
-        
+
+        $spec = $this->getArrayCopy();
+
         // encode each path element
         $path = [];
         foreach ($spec as $elem) {
             $path[] = str_replace($keys, $vals, $elem);
         }
-        
+
         // create a string from the encoded elements
         $path = implode('/', $path);
-        
+
         // create a format string. we use trim() instead of empty() to allow
         // for string-zero values.
         $format = trim($this->format) === ''
                 ? ''
                 : '.' . urlencode($this->format);
-        
+
         // done!
         return $path . $format;
     }
@@ -60,7 +78,7 @@ class Path extends \ArrayObject
      * 
      * This will overwrite any previous values.
      * 
-     * @param string $spec The path string to use; for example,
+     * @param string $path The path string to use; for example,
      * "/foo/bar/baz/dib.gir".  A leading slash will *not* create an empty
      * first element; if the string has a leading slash, it is ignored.
      * 
@@ -88,13 +106,26 @@ class Path extends \ArrayObject
         }
     }
 
+    /**
+     *
+     * set the format
+     * 
+     * @param string $format 
+     */
     public function setFormat($format)
     {
         $this->format = $format;
     }
-    
+
+    /**
+     *
+     * Get the format
+     * 
+     * @return string 
+     */
     public function getFormat()
     {
         return $this->format;
     }
 }
+ 
