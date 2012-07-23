@@ -159,16 +159,12 @@ class Url
     {
         return $this->$key;
     }
-    //FIXME , the @param and the method differs ?
+    
     /**
      * 
-     * Returns a URI based on the object properties.
+     * Returns the URL as a string, not including scheme or host.
      * 
-     * @param bool $full If true, returns a full URI with scheme,
-     * user, pass, host, and port. Otherwise, just returns the
-     * path, format, query, and fragment. Default false.
-     * 
-     * @return string An action URI string.
+     * @return string The URL string.
      * 
      */
     public function get()
@@ -183,6 +179,13 @@ class Url
              . (trim($this->fragment) === '' ? '' : '#' . urlencode($this->fragment));
     }
 
+    /**
+     * 
+     * Returns the URL as a string, including the scheme and host.
+     * 
+     * @return string The URL string.
+     * 
+     */
     public function getFull()
     {
         // start with the scheme
