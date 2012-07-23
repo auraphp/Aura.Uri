@@ -10,7 +10,7 @@ class QueryTest extends \PHPUnit_Framework_TestCase
     /**
      * @var Query
      */
-    protected $object;
+    protected $query;
 
     /**
      * Sets up the fixture, for example, opens a network connection.
@@ -19,7 +19,7 @@ class QueryTest extends \PHPUnit_Framework_TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->object = new Query;
+        $this->query = new Query;
     }
 
     /**
@@ -38,8 +38,8 @@ class QueryTest extends \PHPUnit_Framework_TestCase
     public function test__toString()
     {
         $query_string = 'foo=bar&baz=dib';
-        $this->object->setFromString($query_string);
-        $actual = $this->object->__toString();
+        $this->query->setFromString($query_string);
+        $actual = $this->query->__toString();
         $this->assertEquals($actual, $query_string);
     }
 
@@ -50,12 +50,21 @@ class QueryTest extends \PHPUnit_Framework_TestCase
     public function testSetFromString()
     {
         $query_string = 'foo=bar&baz=dib';
-        $this->object->setFromString($query_string);
-        $actual = $this->object->getArrayCopy();
+        $this->query->setFromString($query_string);
+        $actual = $this->query->getArrayCopy();
         $expected = [
             'foo' => 'bar',
             'baz' => 'dib',
         ];
         $this->assertEquals($actual, $expected);
+    }
+    
+    public function test_deepArrays()
+    {
+        $query_string = 'foo[bar]=baz&zim[gir]=dib';
+        $this->query->setFromString($query_string);
+        $expect = 'foo%5Bbar%5D=baz&zim%5Bgir%5D=dib';
+        $actual = $this->query->__toString();
+        $this->assertEquals($expect, $actual);
     }
 }

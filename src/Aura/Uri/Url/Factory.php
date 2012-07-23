@@ -56,6 +56,8 @@ class Factory
      * 
      * Creates and returns a new Url object.
      * 
+     * If no host is specified, the parsing will fail.
+     * 
      * @param string $spec The URL string to set from.
      * 
      * @return Aura\Uri\Url
@@ -74,7 +76,8 @@ class Factory
             'fragment' => null,
         ];
 
-        $elem = parse_url($spec) + $elem;
+        $parts = parse_url($spec);
+        $elem = (array) $parts + $elem;
 
         $path = new Path([]);
         $path->setFromString($elem['path']);

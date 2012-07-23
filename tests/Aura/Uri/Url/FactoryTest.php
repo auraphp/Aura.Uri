@@ -10,26 +10,7 @@ class FactoryTest extends \PHPUnit_Framework_TestCase
     /**
      * @var Factory
      */
-    protected $object;
-
-    /**
-     * Sets up the fixture, for example, opens a network connection.
-     * This method is called before a test is executed.
-     */
-    protected function setUp()
-    {
-        parent::setUp();
-        $this->object = new Factory($GLOBALS['_SERVER']);
-    }
-
-    /**
-     * Tears down the fixture, for example, closes a network connection.
-     * This method is called after a test is executed.
-     */
-    protected function tearDown()
-    {
-        parent::tearDown();
-    }
+    protected $factory;
 
     /**
      * @covers Aura\Uri\Url\Factory::newInstance
@@ -37,8 +18,9 @@ class FactoryTest extends \PHPUnit_Framework_TestCase
      */
     public function testNewInstance()
     {
+        $this->factory = new Factory([]);
         $spec = 'http://anonymous:guest@example.com/path/to/index.php/foo/bar.xml?baz=dib#anchor';
-        $url  = $this->object->newInstance($spec);
+        $url  = $this->factory->newInstance($spec);
         $this->assertTrue($url instanceof \Aura\Uri\Url);
     }
 
@@ -48,9 +30,66 @@ class FactoryTest extends \PHPUnit_Framework_TestCase
      */
     public function testNewCurrent()
     {
-        // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-          'This test has not been implemented yet.'
-        );
+        $this->factory = new Factory([
+            'HTTP_HOST'   => 'example.com',
+            'REQUEST_URI' => '/path/to/index.php/foo/bar.xml?baz=dib',
+        ]);
+        
+        $url = $this->factory->newCurrent();
+        $actual = $url->__toString();
+        $expect = 'http://example.com/path/to/index.php/foo/bar.xml?baz=dib';
+        $this->assertSame($expect, $actual);
+    }
+    
+    public function testNewCurrent_https()
+    {
+        $this->factory = new Factory([
+            'HTTPS'       => 'on',
+            'HTTP_HOST'   => 'example.com',
+            'REQUEST_URI' => '/path/to/index.php/foo/bar.xml?baz=dib',
+        ]);
+        
+        $url = $this->factory->newCurrent();
+        $actual = $url->__toString();
+        $expect = 'https://example.com/path/to/index.php/foo/bar.xml?baz=dib';
+        $this->assertSame($expect, $actual);
+    }
+    
+    public function testNewCurrent_ssl()
+    {
+        $this->factory = new Factory([
+            'SERVER_PORT' => '443',
+            'HTTP_HOST'   => 'example.com',
+            'REQUEST_URI' => '/path/to/index.php/foo/bar.xml?baz=dib',
+        ]);
+        
+        $url = $this->factory->newCurrent();
+        $actual = $url->__toString();
+        $expect = 'https://example.com/path/to/index.php/foo/bar.xml?baz=dib';
+        $this->assertSame($expect, $actual);
+    }
+    
+    public function testNewCurrent_noHttpHost()
+    {
+        $this->factory = new Factory([
+            'REQUEST_URI' => '/path/to/index.php/foo/bar.xml?baz=dib',
+        ]);
+        
+        $url = $this->factory->newCurrent();
+        $actual = $url->__toString();
+        $expect = '';
+        $this->assertSame($expect, $actual);
+    }
+    
+    public function testNewCurrent_noRequestUri()
+    {
+        $this->factory = new Factory([
+            'HTTP_HOST'   => 'example.com',
+        ]);
+        
+        $url = $this->factory->newCurrent();
+        $actual = $url->__toString();
+        $expect = 'http://example.com';
+        $this->assertSame($expect, $actual);
     }
 }

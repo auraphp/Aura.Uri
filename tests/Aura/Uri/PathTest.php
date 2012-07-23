@@ -10,7 +10,7 @@ class PathTest extends \PHPUnit_Framework_TestCase
     /**
      * @var Path
      */
-    protected $object;
+    protected $path;
 
     /**
      * Sets up the fixture, for example, opens a network connection.
@@ -19,7 +19,7 @@ class PathTest extends \PHPUnit_Framework_TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->object = new Path;
+        $this->path = new Path;
     }
 
     /**
@@ -38,8 +38,8 @@ class PathTest extends \PHPUnit_Framework_TestCase
     public function test__toString()
     {
         $path = '/foo/bar/baz/dib.gir';
-        $this->object->setFromString($path);
-        $actual = $this->object->__toString();
+        $this->path->setFromString($path);
+        $actual = $this->path->__toString();
         $this->assertSame($path, $actual);
     }
 
@@ -50,11 +50,11 @@ class PathTest extends \PHPUnit_Framework_TestCase
     public function testSetFromString()
     {
         $path = '/foo/bar/baz/dib.gir';
-        $this->object->setFromString($path);
-        $actual = $this->object->getFormat();
+        $this->path->setFromString($path);
+        $actual = $this->path->getFormat();
         $expected = 'gir';
         $this->assertSame($expected, $actual);
-        $actual = $this->object->__toString();
+        $actual = $this->path->__toString();
         $this->assertSame($path, $actual);
     }
 
@@ -65,8 +65,8 @@ class PathTest extends \PHPUnit_Framework_TestCase
     public function testSetFormat()
     {
         $format = 'json';
-        $this->object->setFormat($format);
-        $actual = $this->object->getFormat($format);
+        $this->path->setFormat($format);
+        $actual = $this->path->getFormat($format);
         $this->assertSame($format, $actual);
     }
 
@@ -77,8 +77,8 @@ class PathTest extends \PHPUnit_Framework_TestCase
     public function testGetFormat()
     {
         $path = '/foo/bar/baz/dib.xml';
-        $this->object->setFromString($path);
-        $actual = $this->object->getFormat();
+        $this->path->setFromString($path);
+        $actual = $this->path->getFormat();
         $expected = 'xml';
         $this->assertSame($expected, $actual);
     }

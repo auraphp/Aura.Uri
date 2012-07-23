@@ -67,16 +67,15 @@ class Query extends \ArrayObject
             $key = ($prefix)
                  ? $prefix . '[' . $key . ']'
                  : $key;
-
+            
             if (is_array($val)) {
-                $val = $this->buildString($val, $key);
+                $elem[] = $this->buildString($val, $key);
             } else {
                 $val = ($val === null || $val === false)
                      ? ''
                      : urlencode($val);
+                $elem[] = urlencode($key) . '=' . $val;
             }
-
-            $elem[] = urlencode($key) . '=' . $val;
         }
 
         return implode('&', $elem);
