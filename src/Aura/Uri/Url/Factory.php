@@ -3,6 +3,8 @@
  * 
  * This file is part of the Aura project for PHP.
  * 
+ * @package Aura.Uri
+ * 
  * @license http://opensource.org/licenses/bsd-license.php BSD
  * 
  */
@@ -21,9 +23,23 @@ use Aura\Uri\Query;
  */
 class Factory
 {
+    /**
+     * 
+     * A string representing the current URL, built from $_SERVER.
+     * 
+     * @var string
+     * 
+     */
     protected $current;
 
-    public function __construct($server)
+    /**
+     * 
+     * Constructor.
+     * 
+     * @param array $server An array copy of $_SERVER.
+     * 
+     */
+    public function __construct(array $server)
     {
         $https  = isset($server['HTTPS'])
                && strtolower($server['HTTPS']) == 'on';
@@ -60,7 +76,7 @@ class Factory
      * 
      * @param string $spec The URL string to set from.
      * 
-     * @return Aura\Uri\Url
+     * @return Url
      * 
      */
     public function newInstance($spec)
@@ -97,6 +113,13 @@ class Factory
         );
     }
 
+    /**
+     * 
+     * Creates and returns a new URL object based on the current URL.
+     * 
+     * @return Url
+     * 
+     */
     public function newCurrent()
     {
         return $this->newInstance($this->current);
