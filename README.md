@@ -70,7 +70,6 @@ fetch a new URL string from the modified object.
 
 ```php
 <?php
-
 // start with a full URL
 $string = 'http://anonymous:guest@example.com/path/to/index.php/foo/bar.xml?baz=dib#anchor');
 $url = $url_factory->newCurrent();
