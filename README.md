@@ -65,8 +65,8 @@ $url = $url_factory->newCurrent();
 Manipulation
 ------------
 
-Now that we have created the URL, we can modify the component parts, then
-fetch a new URI string.
+After we have created the URL object, we can modify the component parts, then
+fetch a new URL string from the modified object.
 
 ```php
 <?php
