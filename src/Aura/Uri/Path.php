@@ -21,8 +21,8 @@ class Path extends \ArrayObject
 {
     /**
      * 
-     * The dot-format extension of the last path element (for example, the 
-     * "rss" in "feed.rss").
+     * The dot-format extension of the last path element, including the dot
+     * (for example, the ".rss" in "feed.rss").
      * 
      * @var string
      * 
@@ -60,16 +60,7 @@ class Path extends \ArrayObject
         }
 
         // create a string from the encoded elements
-        $path = implode('/', $path);
-
-        // create a format string. we use trim() instead of empty() to allow
-        // for string-zero values.
-        $format = trim($this->format) === ''
-                ? ''
-                : '.' . urlencode($this->format);
-
-        // done!
-        return $path . $format;
+        return implode('/', $path) . $this->format;
     }
 
     /**
@@ -101,16 +92,19 @@ class Path extends \ArrayObject
             if ($pos !== false) {
                 // remove from the path and retain as the format
                 $this[$key] = substr($val, 0, $pos);
-                $this->setFormat(substr($val, $pos + 1));
+                $this->setFormat(substr($val, $pos));
             }
         }
     }
 
     /**
      *
-     * set the format
+     * Set the dot-format; remember to include the leading dot.
      * 
-     * @param string $format 
+     * @param string $format
+     * 
+     * @return void
+     * 
      */
     public function setFormat($format)
     {
@@ -119,7 +113,7 @@ class Path extends \ArrayObject
 
     /**
      *
-     * Get the format
+     * Get the dot-format extension.
      * 
      * @return string 
      */

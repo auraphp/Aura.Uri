@@ -33,7 +33,6 @@ class PathTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @covers Aura\Uri\Path::__toString
-     * @todo Implement test__toString().
      */
     public function test__toString()
     {
@@ -51,35 +50,24 @@ class PathTest extends \PHPUnit_Framework_TestCase
     {
         $path = '/foo/bar/baz/dib.gir';
         $this->path->setFromString($path);
+        
+        $expect = '.gir';
         $actual = $this->path->getFormat();
-        $expected = 'gir';
-        $this->assertSame($expected, $actual);
+        $this->assertSame($expect, $actual);
+        
         $actual = $this->path->__toString();
         $this->assertSame($path, $actual);
     }
 
     /**
      * @covers Aura\Uri\Path::setFormat
-     * @todo Implement testSetFormat().
+     * @covers Aura\Uri\Path::getFormat
      */
-    public function testSetFormat()
+    public function testSetAndGetFormat()
     {
-        $format = 'json';
+        $format = '.json';
         $this->path->setFormat($format);
         $actual = $this->path->getFormat($format);
         $this->assertSame($format, $actual);
-    }
-
-    /**
-     * @covers Aura\Uri\Path::getFormat
-     * @todo Implement testGetFormat().
-     */
-    public function testGetFormat()
-    {
-        $path = '/foo/bar/baz/dib.xml';
-        $this->path->setFromString($path);
-        $actual = $this->path->getFormat();
-        $expected = 'xml';
-        $this->assertSame($expected, $actual);
     }
 }
