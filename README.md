@@ -7,6 +7,13 @@ of the URL and allowing you modify them individually; you can then then fetch
 them as a single URL string. This helps when building complex links,
 such as in a paged navigation system.
 
+This package is compliant with [PSR-0][], [PSR-1][], and [PSR-2][]. If you
+notice compliance oversights, please send a patch via pull request.
+
+[PSR-0]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md
+[PSR-1]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md
+[PSR-2]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md
+
 Getting Started
 ===============
 
