@@ -1,5 +1,5 @@
 {
-    "name": "aura/uri",
+    "name": "Aura/Uri",
     "type": "library",
     "description": "The Aura Uri package provides objects to build and manipulate URL strings.",
     "keywords": [
