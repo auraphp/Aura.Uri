@@ -1,3 +1,8 @@
+---
+title: Aura for PHP -- The Aura Uri package provides objects to build and manipulate URL strings.
+layout: default
+---
+
 Aura.Uri
 ========
 

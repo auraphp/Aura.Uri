@@ -211,11 +211,12 @@ class Url
 
     /**
      *
-     * set the scheme (for example 'http' or 'https').
+     * Set the scheme (for example 'http' or 'https').
      * 
      * @param string $scheme The scheme (for example 'http' or 'https').
      * 
-     * @return Url the Url object
+     * @return $this
+     * 
      */
     public function setScheme($scheme)
     {
@@ -225,11 +226,12 @@ class Url
 
     /**
      * 
-     * The username, if any.
+     * Sets the username.
      *
-     * @param string $user
+     * @param string $user The username.
      * 
-     * @return Url the Url object
+     * @return $this
+     * 
      */
     public function setUser($user)
     {
@@ -239,11 +241,12 @@ class Url
 
     /**
      * 
-     * set the password, if any.
+     * Sets the password.
      *
-     * @param string $pass The password, if any.
+     * @param string $pass The password.
      * 
-     * @return Url the Url object
+     * @return $this
+     * 
      */
     public function setPass($pass)
     {
@@ -253,11 +256,12 @@ class Url
 
     /**
      *
-     * set the host specification (for example, 'example.com').
+     * Sets the host name (for example, 'example.com').
      * 
-     * @param string $host the host name
+     * @param string $host The host name.
      * 
-     * @return Url the Url object
+     * @return $this
+     * 
      */
     public function setHost($host)
     {
@@ -267,11 +271,12 @@ class Url
 
     /**
      *
-     * The port number (for example, '80').
+     * Sets the port number (for example, '80').
      * 
-     * @param int $port the port number
+     * @param int $port The port number.
      * 
-     * @return Url  the Url object
+     * @return $this
+     * 
      */
     public function setPort($port)
     {
@@ -281,11 +286,12 @@ class Url
 
     /**
      *
-     * the path elements including the format
+     * Sets the Path object for this URL.
      * 
-     * @param Path $path Path object
+     * @param Path $path The Path object.
      * 
-     * @return Url the Url object
+     * @return $this
+     * 
      */
     public function setPath(Path $path)
     {
@@ -295,11 +301,12 @@ class Url
 
     /**
      *
-     * A Query object
+     * Sets the Query object for this URL.
      * 
-     * @param Query $query The query elements.
+     * @param Query $query The Query object.
      * 
-     * @return Url the Url object
+     * @return $this
+     * 
      */
     public function setQuery(Query $query)
     {
@@ -309,11 +316,12 @@ class Url
 
     /**
      *
-     * The fragment portion (for example, the "foo" in "#foo").
+     * Sets the fragment portion (for example, the "foo" in "#foo").
      * 
-     * @param string $fragment the fragment
+     * @param string $fragment The fragment.
      * 
-     * @return Url the Url object
+     * @return $this
+     * 
      */
     public function setFragment($fragment)
     {
@@ -321,4 +329,3 @@ class Url
         return $this;
     }
 }
- 
