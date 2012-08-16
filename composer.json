@@ -1,5 +1,5 @@
 {
-    "name": "Aura/Uri",
+    "name": "aura/uri",
     "type": "aura-package",
     "description": "The Aura Uri package provides objects to build and manipulate URI strings.",
     "keywords": [
@@ -16,6 +16,7 @@
         }
     ],
     "require": {
-        "php": ">=5.4.0"
+        "php": ">=5.4.0",
+        "aura/default-installer": "*"
     }
 }
