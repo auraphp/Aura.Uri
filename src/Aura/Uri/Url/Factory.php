@@ -125,4 +125,3 @@ class Factory
         return $this->newInstance($this->current);
     }
 }
- 
