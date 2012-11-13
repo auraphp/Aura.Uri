@@ -3,7 +3,7 @@ Aura.Uri
 
 The `Auri.Uri` package provides objects to help you create and manipulate URLs,
 including query strings and path elements. It does so by splitting up the pieces
-of the URL and allowing you modify them individually; you can then then fetch
+of the URL and allowing you modify them individually; you can then fetch
 them as a single URL string. This helps when building complex links,
 such as in a paged navigation system.
 
@@ -26,7 +26,7 @@ script, like so:
 ```php
 <?php
 $url_factory = require '/path/to/Aura.Uri/scripts/instance.php';
-$url = $url_factory->newInstance();
+$url = $url_factory->newCurrent();
 ```
 
 Alternatively, you can add the `src/` directory to your autoloader and
@@ -37,7 +37,7 @@ instantiate a URL factory object:
 use Aura\Uri\Url\Factory as UrlFactory;
 
 $url_factory = new UrlFactory($_SERVER);
-$url = $url_factory->newInstance();
+$url = $url_factory->newCurrent();
 ```
 
 When using the factory, you can populate the URL properties from a URL
@@ -78,8 +78,8 @@ fetch a new URL string from the modified object.
 ```php
 <?php
 // start with a full URL
-$string = 'http://anonymous:guest@example.com/path/to/index.php/foo/bar.xml?baz=dib#anchor');
-$url = $url_factory->newCurrent();
+$string = 'http://anonymous:guest@example.com/path/to/index.php/foo/bar.xml?baz=dib#anchor';
+$url = $url_factory->newInstance($string);
 
 // change to 'https://'
 $url->setScheme('https');
@@ -88,7 +88,7 @@ $url->setScheme('https');
 $url->setUser(null);
 $url->setPass(null);
 
-// change the value of 'baz' to 'zab'
+// change the value of 'baz' from 'dib' to 'zab'
 $url->query->baz = 'zab';
 
 // add a new query element called 'zim' with a value of 'gir'
