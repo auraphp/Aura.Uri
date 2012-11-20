@@ -60,7 +60,8 @@ class Path extends \ArrayObject
         }
 
         // create a string from the encoded elements
-        return implode('/', $path) . $this->format;
+        $url = implode('/', $path) . $this->format;
+        return !empty( $url ) ? '/' . $url : $url;
     }
 
     /**
@@ -80,13 +81,18 @@ class Path extends \ArrayObject
     {
         $this->exchangeArray([]);
         $path = explode('/', $path);
+
+        if ( $path[0] == '' ) {
+            array_shift($path);
+        }
+
         foreach ($path as $key => $val) {
             $this[$key] = urldecode($val);
         }
 
         // $key and $val are already at the end
         $this->setFormat(null);
-        if ($val) {
+        if ( isset($val) ) {
             // find the last dot in the value
             $pos = strrpos($val, '.');
             if ($pos !== false) {
