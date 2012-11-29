@@ -81,4 +81,3 @@ class Query extends \ArrayObject
         return implode('&', $elem);
     }
 }
- 

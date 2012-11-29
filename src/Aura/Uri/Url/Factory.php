@@ -93,6 +93,7 @@ class Factory
         ];
 
         $parts = parse_url($spec);
+        
         $elem = (array) $parts + $elem;
 
         $path = new Path([]);
@@ -125,4 +126,3 @@ class Factory
         return $this->newInstance($this->current);
     }
 }
- 

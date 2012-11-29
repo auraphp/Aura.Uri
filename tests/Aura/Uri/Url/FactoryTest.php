@@ -92,4 +92,14 @@ class FactoryTest extends \PHPUnit_Framework_TestCase
         $expect = 'http://example.com';
         $this->assertSame($expect, $actual);
     }
+    
+    public function testIssue9()
+    {
+        $factory = new Factory([
+            'HTTP_HOST'   => 'example.com',
+        ]);
+        $string = 'http://localhost:8000/site/foo/bar';
+        $url = $factory->newInstance($string);
+        $this->assertSame(array('site', 'foo', 'bar'), $url->path->getArrayCopy());
+    }
 }
