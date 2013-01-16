@@ -25,8 +25,8 @@ class UrlTest extends \PHPUnit_Framework_TestCase
     protected function setUp()
     {
         parent::setUp();
-        $factory = new UrlFactory([]);
-        $this->url = $factory->newInstance($this->spec);
+        $this->factory = new UrlFactory([]);
+        $this->url = $this->factory->newInstance($this->spec);
     }
 
     /**
@@ -82,6 +82,47 @@ class UrlTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals($expected['pass'], $this->url->pass);
         $this->assertEquals($expected['host'], $this->url->host);
         $this->assertEquals($expected['fragment'], $this->url->fragment);
+    }
+
+    /**
+     * @dataProvider getUrls()
+     */
+    public function test__getPublicDomain(
+        $url, 
+        $publicSuffix, 
+        $registerableDomain, 
+        $subdomain,
+        $scheme = '', 
+        $user = '', 
+        $host = ''
+    ) {
+        $url = $this->factory->newInstance($url);
+        $this->assertEquals($host, $url->host);
+    }
+
+    /**
+     * The list is taken from https://github.com/jeremykendall/php-domain-parser/blob/master/tests/library/Pdp/DomainParserTest.php#L43
+     */
+    public function getUrls()
+    {
+        return array(
+            array('http://www.waxaudio.com.au/audio/albums/the_mashening', 'com.au', 'waxaudio.com.au', 'www', 'http', '', 'waxaudio.com.au'),
+            /*
+            array('example.com', 'com', 'example.com', null),
+            array('cea-law.co.il', 'co.il', 'cea-law.co.il', null),
+            array('http://edition.cnn.com/WORLD/', 'com', 'cnn.com', 'edition'),
+            array('http://en.wikipedia.org/', 'org', 'wikipedia.org', 'en'),
+            array('a.b.c.cy', 'c.cy', 'b.c.cy', 'a'),
+            array('https://test.k12.ak.us', 'k12.ak.us', 'test.k12.ak.us', null),
+            array('www.scottwills.co.uk', 'co.uk', 'scottwills.co.uk', 'www'),
+            array('b.ide.kyoto.jp', 'ide.kyoto.jp', 'b.ide.kyoto.jp', null),
+            array('a.b.example.uk.com', 'uk.com', 'example.uk.com', 'a.b'),
+            array('test.nic.ar', 'nic.ar', 'test.nic.ar', null),
+            array('a.b.test.om', 'test.om', 'b.test.om', 'a', null),
+            array('baez.songfest.om', 'songfest.om', 'baez.songfest.om', null),
+            */
+            array('politics.news.omanpost.om', 'omanpost.om', 'news.omanpost.om', 'politics', '', '', 'politics.news.omanpost.om'),
+        );
     }
 
     /**
