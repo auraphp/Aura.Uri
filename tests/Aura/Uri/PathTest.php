@@ -44,7 +44,6 @@ class PathTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @covers Aura\Uri\Path::setFromString
-     * @todo Implement testSetFromString().
      */
     public function testSetFromString()
     {

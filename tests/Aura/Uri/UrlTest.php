@@ -56,7 +56,6 @@ class UrlTest extends \PHPUnit_Framework_TestCase
     
     /**
      * @covers Aura\Uri\Url::__toString
-     * @todo Implement test__toString().
      */
     public function test__toString()
     {
@@ -66,7 +65,6 @@ class UrlTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @covers Aura\Uri\Url::__get
-     * @todo Implement test__get().
      */
     public function test__get()
     {
@@ -86,7 +84,6 @@ class UrlTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @covers Aura\Uri\Url::get
-     * @todo Implement testGet().
      */
     public function testGet()
     {
@@ -97,7 +94,6 @@ class UrlTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @covers Aura\Uri\Url::getFull
-     * @todo Implement testGetFull().
      */
     public function testGetFull()
     {
@@ -107,7 +103,6 @@ class UrlTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @covers Aura\Uri\Url::setScheme
-     * @todo Implement testSetScheme().
      */
     public function testSetScheme()
     {
@@ -118,7 +113,6 @@ class UrlTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @covers Aura\Uri\Url::setUser
-     * @todo Implement testSetUser().
      */
     public function testSetUser()
     {
@@ -129,7 +123,6 @@ class UrlTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @covers Aura\Uri\Url::setPass
-     * @todo Implement testSetPass().
      */
     public function testSetPass()
     {
@@ -140,7 +133,6 @@ class UrlTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @covers Aura\Uri\Url::setHost
-     * @todo Implement testSetHost().
      */
     public function testSetHost()
     {
@@ -151,7 +143,6 @@ class UrlTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @covers Aura\Uri\Url::setPort
-     * @todo Implement testSetPort().
      */
     public function testSetPort()
     {
@@ -162,7 +153,6 @@ class UrlTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @covers Aura\Uri\Url::setPath
-     * @todo Implement testSetPath().
      */
     public function testSetPath()
     {
@@ -173,7 +163,6 @@ class UrlTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @covers Aura\Uri\Url::setQuery
-     * @todo Implement testSetQuery().
      */
     public function testSetQuery()
     {
@@ -184,7 +173,6 @@ class UrlTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @covers Aura\Uri\Url::setFragment
-     * @todo Implement testSetFragment().
      */
     public function testSetFragment()
     {
