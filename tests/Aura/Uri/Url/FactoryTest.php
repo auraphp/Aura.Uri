@@ -14,7 +14,6 @@ class FactoryTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @covers Aura\Uri\Url\Factory::newInstance
-     * @todo Implement testNewInstance().
      */
     public function testNewInstance()
     {
@@ -26,7 +25,6 @@ class FactoryTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @covers Aura\Uri\Url\Factory::newCurrent
-     * @todo Implement testNewCurrent().
      */
     public function testNewCurrent()
     {

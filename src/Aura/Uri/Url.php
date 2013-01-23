@@ -48,9 +48,9 @@ class Url
 
     /**
      * 
-     * The host specification (for example, 'example.com').
+     * The Host object
      * 
-     * @var string
+     * @var Host
      * 
      */
     protected $host;
@@ -103,7 +103,7 @@ class Url
      * 
      * @param string $pass The password.
      * 
-     * @param string $host The hostname.
+     * @param Host $host The host elements.
      * 
      * @param int $port The port number.
      * 
@@ -118,7 +118,7 @@ class Url
         $scheme,
         $user,
         $pass,
-        $host,
+        Host $host,
         $port,
         Path $path,
         Query $query,
@@ -202,8 +202,10 @@ class Url
             $url .= '@';
         }
 
+        $host = $this->host->__toString();
+
         // add the host and port, if any.
-        $url .= (empty($this->host) ? '' : urlencode($this->host))
+        $url .= (empty($host) ? '' : urlencode($host))
               . (empty($this->port) ? '' : ':' . (int) $this->port);
 
         return $url . $this->get();
@@ -256,14 +258,14 @@ class Url
 
     /**
      *
-     * Sets the host name (for example, 'example.com').
+     * Sets the Host object for this URL.
      * 
      * @param string $host The host name.
      * 
      * @return $this
      * 
      */
-    public function setHost($host)
+    public function setHost(Host $host)
     {
         $this->host = $host;
         return $this;

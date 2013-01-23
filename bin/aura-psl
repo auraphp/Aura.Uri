@@ -1,0 +1,17 @@
+#!/usr/bin/env php
+<?php
+
+require_once __DIR__ . '/../src.php';
+
+$cacheDir = null;
+
+if ($argc == 2 && file_exists($argv[1])) {
+    $cacheDir = $argv[1];
+}
+
+try {
+    $manager = new Aura\Uri\PublicSuffixListManager($cacheDir);
+    $manager->refreshPublicSuffixList();
+} catch (\Exception $e) {
+    die($e->getMessage() . PHP_EOL);
+}
