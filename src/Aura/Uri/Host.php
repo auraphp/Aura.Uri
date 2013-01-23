@@ -1,21 +1,21 @@
 <?php
 /**
- * 
+ *
  * This file is part of the Aura project for PHP.
- * 
+ *
  * @package Aura.Uri
- * 
+ *
  * @license http://opensource.org/licenses/bsd-license.php BSD
- * 
+ *
  */
 namespace Aura\Uri;
 
 /**
- * 
+ *
  * Processing the host
- * 
+ *
  * @package Aura.Uri
- * 
+ *
  */
 class Host extends \ArrayObject
 {
@@ -39,17 +39,17 @@ class Host extends \ArrayObject
         parent::__construct($spec);
     }
 
-    /** 
-     * 
-     * Converts the Host object to a string and returns it. 
-     * 
+    /**
+     *
+     * Converts the Host object to a string and returns it.
+     *
      * @return string The full Host this object represents.
-     * 
+     *
      */
     public function __toString()
     {
         $toString = array_filter(
-            [$this['subdomain'], $this['registerableDomain']], 
+            [$this['subdomain'], $this['registerableDomain']],
             'strlen'
         );
 
@@ -57,15 +57,15 @@ class Host extends \ArrayObject
     }
 
     /**
-     * 
+     *
      * Sets values from a host string; overwrites any previous values.
-     * 
+     *
      * To set from an array, use `exchangeArray()`.
-     * 
+     *
      * @param string $spec The host string to use; for example, 'example.com'
-     * 
+     *
      * @return void
-     * 
+     *
      */
     public function setFromString($spec)
     {
@@ -161,5 +161,5 @@ class Host extends \ArrayObject
 
         return $result . '.' . $part;
     }
-    
+
 }

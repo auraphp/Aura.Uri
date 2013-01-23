@@ -1,30 +1,30 @@
 <?php
 /**
- * 
+ *
  * This file is part of the Aura project for PHP.
- * 
+ *
  * @package Aura.Uri
- * 
+ *
  * @license http://opensource.org/licenses/bsd-license.php BSD
- * 
+ *
  */
 namespace Aura\Uri;
 
 /**
- * 
+ *
  * Processing the query string
- * 
+ *
  * @package Aura.Uri
- * 
+ *
  */
 class Query extends \ArrayObject
 {
     /**
-     * 
+     *
      * Returns the query portion as a string.
-     * 
+     *
      * @return string The query string; e.g., `foo=bar&baz=dib`.
-     * 
+     *
      */
     public function __toString()
     {
@@ -32,16 +32,16 @@ class Query extends \ArrayObject
     }
 
     /**
-     * 
+     *
      * Sets values from a query string; overwrites any previous values.
-     * 
+     *
      * To set from an array, use `exchangeArray()`.
-     * 
+     *
      * @param string $spec The query string to use; for example,
      * `foo=bar&baz=dib`.
-     * 
+     *
      * @return void
-     * 
+     *
      */
     public function setFromString($spec)
     {
@@ -51,13 +51,13 @@ class Query extends \ArrayObject
 
     /**
      *
-     * Build string from an array 
-     * 
+     * Build string from an array
+     *
      * @param array $array
-     * 
+     *
      * @param string $prefix Defaults to null
-     * 
-     * @return string Returns a string 
+     *
+     * @return string Returns a string
      */
     protected function buildString(array $array, $prefix = null)
     {
@@ -67,7 +67,7 @@ class Query extends \ArrayObject
             $key = ($prefix)
                  ? $prefix . '[' . $key . ']'
                  : $key;
-            
+
             if (is_array($val)) {
                 $elem[] = $this->buildString($val, $key);
             } else {

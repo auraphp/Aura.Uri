@@ -1,12 +1,12 @@
 <?php
 /**
- * 
+ *
  * This file is part of the Aura project for PHP.
- * 
+ *
  * @package Aura.Uri
- * 
+ *
  * @license http://opensource.org/licenses/bsd-license.php BSD
- * 
+ *
  */
 namespace Aura\Uri\Url;
 
@@ -17,29 +17,29 @@ use Aura\Uri\Host;
 use Aura\Uri\PublicSuffixListManager;
 
 /**
- * 
+ *
  * Factory to create new Url objects.
- * 
+ *
  * @package Aura.Uri
- * 
+ *
  */
 class Factory
 {
     /**
-     * 
+     *
      * A string representing the current URL, built from $_SERVER.
-     * 
+     *
      * @var string
-     * 
+     *
      */
     protected $current;
 
     /**
-     * 
+     *
      * Constructor.
-     * 
+     *
      * @param array $server An array copy of $_SERVER.
-     * 
+     *
      */
     public function __construct(array $server)
     {
@@ -71,15 +71,15 @@ class Factory
     }
 
     /**
-     * 
+     *
      * Creates and returns a new Url object.
-     * 
+     *
      * If no host is specified, the parsing will fail.
-     * 
+     *
      * @param string $spec The URL string to set from.
-     * 
+     *
      * @return Url
-     * 
+     *
      */
     public function newInstance($spec)
     {
@@ -95,7 +95,7 @@ class Factory
         ];
 
         $parts = $this->parse($spec);
-        
+
         $elem = (array) $parts + $elem;
 
         $path = new Path([]);
@@ -103,7 +103,7 @@ class Factory
 
         $query = new Query([]);
         $query->setFromString($elem['query']);
-        
+
         $listManager = new PublicSuffixListManager();
         $host = new Host($listManager->getList(), []);
         $host->setFromString($elem['host']);
@@ -121,17 +121,17 @@ class Factory
     }
 
     /**
-     * 
+     *
      * Creates and returns a new URL object based on the current URL.
-     * 
+     *
      * @return Url
-     * 
+     *
      */
     public function newCurrent()
     {
         return $this->newInstance($this->current);
     }
-    
+
     /**
      * Parses url
      *
