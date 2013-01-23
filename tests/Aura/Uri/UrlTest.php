@@ -4,6 +4,8 @@ namespace Aura\Uri;
 use Aura\Uri\Url\Factory as UrlFactory;
 use Aura\Uri\Path;
 use Aura\Uri\Query;
+use Aura\Uri\Host;
+use Aura\Uri\PublicSuffixList;
 
 /**
  * Test class for Url.
@@ -16,7 +18,15 @@ class UrlTest extends \PHPUnit_Framework_TestCase
      */
     protected $url;
     
+    /**
+     * @var string Url spec
+     */
     protected $spec = 'http://anonymous:guest@example.com/path/to/index.php/foo/bar.xml?baz=dib#anchor';
+
+    /**
+     * @var PublicSuffixList Public Suffix List
+     */
+    protected $publicSuffixList;
 
     /**
      * Sets up the fixture, for example, opens a network connection.
@@ -25,6 +35,7 @@ class UrlTest extends \PHPUnit_Framework_TestCase
     protected function setUp()
     {
         parent::setUp();
+        $this->publicSuffixList = new PublicSuffixList(__DIR__ . '/../../_files/public-suffix-list.php');
         $factory = new UrlFactory([]);
         $this->url = $factory->newInstance($this->spec);
     }
@@ -44,7 +55,14 @@ class UrlTest extends \PHPUnit_Framework_TestCase
             'http',
             'username',
             'password',
-            'example.com',
+            new Host(
+                $this->publicSuffixList,
+                [
+                'subdomain' => null, 
+                'registerableDomain' => 'example.com', 
+                'publicSuffix' => 'com'
+                ]
+            ),
             '80',
             new Path(['foo', 'bar']),
             new Query(['baz' => 'dib', 'zim' => 'gir']),
@@ -136,7 +154,7 @@ class UrlTest extends \PHPUnit_Framework_TestCase
      */
     public function testSetHost()
     {
-        $host = 'example.com';
+        $host = new Host($this->publicSuffixList);
         $this->url->setHost($host);
         $this->assertSame($host, $this->url->host);
     }
