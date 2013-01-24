@@ -16,9 +16,6 @@
         "php": ">=5.4.0",
         "aura/installer-default": "1.0.0"
     },
-    "require-dev": {
-        "mikey179/vfsStream": "1.1.*"
-    },
     "bin": ["bin/aura-psl"],
     "autoload": {
         "psr-0": {
