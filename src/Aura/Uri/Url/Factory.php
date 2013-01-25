@@ -136,59 +136,14 @@ class Factory
      * Parses url
      *
      * @param  string $spec Url to parse
-     * @return Domain Parsed domain object
+     * @return array Parsed url
      */
     public function parse($spec)
     {
-        $parts = [
-            'scheme'   => null,
-            'user'     => null,
-            'pass'     => null,
-            'host'     => null,
-            'port'     => null,
-            'path'     => null,
-            'query'    => null,
-            'fragment' => null,
-        ];
-
-        list($parts['scheme'], $spec) = explode('://', $spec);
-
-        // If all that's left in $spec is a path, return empty array
-        if (strpos($spec, '/') === 0) {
-            return array();
+        if (strpos($spec, 'http') !== 0) {
+            $spec = 'http://' . $spec;
         }
 
-        // Does the URL contain a path?
-        if (strpos($spec, '/') !== false) {
-            // Extract path (and everything after)
-            $parts['path'] = substr($spec, strpos($spec, '/'));
-            // Remove path from host
-            $spec = str_replace($parts['path'], '', $spec);
-        }
-
-        // Does the path include a querystring?
-        if (strpos($parts['path'], '?') !== false) {
-            list($parts['path'], $parts['query']) = explode('?', $parts['path']);
-        }
-
-        // Does the querystring include a fragment?
-        if (strpos($parts['query'], '#') !== false) {
-            list($parts['query'], $parts['fragment']) = explode('#', $parts['query']);
-        }
-
-        $parts['host'] = $spec;
-
-        // Does $spec contain user:pass?
-        if (strpos($spec, '@') !== false) {
-            list($authParts, $parts['host']) = explode('@', $spec);
-            list($parts['user'], $parts['pass']) = explode(':', $authParts);
-        }
-
-        // Does host contain a port?
-        if (strpos($parts['host'], ':') !== false) {
-            list($parts['host'], $parts['port']) = explode(':', $parts['host']);
-        }
-
-        return $parts;
+        return parse_url($spec);
     }
 }
