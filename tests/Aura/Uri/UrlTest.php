@@ -26,7 +26,7 @@ class UrlTest extends \PHPUnit_Framework_TestCase
     /**
      * @var PublicSuffixList Public Suffix List
      */
-    protected $publicSuffixList;
+    protected $psl;
 
     /**
      * Sets up the fixture, for example, opens a network connection.
@@ -35,8 +35,11 @@ class UrlTest extends \PHPUnit_Framework_TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->publicSuffixList = new PublicSuffixList(__DIR__ . '/../../_files/public-suffix-list.php');
-        $factory = new UrlFactory([]);
+        $file = dirname(dirname(dirname(__DIR__))) . DIRECTORY_SEPARATOR
+              . 'data' . DIRECTORY_SEPARATOR
+              . 'public-suffix-list.php';
+        $this->psl = new PublicSuffixList(require $file);
+        $factory = new UrlFactory([], $this->psl);
         $this->url = $factory->newInstance($this->spec);
     }
 
@@ -56,7 +59,7 @@ class UrlTest extends \PHPUnit_Framework_TestCase
             'username',
             'password',
             new Host(
-                $this->publicSuffixList,
+                $this->psl,
                 [
                 'subdomain' => null, 
                 'registerableDomain' => 'example.com', 
@@ -154,7 +157,7 @@ class UrlTest extends \PHPUnit_Framework_TestCase
      */
     public function testSetHost()
     {
-        $host = new Host($this->publicSuffixList);
+        $host = new Host($this->psl);
         $this->url->setHost($host);
         $this->assertSame($host, $this->url->host);
     }

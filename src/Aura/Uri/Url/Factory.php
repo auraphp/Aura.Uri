@@ -14,7 +14,7 @@ use Aura\Uri\Url;
 use Aura\Uri\Path;
 use Aura\Uri\Query;
 use Aura\Uri\Host;
-use Aura\Uri\PublicSuffixListManager;
+use Aura\Uri\PublicSuffixList;
 
 /**
  *
@@ -34,6 +34,8 @@ class Factory
      */
     protected $current;
 
+    protected $psl;
+    
     /**
      *
      * Constructor.
@@ -41,7 +43,7 @@ class Factory
      * @param array $server An array copy of $_SERVER.
      *
      */
-    public function __construct(array $server)
+    public function __construct(array $server, PublicSuffixList $psl)
     {
         $https  = isset($server['HTTPS'])
                && strtolower($server['HTTPS']) == 'on';
@@ -68,6 +70,8 @@ class Factory
         }
 
         $this->current = $scheme . '://' . $host . $resource;
+        
+        $this->psl = $psl;
     }
 
     /**
@@ -104,8 +108,7 @@ class Factory
         $query = new Query([]);
         $query->setFromString($elem['query']);
 
-        $listManager = new PublicSuffixListManager();
-        $host = new Host($listManager->getList(), []);
+        $host = new Host($this->psl, []);
         $host->setFromString($elem['host']);
 
         return new Url(

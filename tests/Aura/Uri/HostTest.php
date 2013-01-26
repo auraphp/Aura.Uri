@@ -12,7 +12,12 @@ class HostTest extends \PHPUnit_Framework_TestCase
     protected function setUp()
     {
         parent::setUp();
-        $list = new PublicSuffixList(__DIR__ . '/../../_files/public-suffix-list.php');
+        
+        $file = dirname(dirname(dirname(__DIR__))) . DIRECTORY_SEPARATOR
+              . 'data' . DIRECTORY_SEPARATOR
+              . 'public-suffix-list.php';
+        
+        $list = new PublicSuffixList(require $file);
         $this->host = new Host($list);
     }
 
@@ -55,9 +60,9 @@ class HostTest extends \PHPUnit_Framework_TestCase
     {
         $this->host->setFromString($url);
 
-        $this->assertSame($subdomain, $this->host['subdomain']);
-        $this->assertEquals($publicSuffix, $this->host['publicSuffix']);
-        $this->assertEquals($registerableDomain, $this->host['registerableDomain']);
+        $this->assertSame($subdomain, $this->host->subdomain);
+        $this->assertEquals($publicSuffix, $this->host->publicSuffix);
+        $this->assertEquals($registerableDomain, $this->host->registerableDomain);
     }
 
     public function parseDataProvider()

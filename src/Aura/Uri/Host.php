@@ -17,28 +17,41 @@ namespace Aura\Uri;
  * @package Aura.Uri
  *
  */
-class Host extends \ArrayObject
+class Host
 {
     /**
      * @var PublicSuffixList Public Suffix List
      */
-    protected $publicSuffixList;
+    protected $psl;
+
+
+    protected $subdomain;
+    protected $registerableDomain;
+    protected $publicSuffix;
+
 
     /**
      *
      * Constructor
      *
-     * @param PublicSuffixList $publicSuffixList Public Suffix List
+     * @param PublicSuffixList $psl Public Suffix List
      *
      * @param array $spec Host elements
      *
      */
-    public function __construct(PublicSuffixList $publicSuffixList, array $spec = array())
+    public function __construct(PublicSuffixList $psl, array $spec = [])
     {
-        $this->publicSuffixList = $publicSuffixList;
-        parent::__construct($spec);
+        $this->psl = $psl;
+        foreach ($spec as $key => $val) {
+            $this->$key = $val;
+        }
     }
 
+    public function __get($key)
+    {
+        return $this->$key;
+    }
+    
     /**
      *
      * Converts the Host object to a string and returns it.
@@ -49,7 +62,7 @@ class Host extends \ArrayObject
     public function __toString()
     {
         $toString = array_filter(
-            [$this['subdomain'], $this['registerableDomain']],
+            [$this->subdomain, $this->registerableDomain],
             'strlen'
         );
 
@@ -69,18 +82,16 @@ class Host extends \ArrayObject
      */
     public function setFromString($spec)
     {
-        $this->exchangeArray([]);
+        $this->registerableDomain = $this->getRegisterableDomain($spec);
+        $this->publicSuffix = substr($this->registerableDomain, strpos($this->registerableDomain, '.') + 1);
 
-        $this['registerableDomain'] = $this->getRegisterableDomain($spec);
-        $this['publicSuffix'] = substr($this['registerableDomain'], strpos($this['registerableDomain'], '.') + 1);
-
-        $registerableDomainParts = explode('.', $this['registerableDomain']);
+        $registerableDomainParts = explode('.', $this->registerableDomain);
         $hostParts = explode('.', $spec);
         $subdomainParts = array_diff($hostParts, $registerableDomainParts);
-        $this['subdomain'] = implode('.', $subdomainParts);
+        $this->subdomain = implode('.', $subdomainParts);
 
-        if (empty($this['subdomain']) && !is_null($this['subdomain'])) {
-            $this['subdomain'] = null;
+        if (empty($this->subdomain) && !is_null($this->subdomain)) {
+            $this->subdomain = null;
         }
     }
 
@@ -108,7 +119,7 @@ class Host extends \ArrayObject
         $publicSuffix = array();
 
         $domainParts = explode('.', strtolower($domain));
-        $registerableDomain = $this->breakdown($domainParts, $this->publicSuffixList, $publicSuffix);
+        $registerableDomain = $this->breakdown($domainParts, $this->psl, $publicSuffix);
 
         // Remove null values
         $publicSuffix = array_filter($publicSuffix, 'strlen');
@@ -131,28 +142,28 @@ class Host extends \ArrayObject
      * @link https://github.com/usrflo/registered-domain-libs/blob/master/PHP/regDomain.inc.php regDomain.inc.php
      *
      * @param array $domainParts      Domain parts as array
-     * @param array $publicSuffixList Array representation of the Public Suffix
+     * @param array $psl Array representation of the Public Suffix
      * List
      * @param  array  $publicSuffix Builds the public suffix during recursion
      * @return string Public suffix
      */
-    protected function breakdown(array $domainParts, $publicSuffixList, &$publicSuffix)
+    protected function breakdown(array $domainParts, $psl, &$publicSuffix)
     {
         $part = array_pop($domainParts);
         $result = null;
 
-        if (array_key_exists($part, $publicSuffixList) && array_key_exists('!', $publicSuffixList[$part])) {
+        if (array_key_exists($part, $psl) && array_key_exists('!', $psl[$part])) {
             return $part;
         }
 
-        if (array_key_exists($part, $publicSuffixList)) {
+        if (array_key_exists($part, $psl)) {
             array_unshift($publicSuffix, $part);
-            $result = $this->breakdown($domainParts, $publicSuffixList[$part], $publicSuffix);
+            $result = $this->breakdown($domainParts, $psl[$part], $publicSuffix);
         }
 
-        if (array_key_exists('*', $publicSuffixList)) {
+        if (array_key_exists('*', $psl)) {
             array_unshift($publicSuffix, $part);
-            $result = $this->breakdown($domainParts, $publicSuffixList['*'], $publicSuffix);
+            $result = $this->breakdown($domainParts, $psl['*'], $publicSuffix);
         }
 
         if ($result === null) {
