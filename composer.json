@@ -4,7 +4,6 @@
     "description": "The Aura Uri package provides objects to build and manipulate URL strings.",
     "keywords": [ "uri", "url" ],
     "homepage": "http://auraphp.github.com/Aura.Uri",
-    "version": "1.0.0-dev",
     "license": "BSD-2-Clause",
     "authors": [
         {
