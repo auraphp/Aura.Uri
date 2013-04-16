@@ -4,6 +4,8 @@ namespace Aura\Uri;
 use Aura\Uri\Url\Factory as UrlFactory;
 use Aura\Uri\Path;
 use Aura\Uri\Query;
+use Aura\Uri\Host;
+use Aura\Uri\PublicSuffixList;
 
 /**
  * Test class for Url.
@@ -16,7 +18,15 @@ class UrlTest extends \PHPUnit_Framework_TestCase
      */
     protected $url;
     
+    /**
+     * @var string Url spec
+     */
     protected $spec = 'http://anonymous:guest@example.com/path/to/index.php/foo/bar.xml?baz=dib#anchor';
+
+    /**
+     * @var PublicSuffixList Public Suffix List
+     */
+    protected $psl;
 
     /**
      * Sets up the fixture, for example, opens a network connection.
@@ -25,7 +35,11 @@ class UrlTest extends \PHPUnit_Framework_TestCase
     protected function setUp()
     {
         parent::setUp();
-        $factory = new UrlFactory([]);
+        $file = dirname(dirname(dirname(__DIR__))) . DIRECTORY_SEPARATOR
+              . 'data' . DIRECTORY_SEPARATOR
+              . 'public-suffix-list.php';
+        $this->psl = new PublicSuffixList(require $file);
+        $factory = new UrlFactory([], $this->psl);
         $this->url = $factory->newInstance($this->spec);
     }
 
@@ -44,7 +58,14 @@ class UrlTest extends \PHPUnit_Framework_TestCase
             'http',
             'username',
             'password',
-            'example.com',
+            new Host(
+                $this->psl,
+                [
+                'subdomain' => null, 
+                'registerableDomain' => 'example.com', 
+                'publicSuffix' => 'com'
+                ]
+            ),
             '80',
             new Path(['foo', 'bar']),
             new Query(['baz' => 'dib', 'zim' => 'gir']),
@@ -56,7 +77,6 @@ class UrlTest extends \PHPUnit_Framework_TestCase
     
     /**
      * @covers Aura\Uri\Url::__toString
-     * @todo Implement test__toString().
      */
     public function test__toString()
     {
@@ -66,7 +86,6 @@ class UrlTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @covers Aura\Uri\Url::__get
-     * @todo Implement test__get().
      */
     public function test__get()
     {
@@ -86,7 +105,6 @@ class UrlTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @covers Aura\Uri\Url::get
-     * @todo Implement testGet().
      */
     public function testGet()
     {
@@ -97,7 +115,6 @@ class UrlTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @covers Aura\Uri\Url::getFull
-     * @todo Implement testGetFull().
      */
     public function testGetFull()
     {
@@ -107,7 +124,6 @@ class UrlTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @covers Aura\Uri\Url::setScheme
-     * @todo Implement testSetScheme().
      */
     public function testSetScheme()
     {
@@ -118,7 +134,6 @@ class UrlTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @covers Aura\Uri\Url::setUser
-     * @todo Implement testSetUser().
      */
     public function testSetUser()
     {
@@ -129,7 +144,6 @@ class UrlTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @covers Aura\Uri\Url::setPass
-     * @todo Implement testSetPass().
      */
     public function testSetPass()
     {
@@ -140,18 +154,16 @@ class UrlTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @covers Aura\Uri\Url::setHost
-     * @todo Implement testSetHost().
      */
     public function testSetHost()
     {
-        $host = 'example.com';
+        $host = new Host($this->psl);
         $this->url->setHost($host);
         $this->assertSame($host, $this->url->host);
     }
 
     /**
      * @covers Aura\Uri\Url::setPort
-     * @todo Implement testSetPort().
      */
     public function testSetPort()
     {
@@ -162,7 +174,6 @@ class UrlTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @covers Aura\Uri\Url::setPath
-     * @todo Implement testSetPath().
      */
     public function testSetPath()
     {
@@ -173,7 +184,6 @@ class UrlTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @covers Aura\Uri\Url::setQuery
-     * @todo Implement testSetQuery().
      */
     public function testSetQuery()
     {
@@ -184,7 +194,6 @@ class UrlTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @covers Aura\Uri\Url::setFragment
-     * @todo Implement testSetFragment().
      */
     public function testSetFragment()
     {
