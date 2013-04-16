@@ -34,14 +34,20 @@ class Factory
      */
     protected $current;
 
+    /**
+     * Public suffix list
+     *
+     * @var PublicSuffixList
+     */
     protected $psl;
-    
+
     /**
      *
      * Constructor.
      *
      * @param array $server An array copy of $_SERVER.
      *
+     * @param PublicSuffixList $psl Public suffix list
      */
     public function __construct(array $server, PublicSuffixList $psl)
     {
@@ -70,7 +76,7 @@ class Factory
         }
 
         $this->current = $scheme . '://' . $host . $resource;
-        
+
         $this->psl = $psl;
     }
 
@@ -139,7 +145,7 @@ class Factory
      * Parses url
      *
      * @param  string $spec Url to parse
-     * @return array Parsed url
+     * @return array  Parsed url
      */
     public function parse($spec)
     {

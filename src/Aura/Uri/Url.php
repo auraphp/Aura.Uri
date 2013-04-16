@@ -263,7 +263,7 @@ class Url
      *
      * Sets the Host object for this URL.
      *
-     * @param string $host The host name.
+     * @param Host $host The host name.
      *
      * @return $this
      *
