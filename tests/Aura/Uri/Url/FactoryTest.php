@@ -14,7 +14,6 @@ class FactoryTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @covers Aura\Uri\Url\Factory::newInstance
-     * @todo Implement testNewInstance().
      */
     public function testNewInstance()
     {
@@ -26,7 +25,6 @@ class FactoryTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @covers Aura\Uri\Url\Factory::newCurrent
-     * @todo Implement testNewCurrent().
      */
     public function testNewCurrent()
     {
@@ -101,5 +99,15 @@ class FactoryTest extends \PHPUnit_Framework_TestCase
         $string = 'http://localhost:8000/site/foo/bar';
         $url = $factory->newInstance($string);
         $this->assertSame(array('site', 'foo', 'bar'), $url->path->getArrayCopy());
+    }
+
+    public function testNewInstance_noScheme()
+    {
+        $this->factory = new Factory([]);
+        $string = 'example.com';
+        $url = $this->factory->newInstance($string);
+        $actual = $url->__toString();
+        $expect = 'http://example.com';
+        $this->assertSame($expect, $actual);
     }
 }

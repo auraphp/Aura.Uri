@@ -1,124 +1,124 @@
 <?php
 /**
- * 
+ *
  * This file is part of the Aura project for PHP.
- * 
+ *
  * @package Aura.Uri
- * 
+ *
  * @license http://opensource.org/licenses/bsd-license.php BSD
- * 
+ *
  */
 namespace Aura\Uri;
 
 /**
- * 
+ *
  * Manipulates and generates URLs.
- * 
+ *
  * @package Aura.Uri
- * 
+ *
  */
 class Url
 {
     /**
-     * 
+     *
      * The scheme (for example 'http' or 'https').
-     * 
+     *
      * @var string
-     * 
+     *
      */
     protected $scheme;
 
     /**
-     * 
+     *
      * The username, if any.
-     * 
+     *
      * @var string
-     * 
+     *
      */
     protected $user;
 
     /**
-     * 
+     *
      * The password, if any.
-     * 
+     *
      * @var string
-     * 
+     *
      */
     protected $pass;
 
     /**
-     * 
-     * The host specification (for example, 'example.com').
-     * 
-     * @var string
-     * 
+     *
+     * The Host object
+     *
+     * @var Host
+     *
      */
     protected $host;
 
     /**
-     * 
+     *
      * The port number (for example, '80').
-     * 
+     *
      * @var string
-     * 
+     *
      */
     protected $port;
 
     /**
-     * 
+     *
      * A Path object.
-     * 
+     *
      * @var Path
-     * 
+     *
      */
     protected $path;
 
     /**
-     * 
+     *
      * A Query object.
-     * 
+     *
      * @var Query
-     * 
+     *
      */
     protected $query;
 
     /**
-     * 
+     *
      * The fragment portion (for example, the "foo" in "#foo").
-     * 
+     *
      * @var string
-     * 
+     *
      */
     protected $fragment;
 
     // authority = userinfo@host:port
 
     /**
-     * 
+     *
      * Constructor.
-     * 
+     *
      * @param string $scheme The URL scheme (e.g. `http`).
-     * 
+     *
      * @param string $user The username.
-     * 
+     *
      * @param string $pass The password.
-     * 
-     * @param string $host The hostname.
-     * 
+     *
+     * @param Host $host The host elements.
+     *
      * @param int $port The port number.
-     * 
+     *
      * @param Path $path The path elements, including format.
-     * 
+     *
      * @param Query $query The query elements.
-     * 
+     *
      * @param string $fragment The fragment.
-     * 
+     *
      */
     public function __construct(
         $scheme,
         $user,
         $pass,
-        $host,
+        Host $host,
         $port,
         Path $path,
         Query $query,
@@ -134,12 +134,12 @@ class Url
         $this->fragment = $fragment;
     }
 
-    /** 
-     * 
-     * Converts the URI object to a string and returns it. 
-     * 
+    /**
+     *
+     * Converts the URI object to a string and returns it.
+     *
      * @return string The full URI this object represents.
-     * 
+     *
      */
     public function __toString()
     {
@@ -147,25 +147,25 @@ class Url
     }
 
     /**
-     * 
+     *
      * Magic get for properties.
-     * 
+     *
      * @param string $key The property to get.
-     * 
+     *
      * @return mixed The value of the property.
-     * 
+     *
      */
     public function __get($key)
     {
         return $this->$key;
     }
-    
+
     /**
-     * 
+     *
      * Returns the URL as a string, not including scheme or host.
-     * 
+     *
      * @return string The URL string.
-     * 
+     *
      */
     public function get()
     {
@@ -180,11 +180,11 @@ class Url
     }
 
     /**
-     * 
+     *
      * Returns the URL as a string, including the scheme and host.
-     * 
+     *
      * @return string The URL string.
-     * 
+     *
      */
     public function getFull()
     {
@@ -202,8 +202,10 @@ class Url
             $url .= '@';
         }
 
+        $host = $this->host->__toString();
+
         // add the host and port, if any.
-        $url .= (empty($this->host) ? '' : urlencode($this->host))
+        $url .= (empty($host) ? '' : urlencode($host))
               . (empty($this->port) ? '' : ':' . (int) $this->port);
 
         return $url . $this->get();
@@ -212,120 +214,128 @@ class Url
     /**
      *
      * Set the scheme (for example 'http' or 'https').
-     * 
+     *
      * @param string $scheme The scheme (for example 'http' or 'https').
-     * 
+     *
      * @return $this
-     * 
+     *
      */
     public function setScheme($scheme)
     {
         $this->scheme = $scheme;
+
         return $this;
     }
 
     /**
-     * 
+     *
      * Sets the username.
      *
      * @param string $user The username.
-     * 
+     *
      * @return $this
-     * 
+     *
      */
     public function setUser($user)
     {
         $this->user = $user;
+
         return $this;
     }
 
     /**
-     * 
+     *
      * Sets the password.
      *
      * @param string $pass The password.
-     * 
+     *
      * @return $this
-     * 
+     *
      */
     public function setPass($pass)
     {
         $this->pass = $pass;
+
         return $this;
     }
 
     /**
      *
-     * Sets the host name (for example, 'example.com').
-     * 
+     * Sets the Host object for this URL.
+     *
      * @param string $host The host name.
-     * 
+     *
      * @return $this
-     * 
+     *
      */
-    public function setHost($host)
+    public function setHost(Host $host)
     {
         $this->host = $host;
+
         return $this;
     }
 
     /**
      *
      * Sets the port number (for example, '80').
-     * 
+     *
      * @param int $port The port number.
-     * 
+     *
      * @return $this
-     * 
+     *
      */
     public function setPort($port)
     {
         $this->port = $port;
+
         return $this;
     }
 
     /**
      *
      * Sets the Path object for this URL.
-     * 
+     *
      * @param Path $path The Path object.
-     * 
+     *
      * @return $this
-     * 
+     *
      */
     public function setPath(Path $path)
     {
         $this->path = $path;
+
         return $this;
     }
 
     /**
      *
      * Sets the Query object for this URL.
-     * 
+     *
      * @param Query $query The Query object.
-     * 
+     *
      * @return $this
-     * 
+     *
      */
     public function setQuery(Query $query)
     {
         $this->query = $query;
+
         return $this;
     }
 
     /**
      *
      * Sets the fragment portion (for example, the "foo" in "#foo").
-     * 
+     *
      * @param string $fragment The fragment.
-     * 
+     *
      * @return $this
-     * 
+     *
      */
     public function setFragment($fragment)
     {
         $this->fragment = $fragment;
+
         return $this;
     }
 }
