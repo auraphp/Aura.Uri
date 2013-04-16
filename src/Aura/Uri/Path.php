@@ -38,25 +38,12 @@ class Path extends \ArrayObject
      */
     public function __toString()
     {
-        // Url-encode only these characters in path elements.
-        // Characters are ' ' (space), '/', '?', '&', and '#'.
-        $encode = array (
-            ' ' => '+',
-            '/' => '%2F',
-            '?' => '%3F',
-            '&' => '%26',
-            '#' => '%23',
-        );
-
-        $keys = array_keys($encode);
-        $vals = array_values($encode);
-
         $spec = $this->getArrayCopy();
-
-        // encode each path element
         $path = [];
+        
+        // encode each path element
         foreach ($spec as $elem) {
-            $path[] = str_replace($keys, $vals, $elem);
+            $path[] = rawurlencode($elem);
         }
 
         // create a string from the encoded elements

@@ -73,8 +73,8 @@ class Query extends \ArrayObject
             } else {
                 $val = ($val === null || $val === false)
                      ? ''
-                     : urlencode($val);
-                $elem[] = urlencode($key) . '=' . $val;
+                     : rawurlencode($val);
+                $elem[] = rawurlencode($key) . '=' . $val;
             }
         }
 

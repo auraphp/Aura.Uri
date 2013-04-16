@@ -176,7 +176,7 @@ class Url
         // elements to allow for string-zero values.
         return $this->path->__toString()
              . (empty($query)                ? '' : '?' . $query)
-             . (trim($this->fragment) === '' ? '' : '#' . urlencode($this->fragment));
+             . (trim($this->fragment) === '' ? '' : '#' . rawurlencode($this->fragment));
     }
 
     /**
@@ -191,19 +191,19 @@ class Url
         // start with the scheme
         $url = empty($this->scheme)
              ? ''
-             : urlencode($this->scheme) . '://';
+             : rawurlencode($this->scheme) . '://';
 
         // add the username and password, if any.
         if (! empty($this->user)) {
-            $url .= urlencode($this->user);
+            $url .= rawurlencode($this->user);
             if (! empty($this->pass)) {
-                $url .= ':' . urlencode($this->pass);
+                $url .= ':' . rawurlencode($this->pass);
             }
             $url .= '@';
         }
 
         // add the host and port, if any.
-        $url .= (empty($this->host) ? '' : urlencode($this->host))
+        $url .= (empty($this->host) ? '' : rawurlencode($this->host))
               . (empty($this->port) ? '' : ':' . (int) $this->port);
 
         return $url . $this->get();
