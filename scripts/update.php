@@ -35,23 +35,21 @@ function build(array &$data, array $parts)
 
 /**
  * 
- * Update the text and data files.
+ * Update the public suffix list files.
  * 
  */
 
-// get the origin text file and save it locally
+// get the origin text file
 $text = file_get_contents('http://mxr.mozilla.org/mozilla-central/source/netwerk/dns/effective_tld_names.dat?raw=1');
-$text_file = dirname(__DIR__) . DIRECTORY_SEPARATOR
-           . 'data' . DIRECTORY_SEPARATOR
-           . 'public-suffix-list.txt';
-file_put_contents($text_file, $text);
+$lines = explode("\n", $text);
 
-// convert the origin text lines to a data array
+// convert text lines to data
 $data = [];
-$lines = file($text_file, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
 foreach ($lines as $line) {
-    // skip comment lines
-    if (substr($line, 0, 2) == '//') {
+    // massage the line
+    $line = trim($line);
+    // skip empty and comment lines
+    if (! $line || substr($line, 0, 2) == '//') {
         continue;
     }
     // get the line parts and build into the psl data
@@ -59,12 +57,12 @@ foreach ($lines as $line) {
     build($data, $parts);
 }
 
-// write the data aray to a PHP file
+// write the data to a PHP file
 $code = '<?php' . PHP_EOL . 'return ' . var_export($data, true) . ';';
-$code_file = dirname(__DIR__) . DIRECTORY_SEPARATOR
-           . 'data' . DIRECTORY_SEPARATOR
-           . 'public-suffix-list.php';
-file_put_contents($code_file, $code);
+$file = dirname(__DIR__) . DIRECTORY_SEPARATOR
+      . 'data' . DIRECTORY_SEPARATOR
+      . 'public-suffix-list.php';
+file_put_contents($file, $code);
 
 // done!
 exit(0);
