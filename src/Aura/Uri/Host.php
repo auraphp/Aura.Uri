@@ -89,11 +89,6 @@ class Host
         return implode('.', $str);
     }
 
-    public function __get($name)
-    {
-        throw new \Exception;
-    }
-    
     /**
      *
      * Sets values from a host string; overwrites any previous values.
@@ -110,24 +105,39 @@ class Host
         $this->subdomain = $this->psl->getSubdomain($spec);
     }
     
-    public function getPsl()
-    {
-        return $this->psl;
-    }
-    
+    /**
+     * 
+     * Returns the public suffix portion of the host.
+     * 
+     * @return string
+     * 
+     */
     public function getPublicSuffix()
     {
         return $this->public_suffix;
     }
 
+    /**
+     * 
+     * Returns the subdomain portion of the host.
+     * 
+     * @return string
+     * 
+     */
     public function getSubdomain()
     {
         return $this->subdomain;
     }
     
+    /**
+     * 
+     * Returns the registerable domain portion of the host.
+     * 
+     * @return string
+     * 
+     */
     public function getRegisterableDomain()
     {
         return $this->registerable_domain;
     }
-    
 }
