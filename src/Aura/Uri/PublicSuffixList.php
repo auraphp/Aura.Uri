@@ -20,14 +20,20 @@ namespace Aura\Uri;
 class PublicSuffixList
 {
     /**
-     * @var array Public suffix list
+     * 
+     * Public suffix list data.
+     * 
+     * @var array 
+     * 
      */
     protected $psl;
 
     /**
-     * Public constructor
+     * 
+     * Constructor.
      *
      * @param array $list Array representation of the Public Suffix List
+     * 
      */
     public function __construct(array $list)
     {
