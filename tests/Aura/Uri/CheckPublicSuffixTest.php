@@ -18,18 +18,33 @@ class CheckPublicSuffixTest extends \PHPUnit_Framework_TestCase
     protected function setUp()
     {
         parent::setUp();
-        
-        $file = dirname(dirname(dirname(__DIR__))) . DIRECTORY_SEPARATOR
-              . 'data' . DIRECTORY_SEPARATOR
-              . 'public-suffix-list.php';
-        
-        $this->psl = new PublicSuffixList(require $file);
-    }
-
-    protected function tearDown()
-    {
-        $this->psl = null;
-        parent::tearDown();
+        $this->psl = new PublicSuffixList([
+            'ac' => [],
+            'biz' => [],
+            'com' => [
+                'uk' => [],
+            ],
+            'cy' => [
+                'c' => [],
+            ],
+            'jp' => [
+                'ac' => [],
+                'kyoto' => [
+                    'ide' => [],
+                ],
+                'kobe' => [
+                    'c' => [],
+                ],
+            ],
+            'om' => [
+                'test' => [],
+            ],
+            'us' => [
+                'ak' => [
+                    'k12' => [],
+                ],
+            ],
+        ]);
     }
 
     public function testPublicSuffixSpec()
