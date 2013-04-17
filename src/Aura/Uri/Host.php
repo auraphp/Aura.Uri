@@ -20,32 +20,48 @@ namespace Aura\Uri;
 class Host
 {
     /**
-     * @var PublicSuffixList Public Suffix List
+     * 
+     * The public suffix list.
+     * 
+     * @var array
+     * 
      */
     protected $psl;
 
     /**
-     * @var string Subdomain portion of host
+     * 
+     * Subdomain portion of host.
+     * 
+     * @var string
+     * 
      */
     protected $subdomain;
 
     /**
-     * @var string Registerable domain portion of host
+     * 
+     * Registerable domain portion of host.
+     * 
+     * @var string 
+     * 
      */
-    protected $registerableDomain;
+    protected $registerable_domain;
 
     /**
-     * @var string Public suffix portion of host
+     * 
+     * Public suffix portion of host.
+     * 
+     * @var string
+     * 
      */
-    protected $publicSuffix;
+    protected $public_suffix;
 
     /**
      *
-     * Constructor
+     * Constructor.
      *
-     * @param PublicSuffixList $psl Public Suffix List
+     * @param PublicSuffixList $psl Public suffix list.
      *
-     * @param array $spec Host elements
+     * @param array $spec Host elements.
      *
      */
     public function __construct(PublicSuffixList $psl, array $spec = [])
@@ -57,46 +73,61 @@ class Host
     }
 
     /**
-     * Returns value of property $name
      *
-     * @param  string $name Name of property
-     * @return mixed  Value of property $name
-     */
-    public function __get($name)
-    {
-        return $this->$name;
-    }
-
-    /**
-     *
-     * Converts the Host object to a string and returns it.
+     * Returns this Host object as a string.
      *
      * @return string The full Host this object represents.
      *
      */
     public function __toString()
     {
-        $toString = array_filter(
-            [$this->subdomain, $this->registerableDomain],
+        $str = array_filter(
+            [$this->subdomain, $this->registerable_domain],
             'strlen'
         );
 
-        return implode('.', $toString);
+        return implode('.', $str);
     }
 
+    public function __get($name)
+    {
+        throw new \Exception;
+    }
+    
     /**
      *
      * Sets values from a host string; overwrites any previous values.
      *
-     * @param string $spec The host string to use; for example, 'example.com'
+     * @param string $spec The host string to use; e.g., 'example.com'.
      *
      * @return void
      *
      */
     public function setFromString($spec)
     {
-        $this->publicSuffix = $this->psl->getPublicSuffix($spec);
-        $this->registerableDomain = $this->psl->getRegisterableDomain($spec);
+        $this->public_suffix = $this->psl->getPublicSuffix($spec);
+        $this->registerable_domain = $this->psl->getRegisterableDomain($spec);
         $this->subdomain = $this->psl->getSubdomain($spec);
     }
+    
+    public function getPsl()
+    {
+        return $this->psl;
+    }
+    
+    public function getPublicSuffix()
+    {
+        return $this->public_suffix;
+    }
+
+    public function getSubdomain()
+    {
+        return $this->subdomain;
+    }
+    
+    public function getRegisterableDomain()
+    {
+        return $this->registerable_domain;
+    }
+    
 }
