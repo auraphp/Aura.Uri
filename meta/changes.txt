@@ -1,1 +1,5 @@
-Initial release.
+- [NEW] Add PublicSuffixList support. Thanks, Jeremy Kendall.
+
+- [CHG] Use rawurlencode() throughout, instead of urlencode() and custom encoding logic.
+
+- [CHG] CS fixes. Thanks, Jeremy Kendall.
