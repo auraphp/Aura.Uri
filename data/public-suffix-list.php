@@ -1656,6 +1656,9 @@ return array (
   ),
   'com' => 
   array (
+    'elasticbeanstalk' => 
+    array (
+    ),
     'amazonaws' => 
     array (
       'elb' => 
@@ -3343,6 +3346,9 @@ return array (
   'io' => 
   array (
     'com' => 
+    array (
+    ),
+    'github' => 
     array (
     ),
   ),
