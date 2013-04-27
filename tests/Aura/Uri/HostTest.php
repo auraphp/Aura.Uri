@@ -12,7 +12,7 @@ class HostTest extends \PHPUnit_Framework_TestCase
     protected function setUp()
     {
         parent::setUp();
-        
+
         $list = new PublicSuffixList([
             'au' => [
                 'com' => [],
@@ -43,7 +43,7 @@ class HostTest extends \PHPUnit_Framework_TestCase
                 ],
             ],
         ]);
-        
+
         $this->host = new Host($list);
     }
 
@@ -87,8 +87,13 @@ class HostTest extends \PHPUnit_Framework_TestCase
         $this->host->setFromString($url);
 
         $this->assertSame($subdomain, $this->host->getSubdomain());
+        $this->assertSame($subdomain, $this->host->subdomain);
+
         $this->assertEquals($publicSuffix, $this->host->getPublicSuffix());
+        $this->assertEquals($publicSuffix, $this->host->public_suffix);
+
         $this->assertEquals($registerableDomain, $this->host->getRegisterableDomain());
+        $this->assertEquals($registerableDomain, $this->host->registerable_domain);
     }
 
     public function parseDataProvider()
@@ -110,5 +115,5 @@ class HostTest extends \PHPUnit_Framework_TestCase
             array('politics.news.omanpost.om', 'om', 'omanpost.om', 'politics.news'),
         );
     }
-    
+
 }
