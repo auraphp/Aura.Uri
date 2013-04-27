@@ -61,7 +61,6 @@ $url = $url_factory->newInstance($string);
 // $url->host->public_suffix       => 'com'
 // $url->port                      => null
 // $url->path                      => ArrayObject(['path', 'to', 'index.php', 'foo', 'bar'])
-// @TODO 'format' is no longer a property of Url. Remove from docs or add to Url?
 // $url->format                    => '.xml'
 // $url->query                     => ArrayObject(['baz' => 'dib'])
 // $url->fragment                  => 'anchor'
@@ -126,8 +125,8 @@ $full_url = $url->getFull();
 Public Suffix List Host Parsing
 ===============================
 
-Url Host Component Parts
-------------------------
+Host Component Parts
+--------------------
 
 In addition to URL creation and manipulation, `Aura.Uri` is capable of parsing a
 host into its component parts, namely the host's subdomain, registerable domain, 
