@@ -74,6 +74,10 @@ class PublicSuffixList
                 $psl = $psl['*'];
                 continue;
             }
+
+            // Avoids improper parsing when $host's subdomain + public suffix === 
+            // a valid public suffix (e.g. host 'us.example.com' and public suffix 'us.com')
+            break;
         }
 
         // Apply algorithm rule #2: If no rules match, the prevailing rule is "*".
