@@ -140,4 +140,18 @@ class Host
     {
         return $this->registerable_domain;
     }
+    
+    /**
+     *
+     * Magic get for properties.
+     *
+     * @param string $key The property to get.
+     *
+     * @return mixed The value of the property.
+     *
+     */
+    public function __get($key)
+    {
+        return $this->$key;
+    }
 }
