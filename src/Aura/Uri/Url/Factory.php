@@ -1,45 +1,55 @@
 <?php
 /**
- * 
+ *
  * This file is part of the Aura project for PHP.
- * 
+ *
  * @package Aura.Uri
- * 
+ *
  * @license http://opensource.org/licenses/bsd-license.php BSD
- * 
+ *
  */
 namespace Aura\Uri\Url;
 
 use Aura\Uri\Url;
 use Aura\Uri\Path;
 use Aura\Uri\Query;
+use Aura\Uri\Host;
+use Aura\Uri\PublicSuffixList;
 
 /**
- * 
+ *
  * Factory to create new Url objects.
- * 
+ *
  * @package Aura.Uri
- * 
+ *
  */
 class Factory
 {
     /**
-     * 
+     *
      * A string representing the current URL, built from $_SERVER.
-     * 
+     *
      * @var string
-     * 
+     *
      */
     protected $current;
 
     /**
-     * 
-     * Constructor.
-     * 
-     * @param array $server An array copy of $_SERVER.
-     * 
+     * Public suffix list
+     *
+     * @var PublicSuffixList
      */
-    public function __construct(array $server)
+    protected $psl;
+
+    /**
+     *
+     * Constructor.
+     *
+     * @param array $server An array copy of $_SERVER.
+     *
+     * @param PublicSuffixList $psl Public suffix list
+     */
+    public function __construct(array $server, PublicSuffixList $psl)
     {
         $https  = isset($server['HTTPS'])
                && strtolower($server['HTTPS']) == 'on';
@@ -66,18 +76,20 @@ class Factory
         }
 
         $this->current = $scheme . '://' . $host . $resource;
+
+        $this->psl = $psl;
     }
 
     /**
-     * 
+     *
      * Creates and returns a new Url object.
-     * 
+     *
      * If no host is specified, the parsing will fail.
-     * 
+     *
      * @param string $spec The URL string to set from.
-     * 
+     *
      * @return Url
-     * 
+     *
      */
     public function newInstance($spec)
     {
@@ -92,8 +104,8 @@ class Factory
             'fragment' => null,
         ];
 
-        $parts = parse_url($spec);
-        
+        $parts = $this->parse($spec);
+
         $elem = (array) $parts + $elem;
 
         $path = new Path([]);
@@ -102,11 +114,14 @@ class Factory
         $query = new Query([]);
         $query->setFromString($elem['query']);
 
+        $host = new Host($this->psl, []);
+        $host->setFromString($elem['host']);
+
         return new Url(
             $elem['scheme'],
             $elem['user'],
             $elem['pass'],
-            $elem['host'],
+            $host,
             $elem['port'],
             $path,
             $query,
@@ -115,14 +130,29 @@ class Factory
     }
 
     /**
-     * 
+     *
      * Creates and returns a new URL object based on the current URL.
-     * 
+     *
      * @return Url
-     * 
+     *
      */
     public function newCurrent()
     {
         return $this->newInstance($this->current);
+    }
+
+    /**
+     * Parses url
+     *
+     * @param  string $spec Url to parse
+     * @return array  Parsed url
+     */
+    public function parse($spec)
+    {
+        if (strpos($spec, 'http') !== 0) {
+            $spec = 'http://' . $spec;
+        }
+
+        return parse_url($spec);
     }
 }

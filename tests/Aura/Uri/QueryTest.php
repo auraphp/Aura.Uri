@@ -33,7 +33,6 @@ class QueryTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @covers Aura\Uri\Query::__toString
-     * @todo Implement test__toString().
      */
     public function test__toString()
     {
@@ -45,7 +44,6 @@ class QueryTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @covers Aura\Uri\Query::setFromString
-     * @todo Implement testSetFromString().
      */
     public function testSetFromString()
     {
