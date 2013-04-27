@@ -3,9 +3,9 @@
 namespace Aura\Uri;
 
 /**
- * This test case is based on the test data linked at 
+ * This test case is based on the test data linked at
  * http://publicsuffix.org/list/ and provided by Rob Strading of Comodo.
- * @link 
+ * @link
  * http://mxr.mozilla.org/mozilla-central/source/netwerk/test/unit/data/test_psl.txt?raw=1
  */
 class CheckPublicSuffixTest extends \PHPUnit_Framework_TestCase
@@ -18,33 +18,10 @@ class CheckPublicSuffixTest extends \PHPUnit_Framework_TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->psl = new PublicSuffixList([
-            'ac' => [],
-            'biz' => [],
-            'com' => [
-                'uk' => [],
-            ],
-            'cy' => [
-                'c' => [],
-            ],
-            'jp' => [
-                'ac' => [],
-                'kyoto' => [
-                    'ide' => [],
-                ],
-                'kobe' => [
-                    'c' => [],
-                ],
-            ],
-            'om' => [
-                'test' => [],
-            ],
-            'us' => [
-                'ak' => [
-                    'k12' => [],
-                ],
-            ],
-        ]);
+        $file = dirname(dirname(dirname(__DIR__))) . DIRECTORY_SEPARATOR
+              . 'data' . DIRECTORY_SEPARATOR
+              . 'public-suffix-list.php';
+        $this->psl = new PublicSuffixList(require $file);
     }
 
     public function testPublicSuffixSpec()
@@ -126,11 +103,11 @@ class CheckPublicSuffixTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * This is my version of the checkPublicSuffix function referred to in the 
+     * This is my version of the checkPublicSuffix function referred to in the
      * test instructions at the Public Suffix List project.
      *
-     * "You will need to define a checkPublicSuffix() function which takes as a 
-     * parameter a domain name and the public suffix, runs your implementation 
+     * "You will need to define a checkPublicSuffix() function which takes as a
+     * parameter a domain name and the public suffix, runs your implementation
      * on the domain name and checks the result is the public suffix expected."
      *
      * @link http://publicsuffix.org/list/

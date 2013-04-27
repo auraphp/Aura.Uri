@@ -12,36 +12,10 @@ class PublicSuffixListTest extends \PHPUnit_Framework_TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->psl = new PublicSuffixList([
-            'au' => [
-                'com' => [],
-            ],
-            'com' => [
-                'uk' => [],
-            ],
-            'cy' => [
-                'c' => [],
-            ],
-            'il' => [
-                'co' => [],
-            ],
-            'jp' => [
-                'kyoto' => [
-                    'ide' => [],
-                ],
-            ],
-            'om' => [
-                'test' => [],
-            ],
-            'uk' => [
-                'co' => [],
-            ],
-            'us' => [
-                'ak' => [
-                    'k12' => [],
-                ],
-            ],
-        ]);
+        $file = dirname(dirname(dirname(__DIR__))) . DIRECTORY_SEPARATOR
+              . 'data' . DIRECTORY_SEPARATOR
+              . 'public-suffix-list.php';
+        $this->psl = new PublicSuffixList(require $file);
     }
 
     /**
@@ -67,7 +41,7 @@ class PublicSuffixListTest extends \PHPUnit_Framework_TestCase
     {
         $this->assertSame($subdomain, $this->psl->getSubdomain($hostPart));
     }
-    
+
 	/**
      * @dataProvider parseDataProvider
 	 */
@@ -96,5 +70,5 @@ class PublicSuffixListTest extends \PHPUnit_Framework_TestCase
             array('politics.news.omanpost.om', 'om', 'omanpost.om', 'politics.news', 'politics.news.omanpost.om'),
         );
     }
-	
+
 }
