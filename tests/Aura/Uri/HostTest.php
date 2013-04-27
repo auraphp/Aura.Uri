@@ -13,38 +13,12 @@ class HostTest extends \PHPUnit_Framework_TestCase
     {
         parent::setUp();
 
-        $list = new PublicSuffixList([
-            'au' => [
-                'com' => [],
-            ],
-            'com' => [
-                'uk' => [],
-            ],
-            'cy' => [
-                'c' => [],
-            ],
-            'il' => [
-                'co' => [],
-            ],
-            'jp' => [
-                'kyoto' => [
-                    'ide' => [],
-                ],
-            ],
-            'om' => [
-                'test' => [],
-            ],
-            'uk' => [
-                'co' => [],
-            ],
-            'us' => [
-                'ak' => [
-                    'k12' => [],
-                ],
-            ],
-        ]);
+        $file = dirname(dirname(dirname(__DIR__))) . DIRECTORY_SEPARATOR
+              . 'data' . DIRECTORY_SEPARATOR
+              . 'public-suffix-list.php';
+        $psl = new PublicSuffixList(require $file);
 
-        $this->host = new Host($list);
+        $this->host = new Host($psl);
     }
 
     protected function tearDown()
