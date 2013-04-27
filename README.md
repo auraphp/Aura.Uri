@@ -52,18 +52,22 @@ $url = $url_factory->newInstance($string);
 
 // now the $url properties are ...
 // 
-// $url->scheme                         => 'http'
-// $url->user                           => 'anonymous'
-// $url->pass                           => 'guest'
-// $url->host                           => Aura\Uri\Host
-// $url->host->getSubdomain()           => null
-// $url->host->getRegisterableDomain()  => 'example.com'
-// $url->host->getPublicSuffix()        => 'com'
-// $url->port                           => null
-// $url->path                           => ArrayObject(['path', 'to', 'index.php', 'foo', 'bar'])
-// $url->path->getFormat()              => '.xml'
-// $url->query                          => ArrayObject(['baz' => 'dib'])
-// $url->fragment                       => 'anchor'
+// $url->scheme    => 'http'
+// $url->user      => 'anonymous'
+// $url->pass      => 'guest'
+// $url->host      => Aura\Uri\Host, with these methods:
+//                      ->get()                     => 'example.com'
+//                      ->getSubdomain()            => null
+//                      ->getRegisterableDomain()   => 'example.com'
+//                      ->getPublicSuffix()         => 'com'
+// $url->port      => null
+// $url->path      => Aura\Uri\Path, with these ArrayObject elements:
+//                      ['path', 'to', 'index.php', 'foo', 'bar']
+//                    and this method:
+//                      ->getFormat() => '.xml'
+// $url->query     => Aura\Uri\Query, with these ArrayObject elements:
+//                      ['baz' => 'dib']
+// $url->fragment  => 'anchor'
 ```
 
 Alternatively, you can use the factory to create a URL representing the
