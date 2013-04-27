@@ -20,38 +20,38 @@ namespace Aura\Uri;
 class Host
 {
     /**
-     * 
+     *
      * The public suffix list.
-     * 
+     *
      * @var array
-     * 
+     *
      */
     protected $psl;
 
     /**
-     * 
+     *
      * Subdomain portion of host.
-     * 
+     *
      * @var string
-     * 
+     *
      */
     protected $subdomain;
 
     /**
-     * 
+     *
      * Registerable domain portion of host.
-     * 
-     * @var string 
-     * 
+     *
+     * @var string
+     *
      */
     protected $registerable_domain;
 
     /**
-     * 
+     *
      * Public suffix portion of host.
-     * 
+     *
      * @var string
-     * 
+     *
      */
     protected $public_suffix;
 
@@ -70,6 +70,18 @@ class Host
         foreach ($spec as $key => $val) {
             $this->$key = $val;
         }
+    }
+
+    /**
+     *
+     * Returns this Host object as a string.
+     *
+     * @return string The full Host this object represents.
+     *
+     */
+    public function get()
+    {
+        return $this->__toString();
     }
 
     /**
@@ -104,13 +116,13 @@ class Host
         $this->registerable_domain = $this->psl->getRegisterableDomain($spec);
         $this->subdomain = $this->psl->getSubdomain($spec);
     }
-    
+
     /**
-     * 
+     *
      * Returns the public suffix portion of the host.
-     * 
+     *
      * @return string
-     * 
+     *
      */
     public function getPublicSuffix()
     {
@@ -118,23 +130,23 @@ class Host
     }
 
     /**
-     * 
+     *
      * Returns the subdomain portion of the host.
-     * 
+     *
      * @return string
-     * 
+     *
      */
     public function getSubdomain()
     {
         return $this->subdomain;
     }
-    
+
     /**
-     * 
+     *
      * Returns the registerable domain portion of the host.
-     * 
+     *
      * @return string
-     * 
+     *
      */
     public function getRegisterableDomain()
     {

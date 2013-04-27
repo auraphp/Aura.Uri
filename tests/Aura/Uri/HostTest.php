@@ -39,6 +39,15 @@ class HostTest extends \PHPUnit_Framework_TestCase
     /**
      * @dataProvider hostDataProvider
      */
+    public function testGet($string)
+    {
+        $this->host->setFromString($string);
+        $this->assertEquals($string, $this->host->get());
+    }
+
+    /**
+     * @dataProvider hostDataProvider
+     */
     public function testSetFromString($string)
     {
         $this->host->setFromString($string);
