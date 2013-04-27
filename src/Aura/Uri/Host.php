@@ -79,9 +79,9 @@ class Host
      * @return string The full Host this object represents.
      *
      */
-    public function get()
+    public function __toString()
     {
-        return $this->__toString();
+        return $this->get();
     }
 
     /**
@@ -91,8 +91,9 @@ class Host
      * @return string The full Host this object represents.
      *
      */
-    public function __toString()
+    public function get()
     {
+        // retain only the elements that are not empty
         $str = array_filter(
             [$this->subdomain, $this->registerable_domain],
             'strlen'
