@@ -17,7 +17,7 @@ class UrlTest extends \PHPUnit_Framework_TestCase
      * @var Url
      */
     protected $url;
-    
+
     /**
      * @var string Url spec
      */
@@ -61,8 +61,8 @@ class UrlTest extends \PHPUnit_Framework_TestCase
             new Host(
                 $this->psl,
                 [
-                'subdomain' => null, 
-                'registerableDomain' => 'example.com', 
+                'subdomain' => null,
+                'registerableDomain' => 'example.com',
                 'publicSuffix' => 'com'
                 ]
             ),
@@ -71,10 +71,10 @@ class UrlTest extends \PHPUnit_Framework_TestCase
             new Query(['baz' => 'dib', 'zim' => 'gir']),
             'fragment'
         );
-        
+
         $this->assertInstanceOf('Aura\Uri\Url', $url);
     }
-    
+
     /**
      * @covers Aura\Uri\Url::__toString
      */
