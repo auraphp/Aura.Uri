@@ -59,15 +59,9 @@ class HostTest extends \PHPUnit_Framework_TestCase
     public function testParse($url, $publicSuffix, $registerableDomain, $subdomain)
     {
         $this->host->setFromString($url);
-
         $this->assertSame($subdomain, $this->host->getSubdomain());
-        $this->assertSame($subdomain, $this->host->subdomain);
-
         $this->assertEquals($publicSuffix, $this->host->getPublicSuffix());
-        $this->assertEquals($publicSuffix, $this->host->public_suffix);
-
         $this->assertEquals($registerableDomain, $this->host->getRegisterableDomain());
-        $this->assertEquals($registerableDomain, $this->host->registerable_domain);
     }
 
     public function parseDataProvider()
