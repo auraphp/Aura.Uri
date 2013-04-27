@@ -35,8 +35,10 @@ instantiate a URL factory object:
 ```php
 <?php
 use Aura\Uri\Url\Factory as UrlFactory;
+use Aura\Uri\PublicSuffixList;
 
-$url_factory = new UrlFactory($_SERVER);
+$psl = new PublicSuffixList(require '/path/to/Aura.Uri/data/public-suffix-list.php');
+$url_factory = new UrlFactory($_SERVER, $psl);
 $url = $url_factory->newCurrent();
 ```
 
@@ -50,14 +52,19 @@ $url = $url_factory->newInstance($string);
 
 // now the $url properties are ...
 // 
-// $url->scheme   => 'http'
-// $url->host     => 'example.com'
-// $url->user     => 'anonymous'
-// $url->pass     => 'guest'
-// $url->path     => ArrayObject(['path', 'to', 'index.php', 'foo', 'bar'])
-// $url->format   => '.xml'
-// $url->query    => ArrayObject(['baz' => 'dib'])
-// $url->fragment => 'anchor'
+// $url->scheme                    => 'http'
+// $url->user                      => 'anonymous'
+// $url->pass                      => 'guest'
+// $url->host                      => Aura\Uri\Host
+// $url->host->subdomain           => null
+// $url->host->registerable_domain => 'example.com'
+// $url->host->public_suffix       => 'com'
+// $url->port                      => null
+// $url->path                      => ArrayObject(['path', 'to', 'index.php', 'foo', 'bar'])
+// @TODO 'format' is no longer a property of Url. Remove from docs or add to Url?
+// $url->format                    => '.xml'
+// $url->query                     => ArrayObject(['baz' => 'dib'])
+// $url->fragment                  => 'anchor'
 ```
 
 Alternatively, you can use the factory to create a URL representing the
@@ -115,5 +122,36 @@ $full_url = $url->getFull();
 // the $full_url string is as follows:
 // https://example.com/something/else/entirely/another.php?baz=zab&zim=gir#anchor
 ```
+
+Public Suffix List Host Parsing
+===============================
+
+Url Host Component Parts
+------------------------
+
+In addition to URL creation and manipulation, `Aura.Uri` is capable of parsing a
+host into its component parts, namely the host's subdomain, registerable domain, 
+and public suffix. A host's component parts are available via properties on the 
+Aura.Uri host object, as seen in the examples above.
+
+Public Suffix List
+------------------
+
+This parsing capability is possible as a result of the [Public Suffix List][], a community
+resource and initiative of Mozilla.
+
+Updating the Public Suffix List
+-------------------------------
+
+As the Public Suffix List is both an external resource and a living document, it's
+important that you update your copy of the list from time to time.  You can do this
+by executing the provided `update.php` script.
+
+`php /path/to/Aura.Uri/scripts/update.php`
+
+Executing `update.php` will retrieve the most current version of the Public Suffix
+List, parse it to an array, and store it in the `/path/to/Aura.Uri/data` directory.
+
+[Public Suffix List]: http://publicsuffix.org/
 
 * * *
