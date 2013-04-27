@@ -69,6 +69,12 @@ class HostTest extends \PHPUnit_Framework_TestCase
         return array(
             array('www.waxaudio.com.au', 'com.au', 'waxaudio.com.au', 'www'),
             array('example.com', 'com', 'example.com', null),
+            array('us.example.com', 'com', 'example.com', 'us', 'us.example.com'),
+            array('us.example.na', 'na', 'example.na', 'us', 'us.example.na'),
+            array('www.example.us.na', 'us.na', 'example.us.na', 'www', 'www.example.us.na'),
+            array('us.example.org', 'org', 'example.org', 'us', 'us.example.org'),
+            array('webhop.broken.biz', 'biz', 'broken.biz', 'webhop', 'webhop.broken.biz'),
+            array('www.broken.webhop.biz', 'webhop.biz', 'broken.webhop.biz', 'www', 'www.broken.webhop.biz'),
             array('cea-law.co.il', 'co.il', 'cea-law.co.il', null),
             array('edition.cnn.com', 'com', 'cnn.com', 'edition'),
             array('en.wikipedia.org', 'org', 'wikipedia.org', 'en'),
