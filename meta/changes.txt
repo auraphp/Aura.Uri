@@ -1,5 +1,1 @@
-- [NEW] Add PublicSuffixList support. Thanks, Jeremy Kendall.
-
-- [CHG] Use rawurlencode() throughout, instead of urlencode() and custom encoding logic.
-
-- [CHG] CS fixes. Thanks, Jeremy Kendall.
+- [DOC] Add PHP 5.5 to Travis build, and status badge to README.
