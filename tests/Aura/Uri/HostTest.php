@@ -93,7 +93,7 @@ class HostTest extends \PHPUnit_Framework_TestCase
             array('b.ide.kyoto.jp', 'ide.kyoto.jp', 'b.ide.kyoto.jp', null),
             array('a.b.example.uk.com', 'uk.com', 'example.uk.com', 'a.b'),
             array('test.nic.ar', 'ar', 'nic.ar', 'test'),
-            array('a.b.test.om', 'test.om', 'b.test.om', 'a', null),
+            array('a.b.test.ck', 'test.ck', 'b.test.ck', 'a', null),
             array('baez.songfest.om', 'om', 'songfest.om', 'baez'),
             array('politics.news.omanpost.om', 'om', 'omanpost.om', 'politics.news'),
         );
