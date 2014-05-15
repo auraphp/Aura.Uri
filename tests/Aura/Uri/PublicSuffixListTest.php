@@ -52,6 +52,7 @@ class PublicSuffixListTest extends \PHPUnit_Framework_TestCase
 
     public function parseDataProvider()
     {
+        // $url, $publicSuffix, $registerableDomain, $subdomain, $hostPart
         return array(
             array('http://www.waxaudio.com.au/audio/albums/the_mashening', 'com.au', 'waxaudio.com.au', 'www', 'www.waxaudio.com.au'),
             array('example.com', 'com', 'example.com', null, 'example.com'),
@@ -68,6 +69,7 @@ class PublicSuffixListTest extends \PHPUnit_Framework_TestCase
             array('a.b.test.ck', 'test.ck', 'b.test.ck', 'a', 'a.b.test.ck'),
             array('baez.songfest.om', 'om', 'songfest.om', 'baez', 'baez.songfest.om'),
             array('politics.news.omanpost.om', 'om', 'omanpost.om', 'politics.news', 'politics.news.omanpost.om'),
+            array('http://localhost', null, null, null, 'localhost'),
         );
     }
 

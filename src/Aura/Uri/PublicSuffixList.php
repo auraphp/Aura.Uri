@@ -52,6 +52,10 @@ class PublicSuffixList
             return null;
         }
 
+        if (strpos($host, '.') === false) {
+            return null;
+        }
+
         $host = strtolower($host);
         $parts = array_reverse(explode('.', $host));
         $publicSuffix = array();

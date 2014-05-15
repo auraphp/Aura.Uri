@@ -30,6 +30,15 @@ class Host
 
     /**
      *
+     * The full Host this object represents.
+     *
+     * @var string
+     *
+     */
+    protected $host;
+
+    /**
+     *
      * Subdomain portion of host.
      *
      * @var string
@@ -93,6 +102,10 @@ class Host
      */
     public function get()
     {
+        if ($this->host !== null) {
+            return $this->host;
+        }
+
         // retain only the elements that are not empty
         $str = array_filter(
             [$this->subdomain, $this->registerable_domain],
@@ -113,6 +126,7 @@ class Host
      */
     public function setFromString($spec)
     {
+        $this->host = $spec;
         $this->public_suffix = $this->psl->getPublicSuffix($spec);
         $this->registerable_domain = $this->psl->getRegisterableDomain($spec);
         $this->subdomain = $this->psl->getSubdomain($spec);

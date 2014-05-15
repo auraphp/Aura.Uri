@@ -58,7 +58,8 @@ class HostTest extends \PHPUnit_Framework_TestCase
     {
         return array(
             array('example.com'),
-            array('purple.com')
+            array('purple.com'),
+            array('localhost'),
         );
     }
 
@@ -71,10 +72,12 @@ class HostTest extends \PHPUnit_Framework_TestCase
         $this->assertSame($subdomain, $this->host->getSubdomain());
         $this->assertEquals($publicSuffix, $this->host->getPublicSuffix());
         $this->assertEquals($registerableDomain, $this->host->getRegisterableDomain());
+        $this->assertEquals($url, $this->host->get());
     }
 
     public function parseDataProvider()
     {
+        // $url, $publicSuffix, $registerableDomain, $subdomain
         return array(
             array('www.waxaudio.com.au', 'com.au', 'waxaudio.com.au', 'www'),
             array('example.com', 'com', 'example.com', null),
@@ -96,6 +99,7 @@ class HostTest extends \PHPUnit_Framework_TestCase
             array('a.b.test.ck', 'test.ck', 'b.test.ck', 'a', null),
             array('baez.songfest.om', 'om', 'songfest.om', 'baez'),
             array('politics.news.omanpost.om', 'om', 'omanpost.om', 'politics.news'),
+            array('localhost', null, null, null),
         );
     }
 
