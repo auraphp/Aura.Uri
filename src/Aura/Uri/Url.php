@@ -22,7 +22,7 @@ class Url
     /**
      * Pattern for URL scheme matching
      */
-    const SCHEME_PATTERN = '#^https?://#i';
+    const SCHEME_PATTERN = '#^(http|ftp)s?://#i';
 
     /**
      *

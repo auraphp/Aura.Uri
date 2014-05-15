@@ -123,4 +123,13 @@ class FactoryTest extends \PHPUnit_Framework_TestCase
         $expect = 'http://example.com';
         $this->assertSame($expect, $actual);
     }
+
+    public function testNewInstance_ftpUrl()
+    {
+        $factory = $this->newFactory([]);
+        $string = 'ftp://ftp.example.com';
+        $url = $factory->newInstance($string);
+        $actual = $url->__toString();
+        $this->assertSame($string, $actual);
+    }
 }
