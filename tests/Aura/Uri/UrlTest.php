@@ -2,10 +2,6 @@
 namespace Aura\Uri;
 
 use Aura\Uri\Url\Factory as UrlFactory;
-use Aura\Uri\Path;
-use Aura\Uri\Query;
-use Aura\Uri\Host;
-use Aura\Uri\PublicSuffixList;
 
 /**
  * Test class for Url.
@@ -120,6 +116,16 @@ class UrlTest extends \PHPUnit_Framework_TestCase
     {
         $actual = $this->url->getFull();
         $this->assertSame($this->spec, $actual);
+    }
+
+    /**
+     * @covers Aura\Uri\Url::getSchemeless
+     */
+    public function testGetSchemeless()
+    {
+        $schemeless = substr_replace($this->spec, '', 0, 5);
+        $actual = $this->url->getSchemeless();
+        $this->assertSame($schemeless, $actual);
     }
 
     /**

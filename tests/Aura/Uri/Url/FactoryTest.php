@@ -113,4 +113,14 @@ class FactoryTest extends \PHPUnit_Framework_TestCase
         $expect = 'http://example.com';
         $this->assertSame($expect, $actual);
     }
+
+    public function testNewInstance_schemeless()
+    {
+        $factory = $this->newFactory([]);
+        $string = '//example.com';
+        $url = $factory->newInstance($string);
+        $actual = $url->__toString();
+        $expect = 'http://example.com';
+        $this->assertSame($expect, $actual);
+    }
 }

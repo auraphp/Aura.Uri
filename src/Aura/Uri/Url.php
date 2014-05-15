@@ -20,6 +20,11 @@ namespace Aura\Uri;
 class Url
 {
     /**
+     * Pattern for URL scheme matching
+     */
+    const SCHEME_PATTERN = '#^https?://#i';
+
+    /**
      *
      * The scheme (for example 'http' or 'https').
      *
@@ -209,6 +214,18 @@ class Url
               . (empty($this->port) ? '' : ':' . (int) $this->port);
 
         return $url . $this->get();
+    }
+
+    /**
+     *
+     * Returns the URL as a string, including the host but excluding the scheme
+     *
+     * @return string The URL string.
+     *
+     */
+    public function getSchemeless()
+    {
+        return preg_replace(self::SCHEME_PATTERN, '//', $this->getFull(), 1);
     }
 
     /**
