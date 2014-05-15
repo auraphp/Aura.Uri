@@ -40,6 +40,7 @@ class CheckPublicSuffixTest extends \PHPUnit_Framework_TestCase
         $this->checkPublicSuffix('.example', null);
         $this->checkPublicSuffix('.example.com', null);
         $this->checkPublicSuffix('.example.example', null);
+        $this->checkPublicSuffix('localhost', null);
         // Unlisted TLD.
         // Addresses algorithm rule #2: If no rules match, the prevailing rule is "*".
         $this->checkPublicSuffix('example', null);
