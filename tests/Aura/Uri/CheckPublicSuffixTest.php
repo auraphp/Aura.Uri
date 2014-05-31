@@ -40,6 +40,7 @@ class CheckPublicSuffixTest extends \PHPUnit_Framework_TestCase
         $this->checkPublicSuffix('.example', null);
         $this->checkPublicSuffix('.example.com', null);
         $this->checkPublicSuffix('.example.example', null);
+        $this->checkPublicSuffix('localhost', null);
         // Unlisted TLD.
         // Addresses algorithm rule #2: If no rules match, the prevailing rule is "*".
         $this->checkPublicSuffix('example', null);
@@ -85,11 +86,11 @@ class CheckPublicSuffixTest extends \PHPUnit_Framework_TestCase
         $this->checkPublicSuffix('www.city.kobe.jp', 'city.kobe.jp');
         // TLD with a wildcard rule and exceptions.
         $this->checkPublicSuffix('om', null);
-        $this->checkPublicSuffix('test.om', null);
-        $this->checkPublicSuffix('b.test.om', 'b.test.om');
-        $this->checkPublicSuffix('a.b.test.om', 'b.test.om');
-        $this->checkPublicSuffix('songfest.om', 'songfest.om');
-        $this->checkPublicSuffix('www.songfest.om', 'songfest.om');
+        $this->checkPublicSuffix('test.ck', null);
+        $this->checkPublicSuffix('b.test.ck', 'b.test.ck');
+        $this->checkPublicSuffix('a.b.test.ck', 'b.test.ck');
+        $this->checkPublicSuffix('www.ck', 'www.ck');
+        $this->checkPublicSuffix('www.www.ck', 'www.ck');
         // US K12.
         $this->checkPublicSuffix('us', null);
         $this->checkPublicSuffix('test.us', 'test.us');

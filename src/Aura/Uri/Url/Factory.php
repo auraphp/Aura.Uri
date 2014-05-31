@@ -149,8 +149,10 @@ class Factory
      */
     public function parse($spec)
     {
-        if (strpos($spec, 'http') !== 0) {
-            $spec = 'http://' . $spec;
+        preg_match(Url::SCHEME_PATTERN, $spec, $schemeMatches);
+
+        if (empty($schemeMatches)) {
+            $spec = 'http://' . preg_replace('#^//#', '', $spec, 1);
         }
 
         return parse_url($spec);
