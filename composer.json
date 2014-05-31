@@ -1,6 +1,6 @@
 {
     "name": "aura/uri",
-    "version": "1.1.1",
+    "version": "1.2.0",
     "type": "aura-package",
     "description": "The Aura Uri package provides tools to build and manipulate URL strings.",
     "keywords": [
@@ -8,7 +8,7 @@
         "url"
     ],
     "homepage": "http://auraphp.com/Aura.Uri",
-    "time": "2013-09-10",
+    "time": "2014-05-31",
     "license": "BSD-2-Clause",
     "authors": [
         {
@@ -38,7 +38,7 @@
     ],
     "require": {
         "php": ">=5.4.0",
-        "aura/installer-default": ">=1.0.0"
+        "aura/installer-default": "1.0.*"
     },
     "autoload": {
         "psr-0": {
