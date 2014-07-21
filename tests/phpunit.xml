@@ -8,6 +8,7 @@
     <filter>
         <whitelist>
             <directory suffix=".php">../src/Aura/Uri</directory>
+            <file>../src/mb-parse-url.php</file>
         </whitelist>
     </filter>
 </phpunit>

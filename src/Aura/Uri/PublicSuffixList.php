@@ -56,7 +56,6 @@ class PublicSuffixList
             return null;
         }
 
-        $host = strtolower($host);
         $parts = array_reverse(explode('.', $host));
         $publicSuffix = array();
         $psl = $this->psl;
@@ -108,7 +107,13 @@ class PublicSuffixList
             return null;
         }
 
-        $host = strtolower($host);
+        $punycoded = (strpos($host, 'xn--') !== false);
+
+        if ($punycoded) {
+            $host = idn_to_utf8($host);
+        }
+
+        $host = mb_strtolower($host, 'UTF-8');
         $publicSuffix = $this->getPublicSuffix($host);
 
         if ($publicSuffix === null || $host == $publicSuffix) {
@@ -119,7 +124,13 @@ class PublicSuffixList
         $hostParts = array_reverse(explode('.', $host));
         $registerableDomainParts = array_slice($hostParts, 0, count($publicSuffixParts) + 1);
 
-        return implode('.', array_reverse($registerableDomainParts));
+        $registerableDomain = implode('.', array_reverse($registerableDomainParts));
+
+        if ($punycoded) {
+            $registerableDomain = idn_to_ascii($registerableDomain);
+        }
+
+        return $registerableDomain;
     }
 
     /**
@@ -130,7 +141,6 @@ class PublicSuffixList
      */
     public function getSubdomain($host)
     {
-        $host = strtolower($host);
         $registerableDomain = $this->getRegisterableDomain($host);
 
         if ($registerableDomain === null || $host == $registerableDomain) {
