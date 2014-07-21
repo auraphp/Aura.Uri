@@ -82,6 +82,30 @@ class FactoryTest extends \PHPUnit_Framework_TestCase
         $this->assertSame($expect, $actual);
     }
     
+    public function testNewCurrent_IDNA()
+    {
+        $factory = $this->newFactory([
+            'HTTP_HOST'   => 'Яндекс.РФ',
+        ]);
+        
+        $url = $factory->newCurrent();
+        $actual = $url->__toString();
+        $expect = 'http://яндекс.рф';
+        $this->assertSame($expect, $actual);
+    }
+    
+    public function testNewCurrent_Punycode()
+    {
+        $factory = $this->newFactory([
+            'HTTP_HOST'   => 'www.xn--85x722f.xn--fiqs8s',
+        ]);
+        
+        $url = $factory->newCurrent();
+        $actual = $url->__toString();
+        $expect = 'http://www.xn--85x722f.xn--fiqs8s';
+        $this->assertSame($expect, $actual);
+    }
+    
     public function testNewCurrent_noRequestUri()
     {
         $factory = $this->newFactory([

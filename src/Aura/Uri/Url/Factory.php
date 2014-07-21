@@ -93,6 +93,8 @@ class Factory
      */
     public function newInstance($spec)
     {
+        $spec = mb_strtolower($spec, 'UTF-8');
+
         $elem = [
             'scheme'   => null,
             'user'     => null,
@@ -155,6 +157,6 @@ class Factory
             $spec = 'http://' . preg_replace('#^//#', '', $spec, 1);
         }
 
-        return parse_url($spec);
+        return mb_parse_url($spec);
     }
 }
