@@ -31,7 +31,7 @@ class UrlTest extends \PHPUnit_Framework_TestCase
     protected function setUp()
     {
         parent::setUp();
-        $file = dirname(dirname(dirname(__DIR__))) . DIRECTORY_SEPARATOR
+        $file = dirname(dirname(__DIR__)) . DIRECTORY_SEPARATOR
               . 'data' . DIRECTORY_SEPARATOR
               . 'public-suffix-list.php';
         $this->psl = new PublicSuffixList(require $file);

@@ -1,20 +1,16 @@
 <?php
+// turn on all errors
+error_reporting(E_ALL);
 
-error_reporting(-1);
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
+// autoloader
+require dirname(__DIR__) . '/autoload.php';
 
-define('AURA_URI_TEST_ROOT', __DIR__);
+// default globals
+if (is_readable(__DIR__ . '/globals.dist.php')) {
+    require __DIR__ . '/globals.dist.php';
+}
 
-// preload source files
-require dirname(__DIR__) . DIRECTORY_SEPARATOR . 'src.php';
-
-// autoload test files
-spl_autoload_register(function($class) {
-    $file = dirname(__DIR__). DIRECTORY_SEPARATOR
-          . 'tests' . DIRECTORY_SEPARATOR
-          . str_replace('\\', DIRECTORY_SEPARATOR, $class) . '.php';
-    if (file_exists($file)) {
-        require $file;
-    }
-});
+// override globals
+if (is_readable(__DIR__ . '/globals.php')) {
+    require __DIR__ . '/globals.php';
+}
