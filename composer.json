@@ -1,5 +1,6 @@
 {
     "name": "aura/uri",
+    "type": "library",
     "description": "The Aura Uri package provides objects to build and manipulate URL strings.",
     "keywords": [ "uri", "url" ],
     "homepage": "http://auraphp.github.com/Aura.Uri",
@@ -20,6 +21,11 @@
     "autoload": {
         "psr-4": {
             "Aura\\Uri\\": "src/"
+    },
+    "autoload": {
+        "psr-4": {
+            "Aura\\Uri\\": "src/",
+            "Aura\\Uri\\_Config\\": "config/"
         }
     }
 }
