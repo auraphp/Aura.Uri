@@ -1,7 +1,7 @@
 <?php
 /**
  *
- * This file is part of the Aura project for PHP.
+ * This file is part of Aura for PHP.
  *
  * @package Aura.Uri
  *
@@ -20,20 +20,20 @@ namespace Aura\Uri;
 class PublicSuffixList
 {
     /**
-     * 
+     *
      * Public suffix list data.
-     * 
-     * @var array 
-     * 
+     *
+     * @var array
+     *
      */
     protected $psl;
 
     /**
-     * 
+     *
      * Constructor.
      *
      * @param array $list Array representation of the Public Suffix List
-     * 
+     *
      */
     public function __construct(array $list)
     {
@@ -79,7 +79,7 @@ class PublicSuffixList
                 continue;
             }
 
-            // Avoids improper parsing when $host's subdomain + public suffix === 
+            // Avoids improper parsing when $host's subdomain + public suffix ===
             // a valid public suffix (e.g. host 'us.example.com' and public suffix 'us.com')
             break;
         }

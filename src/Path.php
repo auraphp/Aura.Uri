@@ -1,7 +1,7 @@
 <?php
 /**
  *
- * This file is part of the Aura project for PHP.
+ * This file is part of Aura for PHP.
  *
  * @package Aura.Uri
  *
@@ -40,7 +40,7 @@ class Path extends \ArrayObject
     {
         $spec = $this->getArrayCopy();
         $path = [];
-        
+
         // encode each path element
         foreach ($spec as $elem) {
             $path[] = rawurlencode($elem);
