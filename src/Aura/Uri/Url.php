@@ -210,7 +210,7 @@ class Url
         $host = $this->host->__toString();
 
         // add the host and port, if any.
-        $url .= (empty($this->host) ? '' : rawurlencode($this->host))
+        $url .= (empty($this->host) ? '' : $this->host)
               . (empty($this->port) ? '' : ':' . (int) $this->port);
 
         return $url . $this->get();
