@@ -19,5 +19,16 @@
         "psr-0": {
             "Aura\\Uri": "src/"
         }
+    },
+    "extra": {
+        "aura": {
+            "type": "library",
+            "config": {
+                "common": "Aura\\Uri\\_Config\\Common"
+            }
+        },
+        "branch-alias": {
+            "dev-develop": "1.2.x-dev"
+        }
     }
 }
