@@ -1,40 +1,57 @@
 Aura.Uri
 ========
 
-[![Continuous Integration](https://github.com/auraphp/Aura.Uri/actions/workflows/continuous-integration.yml/badge.svg)](https://github.com/auraphp/Aura.Uri/actions/workflows/continuous-integration.yml)
-
-The `Auri.Uri` package provides objects to help you create and manipulate URLs,
+Provides objects to help you create and manipulate URLs,
 including query strings and path elements. It does so by splitting up the pieces
 of the URL and allowing you modify them individually; you can then fetch
 them as a single URL string. This helps when building complex links,
 such as in a paged navigation system.
 
-This package is compliant with [PSR-0][], [PSR-1][], and [PSR-2][]. If you
-notice compliance oversights, please send a patch via pull request.
+## Foreword
 
-[PSR-0]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md
+### Installation
+
+This library requires PHP 5.4 or later; we recommend using the latest available version of PHP as a matter of principle. It has no userland dependencies.
+
+It is installable and autoloadable via Composer as [aura/uri](https://packagist.org/packages/aura/uri).
+
+Alternatively, [download a release](https://github.com/auraphp/Aura.Uri/releases) or clone this repository, then require or include its _autoload.php_ file.
+
+### Quality
+
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/auraphp/Aura.Uri/badges/quality-score.png?b=develop-2)](https://scrutinizer-ci.com/g/auraphp/Aura.Uri/)
+[![Code Coverage](https://scrutinizer-ci.com/g/auraphp/Aura.Uri/badges/coverage.png?b=develop-2)](https://scrutinizer-ci.com/g/auraphp/Aura.Uri/)
+[![Build Status](https://travis-ci.org/auraphp/Aura.Uri.png?branch=develop-2)](https://travis-ci.org/auraphp/Aura.Uri)
+
+To run the unit tests at the command line, issue `composer install` and then `phpunit` at the package root. This requires [Composer](http://getcomposer.org/) to be available as `composer`, and [PHPUnit](http://phpunit.de/manual/) to be available as `phpunit`.
+
+This library attempts to comply with [PSR-1][], [PSR-2][], and [PSR-4][]. If
+you notice compliance oversights, please send a patch via pull request.
+
 [PSR-1]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md
 [PSR-2]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md
+[PSR-4]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader.md
 
-Getting Started
-===============
+### Community
 
-Instantiation
--------------
+To ask questions, provide feedback, or otherwise communicate with the Aura community, please join our [Google Group](http://groups.google.com/group/auraphp), follow [@auraphp on Twitter](http://twitter.com/auraphp), or chat with us on #auraphp on Freenode.
 
-The easiest way to get started is to use the _UrlFactory_ to create a _Url_ object.
+
+# Getting Started
+
+## Instantiation
+
+The easiest way to instantiate a URL object is with the _UrlFactory_:
 
 ```php
 <?php
-use Aura\Uri\Url\Factory as UrlFactory;
-use Aura\Uri\PublicSuffixList;
+use Aura\Uri\UrlFactory;
 
-$psl = new PublicSuffixList(require '/path/to/Aura.Uri/data/public-suffix-list.php');
-$url_factory = new UrlFactory($_SERVER, $psl);
-$url = $url_factory->newCurrent();
+$url_factory = new UrlFactory;
+?>
 ```
 
-You can populate the URL properties from a URL
+Use the factory to create a new URL; you can populate the URL properties from a
 string:
 
 ```php
@@ -43,7 +60,7 @@ $string = 'http://anonymous:guest@example.com/path/to/index.php/foo/bar.xml?baz=
 $url = $url_factory->newInstance($string);
 
 // now the $url properties are ...
-// 
+//
 // $url->scheme    => 'http'
 // $url->user      => 'anonymous'
 // $url->pass      => 'guest'
@@ -60,6 +77,7 @@ $url = $url_factory->newInstance($string);
 // $url->query     => Aura\Uri\Query, with these ArrayObject elements:
 //                      ['baz' => 'dib']
 // $url->fragment  => 'anchor'
+?>
 ```
 
 Alternatively, you can use the factory to create a URL representing the
@@ -68,11 +86,11 @@ current web request URI:
 ```php
 <?php
 $url = $url_factory->newCurrent();
+?>
 ```
 
 
-Manipulation
-------------
+## Manipulation
 
 After we have created the URL object, we can modify the component parts, then
 fetch a new URL string from the modified object.
@@ -116,37 +134,32 @@ $full_url = $url->getFull();
 
 // the $full_url string is as follows:
 // https://example.com/something/else/entirely/another.php?baz=zab&zim=gir#anchor
+?>
 ```
 
-Public Suffix List Host Parsing
-===============================
+# Public Suffix List Host Parsing
 
-Host Component Parts
---------------------
+## Host Component Parts
 
 In addition to URL creation and manipulation, `Aura.Uri` is capable of parsing a
-host into its component parts, namely the host's subdomain, registerable domain, 
-and public suffix. A host's component parts are available via properties on the 
+host into its component parts, namely the host's subdomain, registerable domain,
+and public suffix. A host's component parts are available via properties on the
 Aura.Uri host object, as seen in the examples above.
 
-Public Suffix List
-------------------
+## Public Suffix List
 
 This parsing capability is possible as a result of the [Public Suffix List][], a community
 resource and initiative of Mozilla.
 
-Updating the Public Suffix List
--------------------------------
+## Updating the Public Suffix List
 
 As the Public Suffix List is both an external resource and a living document, it's
 important that you update your copy of the list from time to time.  You can do this
-by executing the provided `update.php` script.
+by executing the provided `update-psl.php` script.
 
-`php /path/to/Aura.Uri/scripts/update.php`
+    php /path/to/Aura.Uri/scripts/update-psl.php
 
-Executing `update.php` will retrieve the most current version of the Public Suffix
+Executing `update-psl.php` will retrieve the most current version of the Public Suffix
 List, parse it to an array, and store it in the `/path/to/Aura.Uri/data` directory.
 
 [Public Suffix List]: http://publicsuffix.org/
-
-* * *
