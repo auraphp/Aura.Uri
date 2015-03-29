@@ -8,13 +8,7 @@
  * @license http://opensource.org/licenses/bsd-license.php BSD
  *
  */
-namespace Aura\Uri\Url;
-
-use Aura\Uri\Url;
-use Aura\Uri\Path;
-use Aura\Uri\Query;
-use Aura\Uri\Host;
-use Aura\Uri\PublicSuffixList;
+namespace Aura\Uri;
 
 /**
  *
@@ -23,7 +17,7 @@ use Aura\Uri\PublicSuffixList;
  * @package Aura.Uri
  *
  */
-class Factory
+class UrlFactory
 {
     /**
      *

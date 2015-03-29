@@ -13,7 +13,7 @@ class HostTest extends \PHPUnit_Framework_TestCase
     {
         parent::setUp();
 
-        $file = dirname(dirname(__DIR__)) . DIRECTORY_SEPARATOR
+        $file = dirname(__DIR__) . DIRECTORY_SEPARATOR
               . 'data' . DIRECTORY_SEPARATOR
               . 'public-suffix-list.php';
         $psl = new PublicSuffixList(require $file);
