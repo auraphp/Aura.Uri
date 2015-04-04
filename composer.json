@@ -27,5 +27,25 @@
             "Aura\\Uri\\": "src/",
             "Aura\\Uri\\_Config\\": "config/"
         }
+    },
+    "extra": {
+        "aura": {
+            "type": "library",
+            "config": {
+                "common": "Aura\\Uri\\_Config\\Common"
+            }
+        },
+        "branch-alias": {
+            "dev-develop-2": "2.0.x-dev"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Aura\\Uri\\": "tests/",
+            "Aura\\Di\\": "vendor/aura/di/tests"
+        }
+    },
+    "require-dev": {
+        "aura/di": "~2.0"
     }
 }
