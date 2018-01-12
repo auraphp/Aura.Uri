@@ -15,6 +15,7 @@ use Aura\Uri\Path;
 use Aura\Uri\Query;
 use Aura\Uri\Host;
 use Aura\Uri\PublicSuffixList;
+use ArrayObject;
 
 /**
  *
@@ -112,6 +113,7 @@ class Factory
         $path->setFromString($elem['path']);
 
         $query = new Query([]);
+        $query->setFlags(ArrayObject::ARRAY_AS_PROPS);
         $query->setFromString($elem['query']);
 
         $host = new Host($this->psl, []);
