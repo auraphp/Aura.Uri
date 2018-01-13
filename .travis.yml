@@ -39,5 +39,4 @@ before_script:
 script:
   - if [[ $TEST_COVERAGE == 'true' ]]; then ../vendor/bin/phpunit --coverage-clover=coverage.clover ; else ../vendor/bin/phpunit ; fi
 after_script:
-  - wget https://scrutinizer-ci.com/ocular.phar
-  - php ocular.phar code-coverage:upload --format=php-clover coverage.clover
+  - if [[ $TEST_COVERAGE == 'true' ]]; then wget https://scrutinizer-ci.com/ocular.phar; php ocular.phar code-coverage:upload --format=php-clover coverage.clover ; fi
