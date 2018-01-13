@@ -77,7 +77,7 @@ class QueryTest extends \PHPUnit_Framework_TestCase
         $actual = $this->query->getArrayCopy();
         $expected = [
             'foo' => 'another',
-            'pagetrt' => 1,
+            'page' => 1,
             'limit' => 50,
         ];
         $this->assertEquals($actual, $expected);

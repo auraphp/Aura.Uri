@@ -19,6 +19,13 @@ namespace Aura\Uri;
  */
 class Query extends \ArrayObject
 {
+
+    public function __construct($input = [], $flags = 0, $iterator_class = "ArrayIterator")
+    {
+        parent::__construct($input, $flags, $iterator_class);
+        $this->setFlags(\ArrayObject::ARRAY_AS_PROPS);
+    }
+
     /**
      *
      * Returns the query portion as a string.
