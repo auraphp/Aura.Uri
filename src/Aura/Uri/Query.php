@@ -25,8 +25,8 @@ class Query extends \ArrayObject
      * ArrayObject constructor used to setFlags
      * @see https://github.com/auraphp/Aura.Uri/issues/28
      *
-     * @param mixed $input
-     * @param integer $flags
+     * @param mixed  $input
+     * @param int    $flags
      * @param string $iterator_class
      */
     public function __construct($input = [], $flags = 0, $iterator_class = "ArrayIterator")
