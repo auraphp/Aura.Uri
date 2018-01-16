@@ -19,6 +19,22 @@ namespace Aura\Uri;
  */
 class Query extends \ArrayObject
 {
+
+    /**
+     *
+     * ArrayObject constructor used to setFlags
+     * @see https://github.com/auraphp/Aura.Uri/issues/28
+     *
+     * @param mixed  $input
+     * @param int    $flags
+     * @param string $iterator_class
+     */
+    public function __construct($input = [], $flags = 0, $iterator_class = "ArrayIterator")
+    {
+        parent::__construct($input, $flags, $iterator_class);
+        $this->setFlags(\ArrayObject::ARRAY_AS_PROPS);
+    }
+
     /**
      *
      * Returns the query portion as a string.

@@ -65,4 +65,24 @@ class QueryTest extends \PHPUnit_Framework_TestCase
         $actual = $this->query->__toString();
         $this->assertEquals($expect, $actual);
     }
+
+    public function testSetQueryString()
+    {
+        $query_string = 'foo=bar&baz=dib';
+        $this->query->setFromString($query_string);
+        $this->query->offsetSet('foo', 'another');
+        $this->query->offsetUnset('baz');
+        $this->query->page = 1;
+        $this->query['limit'] = 50;
+        $actual = $this->query->getArrayCopy();
+        $expected = [
+            'foo' => 'another',
+            'page' => 1,
+            'limit' => 50,
+        ];
+        $this->assertEquals($actual, $expected);
+        $expect = 'foo=another&page=1&limit=50';
+        $actual = $this->query->__toString();
+        $this->assertEquals($expect, $actual);
+    }
 }
