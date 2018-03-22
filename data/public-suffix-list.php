@@ -50,6 +50,12 @@ return array (
     'mil' => 
     array (
     ),
+    'blogspot' => 
+    array (
+    ),
+    'nom' => 
+    array (
+    ),
   ),
   'aero' => 
   array (
@@ -230,9 +236,6 @@ return array (
     'maintenance' => 
     array (
     ),
-    'marketplace' => 
-    array (
-    ),
     'media' => 
     array (
     ),
@@ -297,9 +300,6 @@ return array (
     array (
     ),
     'student' => 
-    array (
-    ),
-    'taxi' => 
     array (
     ),
     'trader' => 
@@ -371,6 +371,9 @@ return array (
     'org' => 
     array (
     ),
+    'nom' => 
+    array (
+    ),
   ),
   'al' => 
   array (
@@ -392,22 +395,16 @@ return array (
     'org' => 
     array (
     ),
+    'blogspot' => 
+    array (
+    ),
+    'nom' => 
+    array (
+    ),
   ),
   'am' => 
   array (
-  ),
-  'an' => 
-  array (
-    'com' => 
-    array (
-    ),
-    'net' => 
-    array (
-    ),
-    'org' => 
-    array (
-    ),
-    'edu' => 
+    'blogspot' => 
     array (
     ),
   ),
@@ -449,10 +446,16 @@ return array (
     'gob' => 
     array (
     ),
+    'gov' => 
+    array (
+    ),
     'int' => 
     array (
     ),
     'mil' => 
+    array (
+    ),
+    'musica' => 
     array (
     ),
     'net' => 
@@ -494,6 +497,9 @@ return array (
   ),
   'asia' => 
   array (
+    'cloudns' => 
+    array (
+    ),
   ),
   'at' => 
   array (
@@ -512,6 +518,33 @@ return array (
     'or' => 
     array (
     ),
+    'futurecms' => 
+    array (
+      '*' => 
+      array (
+      ),
+    ),
+    'futurehosting' => 
+    array (
+    ),
+    'futuremailing' => 
+    array (
+    ),
+    'ortsinfo' => 
+    array (
+      'ex' => 
+      array (
+        '*' => 
+        array (
+        ),
+      ),
+      'kunden' => 
+      array (
+        '*' => 
+        array (
+        ),
+      ),
+    ),
     'biz' => 
     array (
     ),
@@ -519,6 +552,18 @@ return array (
     array (
     ),
     'priv' => 
+    array (
+    ),
+    '12hp' => 
+    array (
+    ),
+    '2ix' => 
+    array (
+    ),
+    '4lima' => 
+    array (
+    ),
+    'lima-city' => 
     array (
     ),
   ),
@@ -565,9 +610,6 @@ return array (
     ),
     'gov' => 
     array (
-      'act' => 
-      array (
-      ),
       'qld' => 
       array (
       ),
@@ -588,9 +630,6 @@ return array (
     array (
     ),
     'id' => 
-    array (
-    ),
-    'csiro' => 
     array (
     ),
     'info' => 
@@ -677,10 +716,7 @@ return array (
   ),
   'ba' => 
   array (
-    'org' => 
-    array (
-    ),
-    'net' => 
+    'com' => 
     array (
     ),
     'edu' => 
@@ -692,25 +728,22 @@ return array (
     'mil' => 
     array (
     ),
-    'unsa' => 
+    'net' => 
     array (
     ),
-    'unbi' => 
+    'org' => 
     array (
     ),
-    'co' => 
-    array (
-    ),
-    'com' => 
-    array (
-    ),
-    'rs' => 
+    'blogspot' => 
     array (
     ),
   ),
   'bb' => 
   array (
     'biz' => 
+    array (
+    ),
+    'co' => 
     array (
     ),
     'com' => 
@@ -734,6 +767,9 @@ return array (
     'store' => 
     array (
     ),
+    'tv' => 
+    array (
+    ),
   ),
   'bd' => 
   array (
@@ -746,8 +782,17 @@ return array (
     'ac' => 
     array (
     ),
+    'webhosting' => 
+    array (
+    ),
     'blogspot' => 
     array (
+    ),
+    'transurl' => 
+    array (
+      '*' => 
+      array (
+      ),
     ),
   ),
   'bf' => 
@@ -866,6 +911,12 @@ return array (
     9 => 
     array (
     ),
+    'blogspot' => 
+    array (
+    ),
+    'barsy' => 
+    array (
+    ),
   ),
   'bh' => 
   array (
@@ -905,6 +956,9 @@ return array (
   ),
   'biz' => 
   array (
+    'cloudns' => 
+    array (
+    ),
     'dyndns' => 
     array (
     ),
@@ -924,6 +978,18 @@ return array (
     array (
     ),
     'webhop' => 
+    array (
+    ),
+    'mmafan' => 
+    array (
+    ),
+    'myftp' => 
+    array (
+    ),
+    'no-ip' => 
+    array (
+    ),
+    'dscloud' => 
     array (
     ),
   ),
@@ -974,9 +1040,6 @@ return array (
     'edu' => 
     array (
     ),
-    'gov' => 
-    array (
-    ),
     'gob' => 
     array (
     ),
@@ -995,9 +1058,114 @@ return array (
     'tv' => 
     array (
     ),
+    'web' => 
+    array (
+    ),
+    'academia' => 
+    array (
+    ),
+    'agro' => 
+    array (
+    ),
+    'arte' => 
+    array (
+    ),
+    'blog' => 
+    array (
+    ),
+    'bolivia' => 
+    array (
+    ),
+    'ciencia' => 
+    array (
+    ),
+    'cooperativa' => 
+    array (
+    ),
+    'democracia' => 
+    array (
+    ),
+    'deporte' => 
+    array (
+    ),
+    'ecologia' => 
+    array (
+    ),
+    'economia' => 
+    array (
+    ),
+    'empresa' => 
+    array (
+    ),
+    'indigena' => 
+    array (
+    ),
+    'industria' => 
+    array (
+    ),
+    'info' => 
+    array (
+    ),
+    'medicina' => 
+    array (
+    ),
+    'movimiento' => 
+    array (
+    ),
+    'musica' => 
+    array (
+    ),
+    'natural' => 
+    array (
+    ),
+    'nombre' => 
+    array (
+    ),
+    'noticias' => 
+    array (
+    ),
+    'patria' => 
+    array (
+    ),
+    'politica' => 
+    array (
+    ),
+    'profesional' => 
+    array (
+    ),
+    'plurinacional' => 
+    array (
+    ),
+    'pueblo' => 
+    array (
+    ),
+    'revista' => 
+    array (
+    ),
+    'salud' => 
+    array (
+    ),
+    'tecnologia' => 
+    array (
+    ),
+    'tksat' => 
+    array (
+    ),
+    'transporte' => 
+    array (
+    ),
+    'wiki' => 
+    array (
+    ),
   ),
   'br' => 
   array (
+    '9guacu' => 
+    array (
+    ),
+    'abc' => 
+    array (
+    ),
     'adm' => 
     array (
     ),
@@ -1007,7 +1175,16 @@ return array (
     'agr' => 
     array (
     ),
+    'aju' => 
+    array (
+    ),
     'am' => 
+    array (
+    ),
+    'anani' => 
+    array (
+    ),
+    'aparecida' => 
     array (
     ),
     'arq' => 
@@ -1022,6 +1199,15 @@ return array (
     'b' => 
     array (
     ),
+    'barueri' => 
+    array (
+    ),
+    'belem' => 
+    array (
+    ),
+    'bhz' => 
+    array (
+    ),
     'bio' => 
     array (
     ),
@@ -1029,6 +1215,21 @@ return array (
     array (
     ),
     'bmd' => 
+    array (
+    ),
+    'boavista' => 
+    array (
+    ),
+    'bsb' => 
+    array (
+    ),
+    'campinagrande' => 
+    array (
+    ),
+    'campinas' => 
+    array (
+    ),
+    'caxias' => 
     array (
     ),
     'cim' => 
@@ -1046,7 +1247,22 @@ return array (
       array (
       ),
     ),
+    'contagem' => 
+    array (
+    ),
     'coop' => 
+    array (
+    ),
+    'cri' => 
+    array (
+    ),
+    'cuiaba' => 
+    array (
+    ),
+    'curitiba' => 
+    array (
+    ),
+    'def' => 
     array (
     ),
     'ecn' => 
@@ -1076,7 +1292,13 @@ return array (
     'far' => 
     array (
     ),
+    'feira' => 
+    array (
+    ),
     'flog' => 
+    array (
+    ),
+    'floripa' => 
     array (
     ),
     'fm' => 
@@ -1085,7 +1307,13 @@ return array (
     'fnd' => 
     array (
     ),
+    'fortal' => 
+    array (
+    ),
     'fot' => 
+    array (
+    ),
+    'foz' => 
     array (
     ),
     'fst' => 
@@ -1097,7 +1325,94 @@ return array (
     'ggf' => 
     array (
     ),
+    'goiania' => 
+    array (
+    ),
     'gov' => 
+    array (
+      'ac' => 
+      array (
+      ),
+      'al' => 
+      array (
+      ),
+      'am' => 
+      array (
+      ),
+      'ap' => 
+      array (
+      ),
+      'ba' => 
+      array (
+      ),
+      'ce' => 
+      array (
+      ),
+      'df' => 
+      array (
+      ),
+      'es' => 
+      array (
+      ),
+      'go' => 
+      array (
+      ),
+      'ma' => 
+      array (
+      ),
+      'mg' => 
+      array (
+      ),
+      'ms' => 
+      array (
+      ),
+      'mt' => 
+      array (
+      ),
+      'pa' => 
+      array (
+      ),
+      'pb' => 
+      array (
+      ),
+      'pe' => 
+      array (
+      ),
+      'pi' => 
+      array (
+      ),
+      'pr' => 
+      array (
+      ),
+      'rj' => 
+      array (
+      ),
+      'rn' => 
+      array (
+      ),
+      'ro' => 
+      array (
+      ),
+      'rr' => 
+      array (
+      ),
+      'rs' => 
+      array (
+      ),
+      'sc' => 
+      array (
+      ),
+      'se' => 
+      array (
+      ),
+      'sp' => 
+      array (
+      ),
+      'to' => 
+      array (
+      ),
+    ),
+    'gru' => 
     array (
     ),
     'imb' => 
@@ -1109,6 +1424,18 @@ return array (
     'inf' => 
     array (
     ),
+    'jab' => 
+    array (
+    ),
+    'jampa' => 
+    array (
+    ),
+    'jdf' => 
+    array (
+    ),
+    'joinville' => 
+    array (
+    ),
     'jor' => 
     array (
     ),
@@ -1117,8 +1444,104 @@ return array (
     ),
     'leg' => 
     array (
+      'ac' => 
+      array (
+      ),
+      'al' => 
+      array (
+      ),
+      'am' => 
+      array (
+      ),
+      'ap' => 
+      array (
+      ),
+      'ba' => 
+      array (
+      ),
+      'ce' => 
+      array (
+      ),
+      'df' => 
+      array (
+      ),
+      'es' => 
+      array (
+      ),
+      'go' => 
+      array (
+      ),
+      'ma' => 
+      array (
+      ),
+      'mg' => 
+      array (
+      ),
+      'ms' => 
+      array (
+      ),
+      'mt' => 
+      array (
+      ),
+      'pa' => 
+      array (
+      ),
+      'pb' => 
+      array (
+      ),
+      'pe' => 
+      array (
+      ),
+      'pi' => 
+      array (
+      ),
+      'pr' => 
+      array (
+      ),
+      'rj' => 
+      array (
+      ),
+      'rn' => 
+      array (
+      ),
+      'ro' => 
+      array (
+      ),
+      'rr' => 
+      array (
+      ),
+      'rs' => 
+      array (
+      ),
+      'sc' => 
+      array (
+      ),
+      'se' => 
+      array (
+      ),
+      'sp' => 
+      array (
+      ),
+      'to' => 
+      array (
+      ),
     ),
     'lel' => 
+    array (
+    ),
+    'londrina' => 
+    array (
+    ),
+    'macapa' => 
+    array (
+    ),
+    'maceio' => 
+    array (
+    ),
+    'manaus' => 
+    array (
+    ),
+    'maringa' => 
     array (
     ),
     'mat' => 
@@ -1130,17 +1553,29 @@ return array (
     'mil' => 
     array (
     ),
+    'morena' => 
+    array (
+    ),
     'mp' => 
     array (
     ),
     'mus' => 
     array (
     ),
+    'natal' => 
+    array (
+    ),
     'net' => 
+    array (
+    ),
+    'niteroi' => 
     array (
     ),
     'nom' => 
     array (
+      '*' => 
+      array (
+      ),
     ),
     'not' => 
     array (
@@ -1152,6 +1587,15 @@ return array (
     array (
     ),
     'org' => 
+    array (
+    ),
+    'osasco' => 
+    array (
+    ),
+    'palmas' => 
+    array (
+    ),
+    'poa' => 
     array (
     ),
     'ppg' => 
@@ -1166,6 +1610,9 @@ return array (
     'psi' => 
     array (
     ),
+    'pvh' => 
+    array (
+    ),
     'qsl' => 
     array (
     ),
@@ -1175,7 +1622,49 @@ return array (
     'rec' => 
     array (
     ),
+    'recife' => 
+    array (
+    ),
+    'ribeirao' => 
+    array (
+    ),
+    'rio' => 
+    array (
+    ),
+    'riobranco' => 
+    array (
+    ),
+    'riopreto' => 
+    array (
+    ),
+    'salvador' => 
+    array (
+    ),
+    'sampa' => 
+    array (
+    ),
+    'santamaria' => 
+    array (
+    ),
+    'santoandre' => 
+    array (
+    ),
+    'saobernardo' => 
+    array (
+    ),
+    'saogonca' => 
+    array (
+    ),
+    'sjc' => 
+    array (
+    ),
     'slg' => 
+    array (
+    ),
+    'slz' => 
+    array (
+    ),
+    'sorocaba' => 
     array (
     ),
     'srv' => 
@@ -1185,6 +1674,9 @@ return array (
     array (
     ),
     'teo' => 
+    array (
+    ),
+    'the' => 
     array (
     ),
     'tmp' => 
@@ -1199,7 +1691,13 @@ return array (
     'tv' => 
     array (
     ),
+    'udi' => 
+    array (
+    ),
     'vet' => 
+    array (
+    ),
+    'vix' => 
     array (
     ),
     'vlog' => 
@@ -1227,6 +1725,9 @@ return array (
     array (
     ),
     'gov' => 
+    array (
+    ),
+    'we' => 
     array (
     ),
   ),
@@ -1270,8 +1771,14 @@ return array (
     ),
     'com' => 
     array (
+      'blogspot' => 
+      array (
+      ),
     ),
     'of' => 
+    array (
+    ),
+    'nym' => 
     array (
     ),
   ),
@@ -1293,6 +1800,9 @@ return array (
     array (
     ),
     'za' => 
+    array (
+    ),
+    'nym' => 
     array (
     ),
   ),
@@ -1343,10 +1853,22 @@ return array (
     'gc' => 
     array (
     ),
+    '1password' => 
+    array (
+    ),
+    'awdev' => 
+    array (
+      '*' => 
+      array (
+      ),
+    ),
     'co' => 
     array (
     ),
     'blogspot' => 
+    array (
+    ),
+    'no-ip' => 
     array (
     ),
   ),
@@ -1355,6 +1877,9 @@ return array (
   ),
   'cc' => 
   array (
+    'cloudns' => 
+    array (
+    ),
     'ftpaccess' => 
     array (
     ),
@@ -1365,6 +1890,12 @@ return array (
     array (
     ),
     'scrapping' => 
+    array (
+    ),
+    'twmail' => 
+    array (
+    ),
+    'fantasyleague' => 
     array (
     ),
   ),
@@ -1385,7 +1916,28 @@ return array (
   ),
   'ch' => 
   array (
+    'square7' => 
+    array (
+    ),
     'blogspot' => 
+    array (
+    ),
+    'linkyard-cloud' => 
+    array (
+    ),
+    'gotdns' => 
+    array (
+    ),
+    '12hp' => 
+    array (
+    ),
+    '2ix' => 
+    array (
+    ),
+    '4lima' => 
+    array (
+    ),
+    'lima-city' => 
     array (
     ),
   ),
@@ -1461,10 +2013,25 @@ return array (
     'mil' => 
     array (
     ),
+    'blogspot' => 
+    array (
+    ),
+    'nom' => 
+    array (
+    ),
   ),
   'cm' => 
   array (
+    'co' => 
+    array (
+    ),
+    'com' => 
+    array (
+    ),
     'gov' => 
+    array (
+    ),
+    'net' => 
     array (
     ),
   ),
@@ -1475,6 +2042,33 @@ return array (
     ),
     'com' => 
     array (
+      'amazonaws' => 
+      array (
+        'compute' => 
+        array (
+          '*' => 
+          array (
+          ),
+        ),
+        'eb' => 
+        array (
+          'cn-north-1' => 
+          array (
+          ),
+        ),
+        'elb' => 
+        array (
+          '*' => 
+          array (
+          ),
+        ),
+        'cn-north-1' => 
+        array (
+          's3' => 
+          array (
+          ),
+        ),
+      ),
     ),
     'edu' => 
     array (
@@ -1610,6 +2204,9 @@ return array (
     ),
     'com' => 
     array (
+      'blogspot' => 
+      array (
+      ),
     ),
     'edu' => 
     array (
@@ -1644,63 +2241,54 @@ return array (
     'web' => 
     array (
     ),
+    'nodum' => 
+    array (
+    ),
   ),
   'com' => 
   array (
+    '1password' => 
+    array (
+    ),
     'amazonaws' => 
     array (
       'compute' => 
       array (
-        'ap-northeast-1' => 
+        '*' => 
         array (
         ),
-        'ap-southeast-1' => 
-        array (
-        ),
-        'ap-southeast-2' => 
-        array (
-        ),
-        'eu-west-1' => 
-        array (
-        ),
-        'sa-east-1' => 
-        array (
-        ),
-        'us-gov-west-1' => 
-        array (
-        ),
-        'us-west-1' => 
-        array (
-        ),
-        'us-west-2' => 
+      ),
+      'compute-1' => 
+      array (
+        '*' => 
         array (
         ),
       ),
       'us-east-1' => 
       array (
-      ),
-      'compute-1' => 
-      array (
-        'z-1' => 
+        'dualstack' => 
         array (
-        ),
-        'z-2' => 
-        array (
+          's3' => 
+          array (
+          ),
         ),
       ),
       'elb' => 
       array (
+        '*' => 
+        array (
+        ),
       ),
       's3' => 
       array (
       ),
-      's3-us-west-2' => 
+      's3-ap-northeast-1' => 
       array (
       ),
-      's3-us-west-1' => 
+      's3-ap-northeast-2' => 
       array (
       ),
-      's3-eu-west-1' => 
+      's3-ap-south-1' => 
       array (
       ),
       's3-ap-southeast-1' => 
@@ -1709,7 +2297,25 @@ return array (
       's3-ap-southeast-2' => 
       array (
       ),
-      's3-ap-northeast-1' => 
+      's3-ca-central-1' => 
+      array (
+      ),
+      's3-eu-central-1' => 
+      array (
+      ),
+      's3-eu-west-1' => 
+      array (
+      ),
+      's3-eu-west-2' => 
+      array (
+      ),
+      's3-eu-west-3' => 
+      array (
+      ),
+      's3-external-1' => 
+      array (
+      ),
+      's3-fips-us-gov-west-1' => 
       array (
       ),
       's3-sa-east-1' => 
@@ -1718,19 +2324,175 @@ return array (
       's3-us-gov-west-1' => 
       array (
       ),
-      's3-fips-us-gov-west-1' => 
+      's3-us-east-2' => 
       array (
+      ),
+      's3-us-west-1' => 
+      array (
+      ),
+      's3-us-west-2' => 
+      array (
+      ),
+      'ap-northeast-2' => 
+      array (
+        's3' => 
+        array (
+        ),
+        'dualstack' => 
+        array (
+          's3' => 
+          array (
+          ),
+        ),
+        's3-website' => 
+        array (
+        ),
+      ),
+      'ap-south-1' => 
+      array (
+        's3' => 
+        array (
+        ),
+        'dualstack' => 
+        array (
+          's3' => 
+          array (
+          ),
+        ),
+        's3-website' => 
+        array (
+        ),
+      ),
+      'ca-central-1' => 
+      array (
+        's3' => 
+        array (
+        ),
+        'dualstack' => 
+        array (
+          's3' => 
+          array (
+          ),
+        ),
+        's3-website' => 
+        array (
+        ),
+      ),
+      'eu-central-1' => 
+      array (
+        's3' => 
+        array (
+        ),
+        'dualstack' => 
+        array (
+          's3' => 
+          array (
+          ),
+        ),
+        's3-website' => 
+        array (
+        ),
+      ),
+      'eu-west-2' => 
+      array (
+        's3' => 
+        array (
+        ),
+        'dualstack' => 
+        array (
+          's3' => 
+          array (
+          ),
+        ),
+        's3-website' => 
+        array (
+        ),
+      ),
+      'eu-west-3' => 
+      array (
+        's3' => 
+        array (
+        ),
+        'dualstack' => 
+        array (
+          's3' => 
+          array (
+          ),
+        ),
+        's3-website' => 
+        array (
+        ),
+      ),
+      'us-east-2' => 
+      array (
+        's3' => 
+        array (
+        ),
+        'dualstack' => 
+        array (
+          's3' => 
+          array (
+          ),
+        ),
+        's3-website' => 
+        array (
+        ),
+      ),
+      'ap-northeast-1' => 
+      array (
+        'dualstack' => 
+        array (
+          's3' => 
+          array (
+          ),
+        ),
+      ),
+      'ap-southeast-1' => 
+      array (
+        'dualstack' => 
+        array (
+          's3' => 
+          array (
+          ),
+        ),
+      ),
+      'ap-southeast-2' => 
+      array (
+        'dualstack' => 
+        array (
+          's3' => 
+          array (
+          ),
+        ),
+      ),
+      'eu-west-1' => 
+      array (
+        'dualstack' => 
+        array (
+          's3' => 
+          array (
+          ),
+        ),
+      ),
+      'sa-east-1' => 
+      array (
+        'dualstack' => 
+        array (
+          's3' => 
+          array (
+          ),
+        ),
       ),
       's3-website-us-east-1' => 
-      array (
-      ),
-      's3-website-us-west-2' => 
       array (
       ),
       's3-website-us-west-1' => 
       array (
       ),
-      's3-website-eu-west-1' => 
+      's3-website-us-west-2' => 
+      array (
+      ),
+      's3-website-ap-northeast-1' => 
       array (
       ),
       's3-website-ap-southeast-1' => 
@@ -1739,20 +2501,74 @@ return array (
       's3-website-ap-southeast-2' => 
       array (
       ),
-      's3-website-ap-northeast-1' => 
+      's3-website-eu-west-1' => 
       array (
       ),
       's3-website-sa-east-1' => 
       array (
       ),
-      's3-website-us-gov-west-1' => 
-      array (
-      ),
     ),
     'elasticbeanstalk' => 
     array (
+      'ap-northeast-1' => 
+      array (
+      ),
+      'ap-northeast-2' => 
+      array (
+      ),
+      'ap-south-1' => 
+      array (
+      ),
+      'ap-southeast-1' => 
+      array (
+      ),
+      'ap-southeast-2' => 
+      array (
+      ),
+      'ca-central-1' => 
+      array (
+      ),
+      'eu-central-1' => 
+      array (
+      ),
+      'eu-west-1' => 
+      array (
+      ),
+      'eu-west-2' => 
+      array (
+      ),
+      'eu-west-3' => 
+      array (
+      ),
+      'sa-east-1' => 
+      array (
+      ),
+      'us-east-1' => 
+      array (
+      ),
+      'us-east-2' => 
+      array (
+      ),
+      'us-gov-west-1' => 
+      array (
+      ),
+      'us-west-1' => 
+      array (
+      ),
+      'us-west-2' => 
+      array (
+      ),
+    ),
+    'on-aptible' => 
+    array (
+    ),
+    'myasustor' => 
+    array (
     ),
     'betainabox' => 
+    array (
+    ),
+    'bplaced' => 
     array (
     ),
     'ar' => 
@@ -1797,9 +2613,6 @@ return array (
     'sa' => 
     array (
     ),
-    'se' => 
-    array (
-    ),
     'uk' => 
     array (
     ),
@@ -1821,13 +2634,28 @@ return array (
     'co' => 
     array (
     ),
+    'xenapponazure' => 
+    array (
+    ),
+    'jdevcloud' => 
+    array (
+    ),
+    'wpdevcloud' => 
+    array (
+    ),
     'cloudcontrolled' => 
     array (
     ),
     'cloudcontrolapp' => 
     array (
     ),
+    'drayddns' => 
+    array (
+    ),
     'dreamhosters' => 
+    array (
+    ),
+    'mydrobo' => 
     array (
     ),
     'dyndns-at-home' => 
@@ -2280,11 +3108,86 @@ return array (
     'writesthisblog' => 
     array (
     ),
+    'ddnsfree' => 
+    array (
+    ),
+    'ddnsgeek' => 
+    array (
+    ),
+    'giize' => 
+    array (
+    ),
+    'gleeze' => 
+    array (
+    ),
+    'kozow' => 
+    array (
+    ),
+    'loseyourip' => 
+    array (
+    ),
+    'ooguy' => 
+    array (
+    ),
+    'theworkpc' => 
+    array (
+    ),
+    'mytuleap' => 
+    array (
+    ),
+    'evennode' => 
+    array (
+      'eu-1' => 
+      array (
+      ),
+      'eu-2' => 
+      array (
+      ),
+      'eu-3' => 
+      array (
+      ),
+      'eu-4' => 
+      array (
+      ),
+      'us-1' => 
+      array (
+      ),
+      'us-2' => 
+      array (
+      ),
+      'us-3' => 
+      array (
+      ),
+      'us-4' => 
+      array (
+      ),
+    ),
+    'fbsbx' => 
+    array (
+      'apps' => 
+      array (
+      ),
+    ),
+    'firebaseapp' => 
+    array (
+    ),
+    'flynnhub' => 
+    array (
+    ),
+    'freebox-os' => 
+    array (
+    ),
+    'freeboxos' => 
+    array (
+    ),
     'githubusercontent' => 
     array (
     ),
-    'ro' => 
+    '0emm' => 
     array (
+      '*' => 
+      array (
+      ),
     ),
     'appspot' => 
     array (
@@ -2301,7 +3204,16 @@ return array (
     'googlecode' => 
     array (
     ),
+    'pagespeedmobilizer' => 
+    array (
+    ),
+    'publishproxy' => 
+    array (
+    ),
     'withgoogle' => 
+    array (
+    ),
+    'withyoutube' => 
     array (
     ),
     'herokuapp' => 
@@ -2310,13 +3222,256 @@ return array (
     'herokussl' => 
     array (
     ),
+    'pixolino' => 
+    array (
+    ),
+    'joyent' => 
+    array (
+      'cns' => 
+      array (
+        '*' => 
+        array (
+        ),
+      ),
+    ),
+    'barsyonline' => 
+    array (
+    ),
+    'meteorapp' => 
+    array (
+      'eu' => 
+      array (
+      ),
+    ),
+    'bitballoon' => 
+    array (
+    ),
+    'netlify' => 
+    array (
+    ),
+    '4u' => 
+    array (
+    ),
+    'nfshost' => 
+    array (
+    ),
+    'blogsyte' => 
+    array (
+    ),
+    'ciscofreak' => 
+    array (
+    ),
+    'damnserver' => 
+    array (
+    ),
+    'ditchyourip' => 
+    array (
+    ),
+    'dnsiskinky' => 
+    array (
+    ),
+    'dynns' => 
+    array (
+    ),
+    'geekgalaxy' => 
+    array (
+    ),
+    'health-carereform' => 
+    array (
+    ),
+    'homesecuritymac' => 
+    array (
+    ),
+    'homesecuritypc' => 
+    array (
+    ),
+    'myactivedirectory' => 
+    array (
+    ),
+    'mysecuritycamera' => 
+    array (
+    ),
+    'net-freaks' => 
+    array (
+    ),
+    'onthewifi' => 
+    array (
+    ),
+    'point2this' => 
+    array (
+    ),
+    'quicksytes' => 
+    array (
+    ),
+    'securitytactics' => 
+    array (
+    ),
+    'serveexchange' => 
+    array (
+    ),
+    'servehumour' => 
+    array (
+    ),
+    'servep2p' => 
+    array (
+    ),
+    'servesarcasm' => 
+    array (
+    ),
+    'stufftoread' => 
+    array (
+    ),
+    'unusualperson' => 
+    array (
+    ),
+    'workisboring' => 
+    array (
+    ),
+    '3utilities' => 
+    array (
+    ),
+    'ddnsking' => 
+    array (
+    ),
+    'myvnc' => 
+    array (
+    ),
+    'servebeer' => 
+    array (
+    ),
+    'servecounterstrike' => 
+    array (
+    ),
+    'serveftp' => 
+    array (
+    ),
+    'servegame' => 
+    array (
+    ),
+    'servehalflife' => 
+    array (
+    ),
+    'servehttp' => 
+    array (
+    ),
+    'serveirc' => 
+    array (
+    ),
+    'servemp3' => 
+    array (
+    ),
+    'servepics' => 
+    array (
+    ),
+    'servequake' => 
+    array (
+    ),
     'operaunite' => 
     array (
     ),
     'outsystemscloud' => 
     array (
     ),
+    'ownprovider' => 
+    array (
+    ),
+    'pgfog' => 
+    array (
+    ),
+    'pagefrontapp' => 
+    array (
+    ),
+    'gotpantheon' => 
+    array (
+    ),
+    'prgmr' => 
+    array (
+      'xen' => 
+      array (
+      ),
+    ),
+    'qa2' => 
+    array (
+    ),
+    'dev-myqnapcloud' => 
+    array (
+    ),
+    'alpha-myqnapcloud' => 
+    array (
+    ),
+    'myqnapcloud' => 
+    array (
+    ),
+    'quipelements' => 
+    array (
+      '*' => 
+      array (
+      ),
+    ),
+    'rackmaze' => 
+    array (
+    ),
     'rhcloud' => 
+    array (
+    ),
+    'logoip' => 
+    array (
+    ),
+    'scrysec' => 
+    array (
+    ),
+    'firewall-gateway' => 
+    array (
+    ),
+    'myshopblocks' => 
+    array (
+    ),
+    '1kapp' => 
+    array (
+    ),
+    'appchizi' => 
+    array (
+    ),
+    'applinzi' => 
+    array (
+    ),
+    'sinaapp' => 
+    array (
+    ),
+    'vipsinaapp' => 
+    array (
+    ),
+    'bounty-full' => 
+    array (
+      'alpha' => 
+      array (
+      ),
+      'beta' => 
+      array (
+      ),
+    ),
+    'temp-dns' => 
+    array (
+    ),
+    'dsmynas' => 
+    array (
+    ),
+    'familyds' => 
+    array (
+    ),
+    'bloxcms' => 
+    array (
+    ),
+    'townnews-staging' => 
+    array (
+    ),
+    'hk' => 
+    array (
+    ),
+    'remotewd' => 
+    array (
+    ),
+    'yolasite' => 
     array (
     ),
   ),
@@ -2397,22 +3552,109 @@ return array (
     'ath' => 
     array (
     ),
+    'info' => 
+    array (
+    ),
   ),
   'cy' => 
   array (
-    '*' => 
+    'ac' => 
+    array (
+    ),
+    'biz' => 
+    array (
+    ),
+    'com' => 
+    array (
+      'blogspot' => 
+      array (
+      ),
+    ),
+    'ekloges' => 
+    array (
+    ),
+    'gov' => 
+    array (
+    ),
+    'ltd' => 
+    array (
+    ),
+    'name' => 
+    array (
+    ),
+    'net' => 
+    array (
+    ),
+    'org' => 
+    array (
+    ),
+    'parliament' => 
+    array (
+    ),
+    'press' => 
+    array (
+    ),
+    'pro' => 
+    array (
+    ),
+    'tm' => 
     array (
     ),
   ),
   'cz' => 
   array (
+    'co' => 
+    array (
+    ),
+    'realm' => 
+    array (
+    ),
+    'e4' => 
+    array (
+    ),
     'blogspot' => 
     array (
+    ),
+    'metacentrum' => 
+    array (
+      'cloud' => 
+      array (
+      ),
+      'custom' => 
+      array (
+      ),
     ),
   ),
   'de' => 
   array (
+    'bplaced' => 
+    array (
+    ),
+    'square7' => 
+    array (
+    ),
     'com' => 
+    array (
+    ),
+    'cosidns' => 
+    array (
+      'dyn' => 
+      array (
+      ),
+    ),
+    'dynamisches-dns' => 
+    array (
+    ),
+    'dnsupdater' => 
+    array (
+    ),
+    'internet-dns' => 
+    array (
+    ),
+    'l-o-g-i-n' => 
+    array (
+    ),
+    'dnshome' => 
     array (
     ),
     'fuettertdasnetz' => 
@@ -2433,7 +3675,112 @@ return array (
     'traeumtgerade' => 
     array (
     ),
+    'ddnss' => 
+    array (
+      'dyn' => 
+      array (
+      ),
+      'dyndns' => 
+      array (
+      ),
+    ),
+    'dyndns1' => 
+    array (
+    ),
+    'dyn-ip24' => 
+    array (
+    ),
+    'home-webserver' => 
+    array (
+      'dyn' => 
+      array (
+      ),
+    ),
+    'myhome-server' => 
+    array (
+    ),
+    'goip' => 
+    array (
+    ),
     'blogspot' => 
+    array (
+    ),
+    'keymachine' => 
+    array (
+    ),
+    'git-repos' => 
+    array (
+    ),
+    'lcube-server' => 
+    array (
+    ),
+    'svn-repos' => 
+    array (
+    ),
+    'barsy' => 
+    array (
+    ),
+    'logoip' => 
+    array (
+    ),
+    'firewall-gateway' => 
+    array (
+    ),
+    'my-gateway' => 
+    array (
+    ),
+    'my-router' => 
+    array (
+    ),
+    'spdns' => 
+    array (
+    ),
+    'taifun-dns' => 
+    array (
+    ),
+    '12hp' => 
+    array (
+    ),
+    '2ix' => 
+    array (
+    ),
+    '4lima' => 
+    array (
+    ),
+    'lima-city' => 
+    array (
+    ),
+    'dd-dns' => 
+    array (
+    ),
+    'dray-dns' => 
+    array (
+    ),
+    'draydns' => 
+    array (
+    ),
+    'dyn-vpn' => 
+    array (
+    ),
+    'dynvpn' => 
+    array (
+    ),
+    'mein-vigor' => 
+    array (
+    ),
+    'my-vigor' => 
+    array (
+    ),
+    'my-wan' => 
+    array (
+    ),
+    'syno-ds' => 
+    array (
+    ),
+    'synology-diskstation' => 
+    array (
+    ),
+    'synology-ds' => 
     array (
     ),
   ),
@@ -2442,6 +3789,21 @@ return array (
   ),
   'dk' => 
   array (
+    'biz' => 
+    array (
+    ),
+    'co' => 
+    array (
+    ),
+    'firm' => 
+    array (
+    ),
+    'reg' => 
+    array (
+    ),
+    'store' => 
+    array (
+    ),
     'blogspot' => 
     array (
     ),
@@ -2585,6 +3947,9 @@ return array (
     ),
     'com' => 
     array (
+      'blogspot' => 
+      array (
+      ),
     ),
     'pri' => 
     array (
@@ -2603,6 +3968,9 @@ return array (
   array (
     'com' => 
     array (
+      'blogspot' => 
+      array (
+      ),
     ),
     'edu' => 
     array (
@@ -2658,16 +4026,67 @@ return array (
   ),
   'et' => 
   array (
-    '*' => 
+    'com' => 
+    array (
+    ),
+    'gov' => 
+    array (
+    ),
+    'org' => 
+    array (
+    ),
+    'edu' => 
+    array (
+    ),
+    'biz' => 
+    array (
+    ),
+    'name' => 
+    array (
+    ),
+    'info' => 
+    array (
+    ),
+    'net' => 
     array (
     ),
   ),
   'eu' => 
   array (
+    '1password' => 
+    array (
+    ),
+    'mycd' => 
+    array (
+    ),
+    'cloudns' => 
+    array (
+    ),
+    'barsy' => 
+    array (
+    ),
+    'wellbeingzone' => 
+    array (
+    ),
+    'spdns' => 
+    array (
+    ),
+    'transurl' => 
+    array (
+      '*' => 
+      array (
+      ),
+    ),
+    'diskstation' => 
+    array (
+    ),
   ),
   'fi' => 
   array (
     'aland' => 
+    array (
+    ),
+    'dy' => 
     array (
     ),
     'blogspot' => 
@@ -2766,7 +4185,25 @@ return array (
     'veterinaire' => 
     array (
     ),
+    'fbx-os' => 
+    array (
+    ),
+    'fbxos' => 
+    array (
+    ),
+    'freebox-os' => 
+    array (
+    ),
+    'freeboxos' => 
+    array (
+    ),
     'blogspot' => 
+    array (
+    ),
+    'on-web' => 
+    array (
+    ),
+    'chirurgiens-dentistes-en-france' => 
     array (
     ),
   ),
@@ -2778,6 +4215,9 @@ return array (
   ),
   'gd' => 
   array (
+    'nom' => 
+    array (
+    ),
   ),
   'ge' => 
   array (
@@ -2815,6 +4255,9 @@ return array (
     array (
     ),
     'org' => 
+    array (
+    ),
+    'cya' => 
     array (
     ),
   ),
@@ -2859,6 +4302,24 @@ return array (
   ),
   'gl' => 
   array (
+    'co' => 
+    array (
+    ),
+    'com' => 
+    array (
+    ),
+    'edu' => 
+    array (
+    ),
+    'net' => 
+    array (
+    ),
+    'org' => 
+    array (
+    ),
+    'nom' => 
+    array (
+    ),
   ),
   'gm' => 
   array (
@@ -2931,6 +4392,9 @@ return array (
     'blogspot' => 
     array (
     ),
+    'nym' => 
+    array (
+    ),
   ),
   'gs' => 
   array (
@@ -2958,6 +4422,9 @@ return array (
     'org' => 
     array (
     ),
+    'nom' => 
+    array (
+    ),
   ),
   'gu' => 
   array (
@@ -2976,7 +4443,16 @@ return array (
     'com' => 
     array (
     ),
+    'edu' => 
+    array (
+    ),
+    'gov' => 
+    array (
+    ),
     'net' => 
+    array (
+    ),
+    'org' => 
     array (
     ),
   ),
@@ -3048,6 +4524,12 @@ return array (
     'blogspot' => 
     array (
     ),
+    'ltd' => 
+    array (
+    ),
+    'inc' => 
+    array (
+    ),
   ),
   'hm' => 
   array (
@@ -3072,6 +4554,9 @@ return array (
     'gob' => 
     array (
     ),
+    'nom' => 
+    array (
+    ),
   ),
   'hr' => 
   array (
@@ -3085,6 +4570,9 @@ return array (
     array (
     ),
     'com' => 
+    array (
+    ),
+    'blogspot' => 
     array (
     ),
   ),
@@ -3251,6 +4739,9 @@ return array (
     ),
     'co' => 
     array (
+      'blogspot' => 
+      array (
+      ),
     ),
     'desa' => 
     array (
@@ -3288,7 +4779,7 @@ return array (
   ),
   'il' => 
   array (
-    '*' => 
+    'ac' => 
     array (
     ),
     'co' => 
@@ -3296,6 +4787,24 @@ return array (
       'blogspot' => 
       array (
       ),
+    ),
+    'gov' => 
+    array (
+    ),
+    'idf' => 
+    array (
+    ),
+    'k12' => 
+    array (
+    ),
+    'muni' => 
+    array (
+    ),
+    'net' => 
+    array (
+    ),
+    'org' => 
+    array (
     ),
   ),
   'im' => 
@@ -3325,6 +4834,12 @@ return array (
     array (
     ),
     'tv' => 
+    array (
+    ),
+    'ro' => 
+    array (
+    ),
+    'nom' => 
     array (
     ),
   ),
@@ -3366,12 +4881,24 @@ return array (
     'mil' => 
     array (
     ),
+    'cloudns' => 
+    array (
+    ),
     'blogspot' => 
+    array (
+    ),
+    'barsy' => 
     array (
     ),
   ),
   'info' => 
   array (
+    'cloudns' => 
+    array (
+    ),
+    'dynamic-dns' => 
+    array (
+    ),
     'dyndns' => 
     array (
     ),
@@ -3402,6 +4929,21 @@ return array (
     'webhop' => 
     array (
     ),
+    'nsupdate' => 
+    array (
+    ),
+    'dvrcam' => 
+    array (
+    ),
+    'ilovecollege' => 
+    array (
+    ),
+    'no-ip' => 
+    array (
+    ),
+    'v-info' => 
+    array (
+    ),
   ),
   'int' => 
   array (
@@ -3414,7 +4956,133 @@ return array (
     'com' => 
     array (
     ),
+    'backplaneapp' => 
+    array (
+    ),
+    'boxfuse' => 
+    array (
+    ),
+    'browsersafetymark' => 
+    array (
+    ),
+    'dedyn' => 
+    array (
+    ),
+    'drud' => 
+    array (
+    ),
+    'definima' => 
+    array (
+    ),
+    'enonic' => 
+    array (
+      'customer' => 
+      array (
+      ),
+    ),
     'github' => 
+    array (
+    ),
+    'gitlab' => 
+    array (
+    ),
+    'hasura-app' => 
+    array (
+    ),
+    'ngrok' => 
+    array (
+    ),
+    'nodeart' => 
+    array (
+      'stage' => 
+      array (
+      ),
+    ),
+    'nodum' => 
+    array (
+    ),
+    'nid' => 
+    array (
+    ),
+    'pantheonsite' => 
+    array (
+    ),
+    'protonet' => 
+    array (
+    ),
+    'vaporcloud' => 
+    array (
+    ),
+    'resindevice' => 
+    array (
+    ),
+    'resinstaging' => 
+    array (
+      'devices' => 
+      array (
+      ),
+    ),
+    'hzc' => 
+    array (
+    ),
+    'sandcats' => 
+    array (
+    ),
+    's5y' => 
+    array (
+      '*' => 
+      array (
+      ),
+    ),
+    'shiftedit' => 
+    array (
+    ),
+    'lair' => 
+    array (
+      'apps' => 
+      array (
+      ),
+    ),
+    'stolos' => 
+    array (
+      '*' => 
+      array (
+      ),
+    ),
+    'spacekit' => 
+    array (
+    ),
+    'thingdust' => 
+    array (
+      'dev' => 
+      array (
+        'cust' => 
+        array (
+        ),
+      ),
+      'disrec' => 
+      array (
+        'cust' => 
+        array (
+        ),
+      ),
+      'prod' => 
+      array (
+        'cust' => 
+        array (
+        ),
+      ),
+      'testing' => 
+      array (
+        'cust' => 
+        array (
+        ),
+      ),
+    ),
+    2038 => 
+    array (
+    ),
+    'wedeploy' => 
     array (
     ),
   ),
@@ -3490,6 +5158,9 @@ return array (
     array (
     ),
     'cupcake' => 
+    array (
+    ),
+    'blogspot' => 
     array (
     ),
   ),
@@ -7151,19 +8822,10 @@ return array (
       'gyokuto' => 
       array (
       ),
-      'hitoyoshi' => 
-      array (
-      ),
       'kamiamakusa' => 
       array (
       ),
-      'kashima' => 
-      array (
-      ),
       'kikuchi' => 
-      array (
-      ),
-      'kosa' => 
       array (
       ),
       'kumamoto' => 
@@ -7425,9 +9087,6 @@ return array (
       array (
       ),
       'kawasaki' => 
-      array (
-      ),
-      'kesennuma' => 
       array (
       ),
       'marumori' => 
@@ -9852,6 +11511,147 @@ return array (
       array (
       ),
     ),
+    '栃木' => 
+    array (
+    ),
+    '愛知' => 
+    array (
+    ),
+    '愛媛' => 
+    array (
+    ),
+    '兵庫' => 
+    array (
+    ),
+    '熊本' => 
+    array (
+    ),
+    '茨城' => 
+    array (
+    ),
+    '北海道' => 
+    array (
+    ),
+    '千葉' => 
+    array (
+    ),
+    '和歌山' => 
+    array (
+    ),
+    '長崎' => 
+    array (
+    ),
+    '長野' => 
+    array (
+    ),
+    '新潟' => 
+    array (
+    ),
+    '青森' => 
+    array (
+    ),
+    '静岡' => 
+    array (
+    ),
+    '東京' => 
+    array (
+    ),
+    '石川' => 
+    array (
+    ),
+    '埼玉' => 
+    array (
+    ),
+    '三重' => 
+    array (
+    ),
+    '京都' => 
+    array (
+    ),
+    '佐賀' => 
+    array (
+    ),
+    '大分' => 
+    array (
+    ),
+    '大阪' => 
+    array (
+    ),
+    '奈良' => 
+    array (
+    ),
+    '宮城' => 
+    array (
+    ),
+    '宮崎' => 
+    array (
+    ),
+    '富山' => 
+    array (
+    ),
+    '山口' => 
+    array (
+    ),
+    '山形' => 
+    array (
+    ),
+    '山梨' => 
+    array (
+    ),
+    '岩手' => 
+    array (
+    ),
+    '岐阜' => 
+    array (
+    ),
+    '岡山' => 
+    array (
+    ),
+    '島根' => 
+    array (
+    ),
+    '広島' => 
+    array (
+    ),
+    '徳島' => 
+    array (
+    ),
+    '沖縄' => 
+    array (
+    ),
+    '滋賀' => 
+    array (
+    ),
+    '神奈川' => 
+    array (
+    ),
+    '福井' => 
+    array (
+    ),
+    '福岡' => 
+    array (
+    ),
+    '福島' => 
+    array (
+    ),
+    '秋田' => 
+    array (
+    ),
+    '群馬' => 
+    array (
+    ),
+    '香川' => 
+    array (
+    ),
+    '高知' => 
+    array (
+    ),
+    '鳥取' => 
+    array (
+    ),
+    '鹿児島' => 
+    array (
+    ),
     'kawasaki' => 
     array (
       '*' => 
@@ -9928,7 +11728,34 @@ return array (
   ),
   'ke' => 
   array (
-    '*' => 
+    'ac' => 
+    array (
+    ),
+    'co' => 
+    array (
+      'blogspot' => 
+      array (
+      ),
+    ),
+    'go' => 
+    array (
+    ),
+    'info' => 
+    array (
+    ),
+    'me' => 
+    array (
+    ),
+    'mobi' => 
+    array (
+    ),
+    'ne' => 
+    array (
+    ),
+    'or' => 
+    array (
+    ),
+    'sc' => 
     array (
     ),
   ),
@@ -10210,6 +12037,9 @@ return array (
     'com' => 
     array (
     ),
+    'nym' => 
+    array (
+    ),
   ),
   'la' => 
   array (
@@ -10237,7 +12067,13 @@ return array (
     'org' => 
     array (
     ),
+    'bnr' => 
+    array (
+    ),
     'c' => 
+    array (
+    ),
+    'nym' => 
     array (
     ),
   ),
@@ -10279,9 +12115,21 @@ return array (
     'gov' => 
     array (
     ),
+    'oy' => 
+    array (
+    ),
   ),
   'li' => 
   array (
+    'blogspot' => 
+    array (
+    ),
+    'nom' => 
+    array (
+    ),
+    'nym' => 
+    array (
+    ),
   ),
   'lk' => 
   array (
@@ -10327,6 +12175,9 @@ return array (
     'hotel' => 
     array (
     ),
+    'ac' => 
+    array (
+    ),
   ),
   'lr' => 
   array (
@@ -10360,9 +12211,21 @@ return array (
     'gov' => 
     array (
     ),
+    'blogspot' => 
+    array (
+    ),
+    'nym' => 
+    array (
+    ),
   ),
   'lu' => 
   array (
+    'blogspot' => 
+    array (
+    ),
+    'nym' => 
+    array (
+    ),
   ),
   'lv' => 
   array (
@@ -10456,6 +12319,9 @@ return array (
   ),
   'md' => 
   array (
+    'blogspot' => 
+    array (
+    ),
   ),
   'me' => 
   array (
@@ -10483,6 +12349,63 @@ return array (
     'priv' => 
     array (
     ),
+    'c66' => 
+    array (
+    ),
+    'daplie' => 
+    array (
+      'localhost' => 
+      array (
+      ),
+    ),
+    'filegear' => 
+    array (
+    ),
+    'brasilia' => 
+    array (
+    ),
+    'ddns' => 
+    array (
+    ),
+    'dnsfor' => 
+    array (
+    ),
+    'hopto' => 
+    array (
+    ),
+    'loginto' => 
+    array (
+    ),
+    'noip' => 
+    array (
+    ),
+    'webhop' => 
+    array (
+    ),
+    'nym' => 
+    array (
+    ),
+    'diskstation' => 
+    array (
+    ),
+    'dscloud' => 
+    array (
+    ),
+    'i234' => 
+    array (
+    ),
+    'myds' => 
+    array (
+    ),
+    'synology' => 
+    array (
+    ),
+    'wedeploy' => 
+    array (
+    ),
+    'yombo' => 
+    array (
+    ),
   ),
   'mg' => 
   array (
@@ -10508,6 +12431,9 @@ return array (
     array (
     ),
     'com' => 
+    array (
+    ),
+    'co' => 
     array (
     ),
   ),
@@ -10538,6 +12464,12 @@ return array (
     array (
     ),
     'name' => 
+    array (
+    ),
+    'blogspot' => 
+    array (
+    ),
+    'nom' => 
     array (
     ),
   ),
@@ -10606,6 +12538,9 @@ return array (
   ),
   'mobi' => 
   array (
+    'dscloud' => 
+    array (
+    ),
   ),
   'mp' => 
   array (
@@ -10644,6 +12579,9 @@ return array (
   array (
     'com' => 
     array (
+      'blogspot' => 
+      array (
+      ),
     ),
     'edu' => 
     array (
@@ -12427,6 +14365,9 @@ return array (
     'blogspot' => 
     array (
     ),
+    'nym' => 
+    array (
+    ),
   ),
   'my' => 
   array (
@@ -12451,15 +14392,35 @@ return array (
     'name' => 
     array (
     ),
+    'blogspot' => 
+    array (
+    ),
   ),
   'mz' => 
   array (
-    '*' => 
+    'ac' => 
     array (
     ),
-    'teledata' => 
+    'adv' => 
     array (
-      '!' => '',
+    ),
+    'co' => 
+    array (
+    ),
+    'edu' => 
+    array (
+    ),
+    'gov' => 
+    array (
+    ),
+    'mil' => 
+    array (
+    ),
+    'net' => 
+    array (
+    ),
+    'org' => 
+    array (
     ),
   ),
   'na' => 
@@ -12536,13 +14497,34 @@ return array (
     'asso' => 
     array (
     ),
+    'nom' => 
+    array (
+    ),
   ),
   'ne' => 
   array (
   ),
   'net' => 
   array (
+    'alwaysdata' => 
+    array (
+    ),
     'cloudfront' => 
+    array (
+    ),
+    't3l3p0rt' => 
+    array (
+    ),
+    'myfritz' => 
+    array (
+    ),
+    'boomla' => 
+    array (
+    ),
+    'bplaced' => 
+    array (
+    ),
+    'square7' => 
     array (
     ),
     'gb' => 
@@ -12561,6 +14543,39 @@ return array (
     array (
     ),
     'in' => 
+    array (
+    ),
+    'cloudaccess' => 
+    array (
+    ),
+    'cdn77-ssl' => 
+    array (
+    ),
+    'cdn77' => 
+    array (
+      'r' => 
+      array (
+      ),
+    ),
+    'cloudeity' => 
+    array (
+    ),
+    'feste-ip' => 
+    array (
+    ),
+    'knx-server' => 
+    array (
+    ),
+    'static-access' => 
+    array (
+    ),
+    'cryptonomic' => 
+    array (
+      '*' => 
+      array (
+      ),
+    ),
+    'debian' => 
     array (
     ),
     'at-band-camp' => 
@@ -12668,8 +14683,50 @@ return array (
     'webhop' => 
     array (
     ),
+    'definima' => 
+    array (
+    ),
+    'casacam' => 
+    array (
+    ),
+    'dynu' => 
+    array (
+    ),
+    'dynv6' => 
+    array (
+    ),
+    'twmail' => 
+    array (
+    ),
+    'ru' => 
+    array (
+    ),
+    'channelsdvr' => 
+    array (
+    ),
+    'fastlylb' => 
+    array (
+      'map' => 
+      array (
+      ),
+    ),
     'fastly' => 
     array (
+      'freetls' => 
+      array (
+      ),
+      'map' => 
+      array (
+      ),
+      'prod' => 
+      array (
+        'a' => 
+        array (
+        ),
+        'global' => 
+        array (
+        ),
+      ),
       'ssl' => 
       array (
         'a' => 
@@ -12682,15 +14739,21 @@ return array (
         array (
         ),
       ),
-      'prod' => 
-      array (
-        'a' => 
-        array (
-        ),
-        'global' => 
-        array (
-        ),
-      ),
+    ),
+    'flynnhosting' => 
+    array (
+    ),
+    'cloudfunctions' => 
+    array (
+    ),
+    'moonscale' => 
+    array (
+    ),
+    'ipifony' => 
+    array (
+    ),
+    'barsy' => 
+    array (
     ),
     'azurewebsites' => 
     array (
@@ -12699,6 +14762,69 @@ return array (
     array (
     ),
     'cloudapp' => 
+    array (
+    ),
+    'eating-organic' => 
+    array (
+    ),
+    'mydissent' => 
+    array (
+    ),
+    'myeffect' => 
+    array (
+    ),
+    'mymediapc' => 
+    array (
+    ),
+    'mypsx' => 
+    array (
+    ),
+    'mysecuritycamera' => 
+    array (
+    ),
+    'nhlfan' => 
+    array (
+    ),
+    'no-ip' => 
+    array (
+    ),
+    'pgafan' => 
+    array (
+    ),
+    'privatizehealthinsurance' => 
+    array (
+    ),
+    'bounceme' => 
+    array (
+    ),
+    'ddns' => 
+    array (
+    ),
+    'redirectme' => 
+    array (
+    ),
+    'serveblog' => 
+    array (
+    ),
+    'serveminecraft' => 
+    array (
+    ),
+    'sytes' => 
+    array (
+    ),
+    'rackmaze' => 
+    array (
+    ),
+    'schokokeks' => 
+    array (
+    ),
+    'firewall-gateway' => 
+    array (
+    ),
+    'dsmynas' => 
+    array (
+    ),
+    'familyds' => 
     array (
     ),
     'za' => 
@@ -12742,8 +14868,23 @@ return array (
   array (
     'com' => 
     array (
+      'blogspot' => 
+      array (
+      ),
     ),
     'edu' => 
+    array (
+    ),
+    'gov' => 
+    array (
+    ),
+    'i' => 
+    array (
+    ),
+    'mil' => 
+    array (
+    ),
+    'mobi' => 
     array (
     ),
     'name' => 
@@ -12758,19 +14899,49 @@ return array (
     'sch' => 
     array (
     ),
-    'gov' => 
+  ),
+  'ni' => 
+  array (
+    'ac' => 
+    array (
+    ),
+    'biz' => 
+    array (
+    ),
+    'co' => 
+    array (
+    ),
+    'com' => 
+    array (
+    ),
+    'edu' => 
+    array (
+    ),
+    'gob' => 
+    array (
+    ),
+    'in' => 
+    array (
+    ),
+    'info' => 
+    array (
+    ),
+    'int' => 
     array (
     ),
     'mil' => 
     array (
     ),
-    'mobi' => 
+    'net' => 
     array (
     ),
-  ),
-  'ni' => 
-  array (
-    '*' => 
+    'nom' => 
+    array (
+    ),
+    'org' => 
+    array (
+    ),
+    'web' => 
     array (
     ),
   ),
@@ -12779,10 +14950,28 @@ return array (
     'bv' => 
     array (
     ),
+    'virtueeldomein' => 
+    array (
+    ),
     'co' => 
     array (
     ),
+    'hosting-cluster' => 
+    array (
+    ),
     'blogspot' => 
+    array (
+    ),
+    'transurl' => 
+    array (
+      '*' => 
+      array (
+      ),
+    ),
+    'cistron' => 
+    array (
+    ),
+    'demon' => 
     array (
     ),
   ),
@@ -15128,10 +17317,13 @@ return array (
     'shacknet' => 
     array (
     ),
+    'nom' => 
+    array (
+    ),
   ),
   'nz' => 
   array (
-    '*' => 
+    'ac' => 
     array (
     ),
     'co' => 
@@ -15139,6 +17331,51 @@ return array (
       'blogspot' => 
       array (
       ),
+    ),
+    'cri' => 
+    array (
+    ),
+    'geek' => 
+    array (
+    ),
+    'gen' => 
+    array (
+    ),
+    'govt' => 
+    array (
+    ),
+    'health' => 
+    array (
+    ),
+    'iwi' => 
+    array (
+    ),
+    'kiwi' => 
+    array (
+    ),
+    'maori' => 
+    array (
+    ),
+    'mil' => 
+    array (
+    ),
+    'māori' => 
+    array (
+    ),
+    'net' => 
+    array (
+    ),
+    'org' => 
+    array (
+    ),
+    'parliament' => 
+    array (
+    ),
+    'school' => 
+    array (
+    ),
+    'nym' => 
+    array (
     ),
   ),
   'om' => 
@@ -15171,12 +17408,63 @@ return array (
     array (
     ),
   ),
+  'onion' => 
+  array (
+  ),
   'org' => 
   array (
+    'amune' => 
+    array (
+      'tele' => 
+      array (
+      ),
+    ),
+    'pimienta' => 
+    array (
+    ),
+    'poivron' => 
+    array (
+    ),
+    'potager' => 
+    array (
+    ),
+    'sweetpepper' => 
+    array (
+    ),
     'ae' => 
     array (
     ),
     'us' => 
+    array (
+    ),
+    'certmgr' => 
+    array (
+    ),
+    'cdn77' => 
+    array (
+      'c' => 
+      array (
+      ),
+      'rsc' => 
+      array (
+      ),
+    ),
+    'cdn77-secure' => 
+    array (
+      'origin' => 
+      array (
+        'ssl' => 
+        array (
+        ),
+      ),
+    ),
+    'cloudns' => 
+    array (
+    ),
+    'duckdns' => 
+    array (
+    ),
+    'tunk' => 
     array (
     ),
     'dyndns' => 
@@ -15335,6 +17623,297 @@ return array (
     'webhop' => 
     array (
     ),
+    'ddnss' => 
+    array (
+    ),
+    'accesscam' => 
+    array (
+    ),
+    'camdvr' => 
+    array (
+    ),
+    'freeddns' => 
+    array (
+    ),
+    'mywire' => 
+    array (
+    ),
+    'webredirect' => 
+    array (
+    ),
+    'eu' => 
+    array (
+      'al' => 
+      array (
+      ),
+      'asso' => 
+      array (
+      ),
+      'at' => 
+      array (
+      ),
+      'au' => 
+      array (
+      ),
+      'be' => 
+      array (
+      ),
+      'bg' => 
+      array (
+      ),
+      'ca' => 
+      array (
+      ),
+      'cd' => 
+      array (
+      ),
+      'ch' => 
+      array (
+      ),
+      'cn' => 
+      array (
+      ),
+      'cy' => 
+      array (
+      ),
+      'cz' => 
+      array (
+      ),
+      'de' => 
+      array (
+      ),
+      'dk' => 
+      array (
+      ),
+      'edu' => 
+      array (
+      ),
+      'ee' => 
+      array (
+      ),
+      'es' => 
+      array (
+      ),
+      'fi' => 
+      array (
+      ),
+      'fr' => 
+      array (
+      ),
+      'gr' => 
+      array (
+      ),
+      'hr' => 
+      array (
+      ),
+      'hu' => 
+      array (
+      ),
+      'ie' => 
+      array (
+      ),
+      'il' => 
+      array (
+      ),
+      'in' => 
+      array (
+      ),
+      'int' => 
+      array (
+      ),
+      'is' => 
+      array (
+      ),
+      'it' => 
+      array (
+      ),
+      'jp' => 
+      array (
+      ),
+      'kr' => 
+      array (
+      ),
+      'lt' => 
+      array (
+      ),
+      'lu' => 
+      array (
+      ),
+      'lv' => 
+      array (
+      ),
+      'mc' => 
+      array (
+      ),
+      'me' => 
+      array (
+      ),
+      'mk' => 
+      array (
+      ),
+      'mt' => 
+      array (
+      ),
+      'my' => 
+      array (
+      ),
+      'net' => 
+      array (
+      ),
+      'ng' => 
+      array (
+      ),
+      'nl' => 
+      array (
+      ),
+      'no' => 
+      array (
+      ),
+      'nz' => 
+      array (
+      ),
+      'paris' => 
+      array (
+      ),
+      'pl' => 
+      array (
+      ),
+      'pt' => 
+      array (
+      ),
+      'q-a' => 
+      array (
+      ),
+      'ro' => 
+      array (
+      ),
+      'ru' => 
+      array (
+      ),
+      'se' => 
+      array (
+      ),
+      'si' => 
+      array (
+      ),
+      'sk' => 
+      array (
+      ),
+      'tr' => 
+      array (
+      ),
+      'uk' => 
+      array (
+      ),
+      'us' => 
+      array (
+      ),
+    ),
+    'twmail' => 
+    array (
+    ),
+    'fedorainfracloud' => 
+    array (
+    ),
+    'fedorapeople' => 
+    array (
+    ),
+    'fedoraproject' => 
+    array (
+      'cloud' => 
+      array (
+      ),
+      'os' => 
+      array (
+        'app' => 
+        array (
+        ),
+      ),
+      'stg' => 
+      array (
+        'os' => 
+        array (
+          'app' => 
+          array (
+          ),
+        ),
+      ),
+    ),
+    'hepforge' => 
+    array (
+    ),
+    'js' => 
+    array (
+    ),
+    'mozilla-iot' => 
+    array (
+    ),
+    'bmoattachments' => 
+    array (
+    ),
+    'cable-modem' => 
+    array (
+    ),
+    'collegefan' => 
+    array (
+    ),
+    'couchpotatofries' => 
+    array (
+    ),
+    'mlbfan' => 
+    array (
+    ),
+    'mysecuritycamera' => 
+    array (
+    ),
+    'nflfan' => 
+    array (
+    ),
+    'read-books' => 
+    array (
+    ),
+    'ufcfan' => 
+    array (
+    ),
+    'hopto' => 
+    array (
+    ),
+    'myftp' => 
+    array (
+    ),
+    'no-ip' => 
+    array (
+    ),
+    'zapto' => 
+    array (
+    ),
+    'my-firewall' => 
+    array (
+    ),
+    'myfirewall' => 
+    array (
+    ),
+    'spdns' => 
+    array (
+    ),
+    'dsmynas' => 
+    array (
+    ),
+    'familyds' => 
+    array (
+    ),
+    'tuxfamily' => 
+    array (
+    ),
+    'diskstation' => 
+    array (
+    ),
+    'hk' => 
+    array (
+    ),
+    'wmflabs' => 
+    array (
+    ),
     'za' => 
     array (
     ),
@@ -15396,6 +17975,12 @@ return array (
     array (
     ),
     'net' => 
+    array (
+    ),
+    'blogspot' => 
+    array (
+    ),
+    'nym' => 
     array (
     ),
   ),
@@ -15491,6 +18076,15 @@ return array (
   ),
   'pl' => 
   array (
+    'com' => 
+    array (
+    ),
+    'net' => 
+    array (
+    ),
+    'org' => 
+    array (
+    ),
     'aid' => 
     array (
     ),
@@ -15504,9 +18098,6 @@ return array (
     array (
     ),
     'biz' => 
-    array (
-    ),
-    'com' => 
     array (
     ),
     'edu' => 
@@ -15533,16 +18124,10 @@ return array (
     'mil' => 
     array (
     ),
-    'net' => 
-    array (
-    ),
     'nieruchomosci' => 
     array (
     ),
     'nom' => 
-    array (
-    ),
-    'org' => 
     array (
     ),
     'pc' => 
@@ -15590,30 +18175,78 @@ return array (
     'turystyka' => 
     array (
     ),
-    '6bone' => 
-    array (
-    ),
-    'art' => 
-    array (
-    ),
-    'mbone' => 
-    array (
-    ),
     'gov' => 
     array (
-      'uw' => 
+      'ap' => 
       array (
       ),
-      'um' => 
+      'ic' => 
+      array (
+      ),
+      'is' => 
+      array (
+      ),
+      'us' => 
+      array (
+      ),
+      'kmpsp' => 
+      array (
+      ),
+      'kppsp' => 
+      array (
+      ),
+      'kwpsp' => 
+      array (
+      ),
+      'psp' => 
+      array (
+      ),
+      'wskr' => 
+      array (
+      ),
+      'kwp' => 
+      array (
+      ),
+      'mw' => 
       array (
       ),
       'ug' => 
       array (
       ),
+      'um' => 
+      array (
+      ),
+      'umig' => 
+      array (
+      ),
+      'ugim' => 
+      array (
+      ),
       'upow' => 
       array (
       ),
+      'uw' => 
+      array (
+      ),
       'starostwo' => 
+      array (
+      ),
+      'pa' => 
+      array (
+      ),
+      'po' => 
+      array (
+      ),
+      'psse' => 
+      array (
+      ),
+      'pup' => 
+      array (
+      ),
+      'rzgw' => 
+      array (
+      ),
+      'sa' => 
       array (
       ),
       'so' => 
@@ -15622,21 +18255,69 @@ return array (
       'sr' => 
       array (
       ),
-      'po' => 
+      'wsa' => 
       array (
       ),
-      'pa' => 
+      'sko' => 
       array (
       ),
-    ),
-    'ngo' => 
-    array (
-    ),
-    'irc' => 
-    array (
-    ),
-    'usenet' => 
-    array (
+      'uzs' => 
+      array (
+      ),
+      'wiih' => 
+      array (
+      ),
+      'winb' => 
+      array (
+      ),
+      'pinb' => 
+      array (
+      ),
+      'wios' => 
+      array (
+      ),
+      'witd' => 
+      array (
+      ),
+      'wzmiuw' => 
+      array (
+      ),
+      'piw' => 
+      array (
+      ),
+      'wiw' => 
+      array (
+      ),
+      'griw' => 
+      array (
+      ),
+      'wif' => 
+      array (
+      ),
+      'oum' => 
+      array (
+      ),
+      'sdn' => 
+      array (
+      ),
+      'zp' => 
+      array (
+      ),
+      'uppo' => 
+      array (
+      ),
+      'mup' => 
+      array (
+      ),
+      'wuoz' => 
+      array (
+      ),
+      'konsulat' => 
+      array (
+      ),
+      'oirm' => 
+      array (
+      ),
     ),
     'augustow' => 
     array (
@@ -15893,9 +18574,6 @@ return array (
     'sejny' => 
     array (
     ),
-    'siedlce' => 
-    array (
-    ),
     'slask' => 
     array (
     ),
@@ -15998,19 +18676,13 @@ return array (
     'zgorzelec' => 
     array (
     ),
-    'gda' => 
+    'beep' => 
     array (
     ),
-    'gdansk' => 
+    'co' => 
     array (
     ),
-    'gdynia' => 
-    array (
-    ),
-    'med' => 
-    array (
-    ),
-    'sopot' => 
+    'art' => 
     array (
     ),
     'gliwice' => 
@@ -16028,7 +18700,19 @@ return array (
     'zakopane' => 
     array (
     ),
-    'co' => 
+    'gda' => 
+    array (
+    ),
+    'gdansk' => 
+    array (
+    ),
+    'gdynia' => 
+    array (
+    ),
+    'med' => 
+    array (
+    ),
+    'sopot' => 
     array (
     ),
   ),
@@ -16100,13 +18784,25 @@ return array (
   ),
   'pro' => 
   array (
+    'aaa' => 
+    array (
+    ),
     'aca' => 
+    array (
+    ),
+    'acct' => 
+    array (
+    ),
+    'avocat' => 
     array (
     ),
     'bar' => 
     array (
     ),
     'cpa' => 
+    array (
+    ),
+    'eng' => 
     array (
     ),
     'jur' => 
@@ -16118,7 +18814,10 @@ return array (
     'med' => 
     array (
     ),
-    'eng' => 
+    'recht' => 
+    array (
+    ),
+    'cloudns' => 
     array (
     ),
   ),
@@ -16175,6 +18874,9 @@ return array (
     'blogspot' => 
     array (
     ),
+    'nym' => 
+    array (
+    ),
   ),
   'pw' => 
   array (
@@ -16194,6 +18896,12 @@ return array (
     array (
     ),
     'belau' => 
+    array (
+    ),
+    'cloudns' => 
+    array (
+    ),
+    'nom' => 
     array (
     ),
   ),
@@ -16247,13 +18955,19 @@ return array (
     'sch' => 
     array (
     ),
+    'blogspot' => 
+    array (
+    ),
+    'nom' => 
+    array (
+    ),
   ),
   're' => 
   array (
-    'com' => 
+    'asso' => 
     array (
     ),
-    'asso' => 
+    'com' => 
     array (
     ),
     'nom' => 
@@ -16265,37 +18979,40 @@ return array (
   ),
   'ro' => 
   array (
-    'com' => 
-    array (
-    ),
-    'org' => 
-    array (
-    ),
-    'tm' => 
-    array (
-    ),
-    'nt' => 
-    array (
-    ),
-    'nom' => 
-    array (
-    ),
-    'info' => 
-    array (
-    ),
-    'rec' => 
-    array (
-    ),
     'arts' => 
+    array (
+    ),
+    'com' => 
     array (
     ),
     'firm' => 
     array (
     ),
+    'info' => 
+    array (
+    ),
+    'nom' => 
+    array (
+    ),
+    'nt' => 
+    array (
+    ),
+    'org' => 
+    array (
+    ),
+    'rec' => 
+    array (
+    ),
     'store' => 
     array (
     ),
+    'tm' => 
+    array (
+    ),
     'www' => 
+    array (
+    ),
+    'shop' => 
     array (
     ),
     'blogspot' => 
@@ -16304,16 +19021,13 @@ return array (
   ),
   'rs' => 
   array (
+    'ac' => 
+    array (
+    ),
     'co' => 
     array (
     ),
-    'org' => 
-    array (
-    ),
     'edu' => 
-    array (
-    ),
-    'ac' => 
     array (
     ),
     'gov' => 
@@ -16322,169 +19036,61 @@ return array (
     'in' => 
     array (
     ),
+    'org' => 
+    array (
+    ),
+    'blogspot' => 
+    array (
+    ),
+    'nom' => 
+    array (
+    ),
   ),
   'ru' => 
   array (
     'ac' => 
     array (
     ),
-    'com' => 
+    'edu' => 
     array (
     ),
-    'edu' => 
+    'gov' => 
     array (
     ),
     'int' => 
     array (
     ),
-    'net' => 
+    'mil' => 
     array (
     ),
-    'org' => 
-    array (
-    ),
-    'pp' => 
+    'test' => 
     array (
     ),
     'adygeya' => 
     array (
     ),
-    'altai' => 
-    array (
-    ),
-    'amur' => 
-    array (
-    ),
-    'arkhangelsk' => 
-    array (
-    ),
-    'astrakhan' => 
-    array (
-    ),
     'bashkiria' => 
-    array (
-    ),
-    'belgorod' => 
     array (
     ),
     'bir' => 
     array (
     ),
-    'bryansk' => 
-    array (
-    ),
-    'buryatia' => 
-    array (
-    ),
     'cbg' => 
     array (
     ),
-    'chel' => 
-    array (
-    ),
-    'chelyabinsk' => 
-    array (
-    ),
-    'chita' => 
-    array (
-    ),
-    'chukotka' => 
-    array (
-    ),
-    'chuvashia' => 
+    'com' => 
     array (
     ),
     'dagestan' => 
     array (
     ),
-    'dudinka' => 
-    array (
-    ),
-    'e-burg' => 
-    array (
-    ),
     'grozny' => 
-    array (
-    ),
-    'irkutsk' => 
-    array (
-    ),
-    'ivanovo' => 
-    array (
-    ),
-    'izhevsk' => 
-    array (
-    ),
-    'jar' => 
-    array (
-    ),
-    'joshkar-ola' => 
     array (
     ),
     'kalmykia' => 
     array (
     ),
-    'kaluga' => 
-    array (
-    ),
-    'kamchatka' => 
-    array (
-    ),
-    'karelia' => 
-    array (
-    ),
-    'kazan' => 
-    array (
-    ),
-    'kchr' => 
-    array (
-    ),
-    'kemerovo' => 
-    array (
-    ),
-    'khabarovsk' => 
-    array (
-    ),
-    'khakassia' => 
-    array (
-    ),
-    'khv' => 
-    array (
-    ),
-    'kirov' => 
-    array (
-    ),
-    'koenig' => 
-    array (
-    ),
-    'komi' => 
-    array (
-    ),
-    'kostroma' => 
-    array (
-    ),
-    'krasnoyarsk' => 
-    array (
-    ),
-    'kuban' => 
-    array (
-    ),
-    'kurgan' => 
-    array (
-    ),
-    'kursk' => 
-    array (
-    ),
-    'lipetsk' => 
-    array (
-    ),
-    'magadan' => 
-    array (
-    ),
-    'mari' => 
-    array (
-    ),
-    'mari-el' => 
+    'kustanai' => 
     array (
     ),
     'marine' => 
@@ -16493,124 +19099,22 @@ return array (
     'mordovia' => 
     array (
     ),
-    'mosreg' => 
-    array (
-    ),
     'msk' => 
     array (
     ),
-    'murmansk' => 
+    'mytis' => 
     array (
     ),
     'nalchik' => 
     array (
     ),
-    'nnov' => 
-    array (
-    ),
     'nov' => 
     array (
     ),
-    'novosibirsk' => 
-    array (
-    ),
-    'nsk' => 
-    array (
-    ),
-    'omsk' => 
-    array (
-    ),
-    'orenburg' => 
-    array (
-    ),
-    'oryol' => 
-    array (
-    ),
-    'palana' => 
-    array (
-    ),
-    'penza' => 
-    array (
-    ),
-    'perm' => 
-    array (
-    ),
-    'pskov' => 
-    array (
-    ),
-    'ptz' => 
-    array (
-    ),
-    'rnd' => 
-    array (
-    ),
-    'ryazan' => 
-    array (
-    ),
-    'sakhalin' => 
-    array (
-    ),
-    'samara' => 
-    array (
-    ),
-    'saratov' => 
-    array (
-    ),
-    'simbirsk' => 
-    array (
-    ),
-    'smolensk' => 
+    'pyatigorsk' => 
     array (
     ),
     'spb' => 
-    array (
-    ),
-    'stavropol' => 
-    array (
-    ),
-    'stv' => 
-    array (
-    ),
-    'surgut' => 
-    array (
-    ),
-    'tambov' => 
-    array (
-    ),
-    'tatarstan' => 
-    array (
-    ),
-    'tom' => 
-    array (
-    ),
-    'tomsk' => 
-    array (
-    ),
-    'tsaritsyn' => 
-    array (
-    ),
-    'tsk' => 
-    array (
-    ),
-    'tula' => 
-    array (
-    ),
-    'tuva' => 
-    array (
-    ),
-    'tver' => 
-    array (
-    ),
-    'tyumen' => 
-    array (
-    ),
-    'udm' => 
-    array (
-    ),
-    'udmurtia' => 
-    array (
-    ),
-    'ulan-ude' => 
     array (
     ),
     'vladikavkaz' => 
@@ -16619,109 +19123,22 @@ return array (
     'vladimir' => 
     array (
     ),
-    'vladivostok' => 
+    'blogspot' => 
     array (
     ),
-    'volgograd' => 
+    'cldmail' => 
+    array (
+      'hb' => 
+      array (
+      ),
+    ),
+    'net' => 
     array (
     ),
-    'vologda' => 
+    'org' => 
     array (
     ),
-    'voronezh' => 
-    array (
-    ),
-    'vrn' => 
-    array (
-    ),
-    'vyatka' => 
-    array (
-    ),
-    'yakutia' => 
-    array (
-    ),
-    'yamal' => 
-    array (
-    ),
-    'yaroslavl' => 
-    array (
-    ),
-    'yekaterinburg' => 
-    array (
-    ),
-    'yuzhno-sakhalinsk' => 
-    array (
-    ),
-    'amursk' => 
-    array (
-    ),
-    'baikal' => 
-    array (
-    ),
-    'cmw' => 
-    array (
-    ),
-    'fareast' => 
-    array (
-    ),
-    'jamal' => 
-    array (
-    ),
-    'kms' => 
-    array (
-    ),
-    'k-uralsk' => 
-    array (
-    ),
-    'kustanai' => 
-    array (
-    ),
-    'kuzbass' => 
-    array (
-    ),
-    'magnitka' => 
-    array (
-    ),
-    'mytis' => 
-    array (
-    ),
-    'nakhodka' => 
-    array (
-    ),
-    'nkz' => 
-    array (
-    ),
-    'norilsk' => 
-    array (
-    ),
-    'oskol' => 
-    array (
-    ),
-    'pyatigorsk' => 
-    array (
-    ),
-    'rubtsovsk' => 
-    array (
-    ),
-    'snz' => 
-    array (
-    ),
-    'syzran' => 
-    array (
-    ),
-    'vdonsk' => 
-    array (
-    ),
-    'zgrad' => 
-    array (
-    ),
-    'gov' => 
-    array (
-    ),
-    'mil' => 
-    array (
-    ),
-    'test' => 
+    'pp' => 
     array (
     ),
   ),
@@ -16964,6 +19381,9 @@ return array (
     'z' => 
     array (
     ),
+    'com' => 
+    array (
+    ),
     'blogspot' => 
     array (
     ),
@@ -17009,9 +19429,30 @@ return array (
     'mil' => 
     array (
     ),
+    'hashbang' => 
+    array (
+    ),
+    'platform' => 
+    array (
+      '*' => 
+      array (
+      ),
+    ),
+    'wedeploy' => 
+    array (
+    ),
+    'now' => 
+    array (
+    ),
   ),
   'si' => 
   array (
+    'blogspot' => 
+    array (
+    ),
+    'nom' => 
+    array (
+    ),
   ),
   'sj' => 
   array (
@@ -17019,6 +19460,9 @@ return array (
   'sk' => 
   array (
     'blogspot' => 
+    array (
+    ),
+    'nym' => 
     array (
     ),
   ),
@@ -17064,6 +19508,9 @@ return array (
     array (
     ),
     'univ' => 
+    array (
+    ),
+    'blogspot' => 
     array (
     ),
   ),
@@ -17123,6 +19570,165 @@ return array (
   ),
   'su' => 
   array (
+    'abkhazia' => 
+    array (
+    ),
+    'adygeya' => 
+    array (
+    ),
+    'aktyubinsk' => 
+    array (
+    ),
+    'arkhangelsk' => 
+    array (
+    ),
+    'armenia' => 
+    array (
+    ),
+    'ashgabad' => 
+    array (
+    ),
+    'azerbaijan' => 
+    array (
+    ),
+    'balashov' => 
+    array (
+    ),
+    'bashkiria' => 
+    array (
+    ),
+    'bryansk' => 
+    array (
+    ),
+    'bukhara' => 
+    array (
+    ),
+    'chimkent' => 
+    array (
+    ),
+    'dagestan' => 
+    array (
+    ),
+    'east-kazakhstan' => 
+    array (
+    ),
+    'exnet' => 
+    array (
+    ),
+    'georgia' => 
+    array (
+    ),
+    'grozny' => 
+    array (
+    ),
+    'ivanovo' => 
+    array (
+    ),
+    'jambyl' => 
+    array (
+    ),
+    'kalmykia' => 
+    array (
+    ),
+    'kaluga' => 
+    array (
+    ),
+    'karacol' => 
+    array (
+    ),
+    'karaganda' => 
+    array (
+    ),
+    'karelia' => 
+    array (
+    ),
+    'khakassia' => 
+    array (
+    ),
+    'krasnodar' => 
+    array (
+    ),
+    'kurgan' => 
+    array (
+    ),
+    'kustanai' => 
+    array (
+    ),
+    'lenug' => 
+    array (
+    ),
+    'mangyshlak' => 
+    array (
+    ),
+    'mordovia' => 
+    array (
+    ),
+    'msk' => 
+    array (
+    ),
+    'murmansk' => 
+    array (
+    ),
+    'nalchik' => 
+    array (
+    ),
+    'navoi' => 
+    array (
+    ),
+    'north-kazakhstan' => 
+    array (
+    ),
+    'nov' => 
+    array (
+    ),
+    'obninsk' => 
+    array (
+    ),
+    'penza' => 
+    array (
+    ),
+    'pokrovsk' => 
+    array (
+    ),
+    'sochi' => 
+    array (
+    ),
+    'spb' => 
+    array (
+    ),
+    'tashkent' => 
+    array (
+    ),
+    'termez' => 
+    array (
+    ),
+    'togliatti' => 
+    array (
+    ),
+    'troitsk' => 
+    array (
+    ),
+    'tselinograd' => 
+    array (
+    ),
+    'tula' => 
+    array (
+    ),
+    'tuva' => 
+    array (
+    ),
+    'vladikavkaz' => 
+    array (
+    ),
+    'vladimir' => 
+    array (
+    ),
+    'vologda' => 
+    array (
+    ),
+    'nym' => 
+    array (
+    ),
   ),
   'sv' => 
   array (
@@ -17145,6 +19751,9 @@ return array (
   'sx' => 
   array (
     'gov' => 
+    array (
+    ),
+    'nym' => 
     array (
     ),
   ),
@@ -17390,18 +19999,74 @@ return array (
     'mil' => 
     array (
     ),
-  ),
-  'tp' => 
-  array (
+    'vpnplus' => 
+    array (
+    ),
   ),
   'tr' => 
   array (
-    '*' => 
+    'com' => 
+    array (
+      'blogspot' => 
+      array (
+      ),
+    ),
+    'info' => 
     array (
     ),
-    'nic' => 
+    'biz' => 
     array (
-      '!' => '',
+    ),
+    'net' => 
+    array (
+    ),
+    'org' => 
+    array (
+    ),
+    'web' => 
+    array (
+    ),
+    'gen' => 
+    array (
+    ),
+    'tv' => 
+    array (
+    ),
+    'av' => 
+    array (
+    ),
+    'dr' => 
+    array (
+    ),
+    'bbs' => 
+    array (
+    ),
+    'name' => 
+    array (
+    ),
+    'tel' => 
+    array (
+    ),
+    'gov' => 
+    array (
+    ),
+    'bel' => 
+    array (
+    ),
+    'pol' => 
+    array (
+    ),
+    'mil' => 
+    array (
+    ),
+    'k12' => 
+    array (
+    ),
+    'edu' => 
+    array (
+    ),
+    'kep' => 
+    array (
     ),
     'nc' => 
     array (
@@ -17495,6 +20160,9 @@ return array (
     ),
     'com' => 
     array (
+      'mymailer' => 
+      array (
+      ),
     ),
     'net' => 
     array (
@@ -17523,7 +20191,13 @@ return array (
     '商業' => 
     array (
     ),
+    'url' => 
+    array (
+    ),
     'blogspot' => 
+    array (
+    ),
+    'nym' => 
     array (
     ),
   ),
@@ -17796,6 +20470,18 @@ return array (
     'zt' => 
     array (
     ),
+    'cc' => 
+    array (
+    ),
+    'inf' => 
+    array (
+    ),
+    'ltd' => 
+    array (
+    ),
+    'biz' => 
+    array (
+    ),
     'co' => 
     array (
     ),
@@ -17829,57 +20515,66 @@ return array (
     'org' => 
     array (
     ),
+    'blogspot' => 
+    array (
+    ),
+    'nom' => 
+    array (
+    ),
   ),
   'uk' => 
   array (
-    '*' => 
+    'ac' => 
+    array (
+    ),
+    'co' => 
+    array (
+      'blogspot' => 
+      array (
+      ),
+      'nh-serv' => 
+      array (
+      ),
+      'no-ip' => 
+      array (
+      ),
+      'wellbeingzone' => 
+      array (
+      ),
+    ),
+    'gov' => 
+    array (
+      'service' => 
+      array (
+      ),
+      'homeoffice' => 
+      array (
+      ),
+    ),
+    'ltd' => 
+    array (
+    ),
+    'me' => 
+    array (
+    ),
+    'net' => 
+    array (
+    ),
+    'nhs' => 
+    array (
+    ),
+    'org' => 
+    array (
+    ),
+    'plc' => 
+    array (
+    ),
+    'police' => 
     array (
     ),
     'sch' => 
     array (
       '*' => 
-      array (
-      ),
-    ),
-    'bl' => 
-    array (
-      '!' => '',
-    ),
-    'british-library' => 
-    array (
-      '!' => '',
-    ),
-    'jet' => 
-    array (
-      '!' => '',
-    ),
-    'mod' => 
-    array (
-      '!' => '',
-    ),
-    'national-library-scotland' => 
-    array (
-      '!' => '',
-    ),
-    'nel' => 
-    array (
-      '!' => '',
-    ),
-    'nic' => 
-    array (
-      '!' => '',
-    ),
-    'nls' => 
-    array (
-      '!' => '',
-    ),
-    'parliament' => 
-    array (
-      '!' => '',
-    ),
-    'co' => 
-    array (
-      'blogspot' => 
       array (
       ),
     ),
@@ -18206,6 +20901,30 @@ return array (
       'lib' => 
       array (
       ),
+      'ann-arbor' => 
+      array (
+      ),
+      'cog' => 
+      array (
+      ),
+      'dst' => 
+      array (
+      ),
+      'eaton' => 
+      array (
+      ),
+      'gen' => 
+      array (
+      ),
+      'mus' => 
+      array (
+      ),
+      'tec' => 
+      array (
+      ),
+      'washtenaw' => 
+      array (
+      ),
     ),
     'mn' => 
     array (
@@ -18269,9 +20988,6 @@ return array (
     ),
     'nd' => 
     array (
-      'k12' => 
-      array (
-      ),
       'cc' => 
       array (
       ),
@@ -18558,6 +21274,12 @@ return array (
       array (
       ),
     ),
+    'cloudns' => 
+    array (
+    ),
+    'drud' => 
+    array (
+    ),
     'is-by' => 
     array (
     ),
@@ -18567,11 +21289,23 @@ return array (
     'stuff-4-sale' => 
     array (
     ),
+    'golffan' => 
+    array (
+    ),
+    'noip' => 
+    array (
+    ),
+    'pointto' => 
+    array (
+    ),
   ),
   'uy' => 
   array (
     'com' => 
     array (
+      'blogspot' => 
+      array (
+      ),
     ),
     'edu' => 
     array (
@@ -18586,6 +21320,9 @@ return array (
     array (
     ),
     'org' => 
+    array (
+    ),
+    'nom' => 
     array (
     ),
   ),
@@ -18627,9 +21364,15 @@ return array (
     'edu' => 
     array (
     ),
+    'nom' => 
+    array (
+    ),
   ),
   've' => 
   array (
+    'arts' => 
+    array (
+    ),
     'co' => 
     array (
     ),
@@ -18642,10 +21385,19 @@ return array (
     'edu' => 
     array (
     ),
+    'firm' => 
+    array (
+    ),
+    'gob' => 
+    array (
+    ),
     'gov' => 
     array (
     ),
     'info' => 
+    array (
+    ),
+    'int' => 
     array (
     ),
     'mil' => 
@@ -18657,12 +21409,24 @@ return array (
     'org' => 
     array (
     ),
+    'rec' => 
+    array (
+    ),
+    'store' => 
+    array (
+    ),
+    'tec' => 
+    array (
+    ),
     'web' => 
     array (
     ),
   ),
   'vg' => 
   array (
+    'nom' => 
+    array (
+    ),
   ),
   'vi' => 
   array (
@@ -18720,9 +21484,24 @@ return array (
     'health' => 
     array (
     ),
+    'blogspot' => 
+    array (
+    ),
   ),
   'vu' => 
   array (
+    'com' => 
+    array (
+    ),
+    'edu' => 
+    array (
+    ),
+    'net' => 
+    array (
+    ),
+    'org' => 
+    array (
+    ),
   ),
   'wf' => 
   array (
@@ -18744,6 +21523,15 @@ return array (
     'edu' => 
     array (
     ),
+    'advisor' => 
+    array (
+      '*' => 
+      array (
+      ),
+    ),
+    'cloud66' => 
+    array (
+    ),
     'dyndns' => 
     array (
     ),
@@ -18757,7 +21545,16 @@ return array (
   'امارات' => 
   array (
   ),
+  'հայ' => 
+  array (
+  ),
   'বাংলা' => 
+  array (
+  ),
+  'бг' => 
+  array (
+  ),
+  'бел' => 
   array (
   ),
   '中国' => 
@@ -18772,10 +21569,37 @@ return array (
   'مصر' => 
   array (
   ),
+  'ею' => 
+  array (
+  ),
   'გე' => 
   array (
   ),
+  'ελ' => 
+  array (
+  ),
   '香港' => 
+  array (
+  ),
+  'ಭಾರತ' => 
+  array (
+  ),
+  'ଭାରତ' => 
+  array (
+  ),
+  'ভাৰত' => 
+  array (
+  ),
+  'भारतम्' => 
+  array (
+  ),
+  'भारोत' => 
+  array (
+  ),
+  'ڀارت' => 
+  array (
+  ),
+  'ഭാരതം' => 
   array (
   ),
   'भारत' => 
@@ -18805,6 +21629,9 @@ return array (
   'ايران' => 
   array (
   ),
+  'عراق' => 
+  array (
+  ),
   'الاردن' => 
   array (
   ),
@@ -18823,7 +21650,16 @@ return array (
   'المغرب' => 
   array (
   ),
+  'мкд' => 
+  array (
+  ),
   'мон' => 
+  array (
+  ),
+  '澳門' => 
+  array (
+  ),
+  '澳门' => 
   array (
   ),
   'مليسيا' => 
@@ -18832,11 +21668,35 @@ return array (
   'عمان' => 
   array (
   ),
+  'پاکستان' => 
+  array (
+  ),
+  'پاكستان' => 
+  array (
+  ),
   'فلسطين' => 
   array (
   ),
   'срб' => 
   array (
+    'пр' => 
+    array (
+    ),
+    'орг' => 
+    array (
+    ),
+    'обр' => 
+    array (
+    ),
+    'од' => 
+    array (
+    ),
+    'упр' => 
+    array (
+    ),
+    'ак' => 
+    array (
+    ),
   ),
   'рф' => 
   array (
@@ -18856,10 +21716,7 @@ return array (
   'السعوديه' => 
   array (
   ),
-  'سورية' => 
-  array (
-  ),
-  'سوريا' => 
+  'سودان' => 
   array (
   ),
   '新加坡' => 
@@ -18868,8 +21725,32 @@ return array (
   'சிங்கப்பூர்' => 
   array (
   ),
+  'سورية' => 
+  array (
+  ),
+  'سوريا' => 
+  array (
+  ),
   'ไทย' => 
   array (
+    'ศึกษา' => 
+    array (
+    ),
+    'ธุรกิจ' => 
+    array (
+    ),
+    'รัฐบาล' => 
+    array (
+    ),
+    'ทหาร' => 
+    array (
+    ),
+    'เน็ต' => 
+    array (
+    ),
+    'องค์กร' => 
+    array (
+    ),
   ),
   'تونس' => 
   array (
@@ -18900,21 +21781,3642 @@ return array (
   ),
   'za' => 
   array (
-    '*' => 
+    'ac' => 
+    array (
+    ),
+    'agric' => 
+    array (
+    ),
+    'alt' => 
+    array (
+    ),
+    'co' => 
+    array (
+      'blogspot' => 
+      array (
+      ),
+    ),
+    'edu' => 
+    array (
+    ),
+    'gov' => 
+    array (
+    ),
+    'grondar' => 
+    array (
+    ),
+    'law' => 
+    array (
+    ),
+    'mil' => 
+    array (
+    ),
+    'net' => 
+    array (
+    ),
+    'ngo' => 
+    array (
+    ),
+    'nis' => 
+    array (
+    ),
+    'nom' => 
+    array (
+    ),
+    'org' => 
+    array (
+    ),
+    'school' => 
+    array (
+    ),
+    'tm' => 
+    array (
+    ),
+    'web' => 
     array (
     ),
   ),
   'zm' => 
   array (
-    '*' => 
+    'ac' => 
+    array (
+    ),
+    'biz' => 
+    array (
+    ),
+    'co' => 
+    array (
+    ),
+    'com' => 
+    array (
+    ),
+    'edu' => 
+    array (
+    ),
+    'gov' => 
+    array (
+    ),
+    'info' => 
+    array (
+    ),
+    'mil' => 
+    array (
+    ),
+    'net' => 
+    array (
+    ),
+    'org' => 
+    array (
+    ),
+    'sch' => 
     array (
     ),
   ),
   'zw' => 
   array (
-    '*' => 
+    'ac' => 
     array (
     ),
+    'co' => 
+    array (
+    ),
+    'gov' => 
+    array (
+    ),
+    'mil' => 
+    array (
+    ),
+    'org' => 
+    array (
+    ),
+  ),
+  'aaa' => 
+  array (
+  ),
+  'aarp' => 
+  array (
+  ),
+  'abarth' => 
+  array (
+  ),
+  'abb' => 
+  array (
+  ),
+  'abbott' => 
+  array (
+  ),
+  'abbvie' => 
+  array (
+  ),
+  'abc' => 
+  array (
+  ),
+  'able' => 
+  array (
+  ),
+  'abogado' => 
+  array (
+  ),
+  'abudhabi' => 
+  array (
+  ),
+  'academy' => 
+  array (
+    'official' => 
+    array (
+    ),
+  ),
+  'accenture' => 
+  array (
+  ),
+  'accountant' => 
+  array (
+  ),
+  'accountants' => 
+  array (
+  ),
+  'aco' => 
+  array (
+  ),
+  'active' => 
+  array (
+  ),
+  'actor' => 
+  array (
+  ),
+  'adac' => 
+  array (
+  ),
+  'ads' => 
+  array (
+  ),
+  'adult' => 
+  array (
+  ),
+  'aeg' => 
+  array (
+  ),
+  'aetna' => 
+  array (
+  ),
+  'afamilycompany' => 
+  array (
+  ),
+  'afl' => 
+  array (
+  ),
+  'africa' => 
+  array (
+  ),
+  'agakhan' => 
+  array (
+  ),
+  'agency' => 
+  array (
+  ),
+  'aig' => 
+  array (
+  ),
+  'aigo' => 
+  array (
+  ),
+  'airbus' => 
+  array (
+  ),
+  'airforce' => 
+  array (
+  ),
+  'airtel' => 
+  array (
+  ),
+  'akdn' => 
+  array (
+  ),
+  'alfaromeo' => 
+  array (
+  ),
+  'alibaba' => 
+  array (
+  ),
+  'alipay' => 
+  array (
+  ),
+  'allfinanz' => 
+  array (
+  ),
+  'allstate' => 
+  array (
+  ),
+  'ally' => 
+  array (
+  ),
+  'alsace' => 
+  array (
+  ),
+  'alstom' => 
+  array (
+  ),
+  'americanexpress' => 
+  array (
+  ),
+  'americanfamily' => 
+  array (
+  ),
+  'amex' => 
+  array (
+  ),
+  'amfam' => 
+  array (
+  ),
+  'amica' => 
+  array (
+  ),
+  'amsterdam' => 
+  array (
+  ),
+  'analytics' => 
+  array (
+  ),
+  'android' => 
+  array (
+  ),
+  'anquan' => 
+  array (
+  ),
+  'anz' => 
+  array (
+  ),
+  'aol' => 
+  array (
+  ),
+  'apartments' => 
+  array (
+  ),
+  'app' => 
+  array (
+  ),
+  'apple' => 
+  array (
+  ),
+  'aquarelle' => 
+  array (
+  ),
+  'arab' => 
+  array (
+  ),
+  'aramco' => 
+  array (
+  ),
+  'archi' => 
+  array (
+  ),
+  'army' => 
+  array (
+  ),
+  'art' => 
+  array (
+  ),
+  'arte' => 
+  array (
+  ),
+  'asda' => 
+  array (
+  ),
+  'associates' => 
+  array (
+  ),
+  'athleta' => 
+  array (
+  ),
+  'attorney' => 
+  array (
+  ),
+  'auction' => 
+  array (
+  ),
+  'audi' => 
+  array (
+  ),
+  'audible' => 
+  array (
+  ),
+  'audio' => 
+  array (
+  ),
+  'auspost' => 
+  array (
+  ),
+  'author' => 
+  array (
+  ),
+  'auto' => 
+  array (
+  ),
+  'autos' => 
+  array (
+  ),
+  'avianca' => 
+  array (
+  ),
+  'aws' => 
+  array (
+  ),
+  'axa' => 
+  array (
+  ),
+  'azure' => 
+  array (
+  ),
+  'baby' => 
+  array (
+  ),
+  'baidu' => 
+  array (
+  ),
+  'banamex' => 
+  array (
+  ),
+  'bananarepublic' => 
+  array (
+  ),
+  'band' => 
+  array (
+  ),
+  'bank' => 
+  array (
+  ),
+  'bar' => 
+  array (
+  ),
+  'barcelona' => 
+  array (
+  ),
+  'barclaycard' => 
+  array (
+  ),
+  'barclays' => 
+  array (
+  ),
+  'barefoot' => 
+  array (
+  ),
+  'bargains' => 
+  array (
+  ),
+  'baseball' => 
+  array (
+  ),
+  'basketball' => 
+  array (
+  ),
+  'bauhaus' => 
+  array (
+  ),
+  'bayern' => 
+  array (
+  ),
+  'bbc' => 
+  array (
+  ),
+  'bbt' => 
+  array (
+  ),
+  'bbva' => 
+  array (
+  ),
+  'bcg' => 
+  array (
+  ),
+  'bcn' => 
+  array (
+  ),
+  'beats' => 
+  array (
+  ),
+  'beauty' => 
+  array (
+  ),
+  'beer' => 
+  array (
+  ),
+  'bentley' => 
+  array (
+  ),
+  'berlin' => 
+  array (
+  ),
+  'best' => 
+  array (
+  ),
+  'bestbuy' => 
+  array (
+  ),
+  'bet' => 
+  array (
+  ),
+  'bharti' => 
+  array (
+  ),
+  'bible' => 
+  array (
+  ),
+  'bid' => 
+  array (
+  ),
+  'bike' => 
+  array (
+  ),
+  'bing' => 
+  array (
+  ),
+  'bingo' => 
+  array (
+  ),
+  'bio' => 
+  array (
+  ),
+  'black' => 
+  array (
+  ),
+  'blackfriday' => 
+  array (
+  ),
+  'blanco' => 
+  array (
+  ),
+  'blockbuster' => 
+  array (
+  ),
+  'blog' => 
+  array (
+  ),
+  'bloomberg' => 
+  array (
+  ),
+  'blue' => 
+  array (
+  ),
+  'bms' => 
+  array (
+  ),
+  'bmw' => 
+  array (
+  ),
+  'bnl' => 
+  array (
+  ),
+  'bnpparibas' => 
+  array (
+  ),
+  'boats' => 
+  array (
+  ),
+  'boehringer' => 
+  array (
+  ),
+  'bofa' => 
+  array (
+  ),
+  'bom' => 
+  array (
+  ),
+  'bond' => 
+  array (
+  ),
+  'boo' => 
+  array (
+  ),
+  'book' => 
+  array (
+  ),
+  'booking' => 
+  array (
+  ),
+  'boots' => 
+  array (
+  ),
+  'bosch' => 
+  array (
+  ),
+  'bostik' => 
+  array (
+  ),
+  'boston' => 
+  array (
+  ),
+  'bot' => 
+  array (
+  ),
+  'boutique' => 
+  array (
+  ),
+  'box' => 
+  array (
+  ),
+  'bradesco' => 
+  array (
+  ),
+  'bridgestone' => 
+  array (
+  ),
+  'broadway' => 
+  array (
+  ),
+  'broker' => 
+  array (
+  ),
+  'brother' => 
+  array (
+  ),
+  'brussels' => 
+  array (
+  ),
+  'budapest' => 
+  array (
+  ),
+  'bugatti' => 
+  array (
+  ),
+  'build' => 
+  array (
+  ),
+  'builders' => 
+  array (
+  ),
+  'business' => 
+  array (
+  ),
+  'buy' => 
+  array (
+  ),
+  'buzz' => 
+  array (
+  ),
+  'bzh' => 
+  array (
+  ),
+  'cab' => 
+  array (
+  ),
+  'cafe' => 
+  array (
+  ),
+  'cal' => 
+  array (
+  ),
+  'call' => 
+  array (
+  ),
+  'calvinklein' => 
+  array (
+  ),
+  'cam' => 
+  array (
+  ),
+  'camera' => 
+  array (
+  ),
+  'camp' => 
+  array (
+  ),
+  'cancerresearch' => 
+  array (
+  ),
+  'canon' => 
+  array (
+  ),
+  'capetown' => 
+  array (
+  ),
+  'capital' => 
+  array (
+  ),
+  'capitalone' => 
+  array (
+  ),
+  'car' => 
+  array (
+  ),
+  'caravan' => 
+  array (
+  ),
+  'cards' => 
+  array (
+  ),
+  'care' => 
+  array (
+  ),
+  'career' => 
+  array (
+  ),
+  'careers' => 
+  array (
+  ),
+  'cars' => 
+  array (
+  ),
+  'cartier' => 
+  array (
+  ),
+  'casa' => 
+  array (
+  ),
+  'case' => 
+  array (
+  ),
+  'caseih' => 
+  array (
+  ),
+  'cash' => 
+  array (
+  ),
+  'casino' => 
+  array (
+  ),
+  'catering' => 
+  array (
+  ),
+  'catholic' => 
+  array (
+  ),
+  'cba' => 
+  array (
+  ),
+  'cbn' => 
+  array (
+  ),
+  'cbre' => 
+  array (
+  ),
+  'cbs' => 
+  array (
+  ),
+  'ceb' => 
+  array (
+  ),
+  'center' => 
+  array (
+  ),
+  'ceo' => 
+  array (
+  ),
+  'cern' => 
+  array (
+  ),
+  'cfa' => 
+  array (
+  ),
+  'cfd' => 
+  array (
+  ),
+  'chanel' => 
+  array (
+  ),
+  'channel' => 
+  array (
+  ),
+  'chase' => 
+  array (
+  ),
+  'chat' => 
+  array (
+  ),
+  'cheap' => 
+  array (
+  ),
+  'chintai' => 
+  array (
+  ),
+  'christmas' => 
+  array (
+  ),
+  'chrome' => 
+  array (
+  ),
+  'chrysler' => 
+  array (
+  ),
+  'church' => 
+  array (
+  ),
+  'cipriani' => 
+  array (
+  ),
+  'circle' => 
+  array (
+  ),
+  'cisco' => 
+  array (
+  ),
+  'citadel' => 
+  array (
+  ),
+  'citi' => 
+  array (
+  ),
+  'citic' => 
+  array (
+  ),
+  'city' => 
+  array (
+  ),
+  'cityeats' => 
+  array (
+  ),
+  'claims' => 
+  array (
+  ),
+  'cleaning' => 
+  array (
+  ),
+  'click' => 
+  array (
+  ),
+  'clinic' => 
+  array (
+  ),
+  'clinique' => 
+  array (
+  ),
+  'clothing' => 
+  array (
+  ),
+  'cloud' => 
+  array (
+    'statics' => 
+    array (
+      '*' => 
+      array (
+      ),
+    ),
+    'linkyard' => 
+    array (
+    ),
+    'magentosite' => 
+    array (
+      '*' => 
+      array (
+      ),
+    ),
+    'vapor' => 
+    array (
+    ),
+    'sensiosite' => 
+    array (
+      '*' => 
+      array (
+      ),
+    ),
+    'trafficplex' => 
+    array (
+    ),
+  ),
+  'club' => 
+  array (
+    'cloudns' => 
+    array (
+    ),
+  ),
+  'clubmed' => 
+  array (
+  ),
+  'coach' => 
+  array (
+  ),
+  'codes' => 
+  array (
+  ),
+  'coffee' => 
+  array (
+  ),
+  'college' => 
+  array (
+  ),
+  'cologne' => 
+  array (
+  ),
+  'comcast' => 
+  array (
+  ),
+  'commbank' => 
+  array (
+  ),
+  'community' => 
+  array (
+  ),
+  'company' => 
+  array (
+  ),
+  'compare' => 
+  array (
+  ),
+  'computer' => 
+  array (
+  ),
+  'comsec' => 
+  array (
+  ),
+  'condos' => 
+  array (
+  ),
+  'construction' => 
+  array (
+  ),
+  'consulting' => 
+  array (
+  ),
+  'contact' => 
+  array (
+  ),
+  'contractors' => 
+  array (
+  ),
+  'cooking' => 
+  array (
+  ),
+  'cookingchannel' => 
+  array (
+  ),
+  'cool' => 
+  array (
+    'de' => 
+    array (
+    ),
+  ),
+  'corsica' => 
+  array (
+  ),
+  'country' => 
+  array (
+  ),
+  'coupon' => 
+  array (
+  ),
+  'coupons' => 
+  array (
+  ),
+  'courses' => 
+  array (
+  ),
+  'credit' => 
+  array (
+  ),
+  'creditcard' => 
+  array (
+  ),
+  'creditunion' => 
+  array (
+  ),
+  'cricket' => 
+  array (
+  ),
+  'crown' => 
+  array (
+  ),
+  'crs' => 
+  array (
+  ),
+  'cruise' => 
+  array (
+  ),
+  'cruises' => 
+  array (
+  ),
+  'csc' => 
+  array (
+  ),
+  'cuisinella' => 
+  array (
+  ),
+  'cymru' => 
+  array (
+  ),
+  'cyou' => 
+  array (
+  ),
+  'dabur' => 
+  array (
+  ),
+  'dad' => 
+  array (
+  ),
+  'dance' => 
+  array (
+  ),
+  'data' => 
+  array (
+  ),
+  'date' => 
+  array (
+  ),
+  'dating' => 
+  array (
+  ),
+  'datsun' => 
+  array (
+  ),
+  'day' => 
+  array (
+  ),
+  'dclk' => 
+  array (
+  ),
+  'dds' => 
+  array (
+  ),
+  'deal' => 
+  array (
+  ),
+  'dealer' => 
+  array (
+  ),
+  'deals' => 
+  array (
+  ),
+  'degree' => 
+  array (
+  ),
+  'delivery' => 
+  array (
+  ),
+  'dell' => 
+  array (
+  ),
+  'deloitte' => 
+  array (
+  ),
+  'delta' => 
+  array (
+  ),
+  'democrat' => 
+  array (
+  ),
+  'dental' => 
+  array (
+  ),
+  'dentist' => 
+  array (
+  ),
+  'desi' => 
+  array (
+  ),
+  'design' => 
+  array (
+  ),
+  'dev' => 
+  array (
+  ),
+  'dhl' => 
+  array (
+  ),
+  'diamonds' => 
+  array (
+  ),
+  'diet' => 
+  array (
+  ),
+  'digital' => 
+  array (
+  ),
+  'direct' => 
+  array (
+  ),
+  'directory' => 
+  array (
+  ),
+  'discount' => 
+  array (
+  ),
+  'discover' => 
+  array (
+  ),
+  'dish' => 
+  array (
+  ),
+  'diy' => 
+  array (
+  ),
+  'dnp' => 
+  array (
+  ),
+  'docs' => 
+  array (
+  ),
+  'doctor' => 
+  array (
+  ),
+  'dodge' => 
+  array (
+  ),
+  'dog' => 
+  array (
+  ),
+  'doha' => 
+  array (
+  ),
+  'domains' => 
+  array (
+  ),
+  'dot' => 
+  array (
+  ),
+  'download' => 
+  array (
+  ),
+  'drive' => 
+  array (
+  ),
+  'dtv' => 
+  array (
+  ),
+  'dubai' => 
+  array (
+  ),
+  'duck' => 
+  array (
+  ),
+  'dunlop' => 
+  array (
+  ),
+  'duns' => 
+  array (
+  ),
+  'dupont' => 
+  array (
+  ),
+  'durban' => 
+  array (
+  ),
+  'dvag' => 
+  array (
+  ),
+  'dvr' => 
+  array (
+  ),
+  'earth' => 
+  array (
+  ),
+  'eat' => 
+  array (
+  ),
+  'eco' => 
+  array (
+  ),
+  'edeka' => 
+  array (
+  ),
+  'education' => 
+  array (
+  ),
+  'email' => 
+  array (
+  ),
+  'emerck' => 
+  array (
+  ),
+  'energy' => 
+  array (
+  ),
+  'engineer' => 
+  array (
+  ),
+  'engineering' => 
+  array (
+  ),
+  'enterprises' => 
+  array (
+  ),
+  'epost' => 
+  array (
+  ),
+  'epson' => 
+  array (
+  ),
+  'equipment' => 
+  array (
+  ),
+  'ericsson' => 
+  array (
+  ),
+  'erni' => 
+  array (
+  ),
+  'esq' => 
+  array (
+  ),
+  'estate' => 
+  array (
+    'compute' => 
+    array (
+      '*' => 
+      array (
+      ),
+    ),
+  ),
+  'esurance' => 
+  array (
+  ),
+  'etisalat' => 
+  array (
+  ),
+  'eurovision' => 
+  array (
+  ),
+  'eus' => 
+  array (
+    'party' => 
+    array (
+      'user' => 
+      array (
+      ),
+    ),
+  ),
+  'events' => 
+  array (
+  ),
+  'everbank' => 
+  array (
+  ),
+  'exchange' => 
+  array (
+  ),
+  'expert' => 
+  array (
+  ),
+  'exposed' => 
+  array (
+  ),
+  'express' => 
+  array (
+  ),
+  'extraspace' => 
+  array (
+  ),
+  'fage' => 
+  array (
+  ),
+  'fail' => 
+  array (
+  ),
+  'fairwinds' => 
+  array (
+  ),
+  'faith' => 
+  array (
+    'ybo' => 
+    array (
+    ),
+  ),
+  'family' => 
+  array (
+  ),
+  'fan' => 
+  array (
+  ),
+  'fans' => 
+  array (
+  ),
+  'farm' => 
+  array (
+    'storj' => 
+    array (
+    ),
+  ),
+  'farmers' => 
+  array (
+  ),
+  'fashion' => 
+  array (
+  ),
+  'fast' => 
+  array (
+  ),
+  'fedex' => 
+  array (
+  ),
+  'feedback' => 
+  array (
+  ),
+  'ferrari' => 
+  array (
+  ),
+  'ferrero' => 
+  array (
+  ),
+  'fiat' => 
+  array (
+  ),
+  'fidelity' => 
+  array (
+  ),
+  'fido' => 
+  array (
+  ),
+  'film' => 
+  array (
+  ),
+  'final' => 
+  array (
+  ),
+  'finance' => 
+  array (
+  ),
+  'financial' => 
+  array (
+  ),
+  'fire' => 
+  array (
+  ),
+  'firestone' => 
+  array (
+  ),
+  'firmdale' => 
+  array (
+  ),
+  'fish' => 
+  array (
+  ),
+  'fishing' => 
+  array (
+  ),
+  'fit' => 
+  array (
+    'ptplus' => 
+    array (
+    ),
+  ),
+  'fitness' => 
+  array (
+  ),
+  'flickr' => 
+  array (
+  ),
+  'flights' => 
+  array (
+  ),
+  'flir' => 
+  array (
+  ),
+  'florist' => 
+  array (
+  ),
+  'flowers' => 
+  array (
+  ),
+  'fly' => 
+  array (
+  ),
+  'foo' => 
+  array (
+  ),
+  'food' => 
+  array (
+  ),
+  'foodnetwork' => 
+  array (
+  ),
+  'football' => 
+  array (
+  ),
+  'ford' => 
+  array (
+  ),
+  'forex' => 
+  array (
+  ),
+  'forsale' => 
+  array (
+  ),
+  'forum' => 
+  array (
+  ),
+  'foundation' => 
+  array (
+  ),
+  'fox' => 
+  array (
+  ),
+  'free' => 
+  array (
+  ),
+  'fresenius' => 
+  array (
+  ),
+  'frl' => 
+  array (
+  ),
+  'frogans' => 
+  array (
+  ),
+  'frontdoor' => 
+  array (
+  ),
+  'frontier' => 
+  array (
+  ),
+  'ftr' => 
+  array (
+  ),
+  'fujitsu' => 
+  array (
+  ),
+  'fujixerox' => 
+  array (
+  ),
+  'fun' => 
+  array (
+  ),
+  'fund' => 
+  array (
+  ),
+  'furniture' => 
+  array (
+  ),
+  'futbol' => 
+  array (
+  ),
+  'fyi' => 
+  array (
+  ),
+  'gal' => 
+  array (
+  ),
+  'gallery' => 
+  array (
+  ),
+  'gallo' => 
+  array (
+  ),
+  'gallup' => 
+  array (
+  ),
+  'game' => 
+  array (
+  ),
+  'games' => 
+  array (
+  ),
+  'gap' => 
+  array (
+  ),
+  'garden' => 
+  array (
+  ),
+  'gbiz' => 
+  array (
+  ),
+  'gdn' => 
+  array (
+  ),
+  'gea' => 
+  array (
+  ),
+  'gent' => 
+  array (
+  ),
+  'genting' => 
+  array (
+  ),
+  'george' => 
+  array (
+  ),
+  'ggee' => 
+  array (
+  ),
+  'gift' => 
+  array (
+  ),
+  'gifts' => 
+  array (
+  ),
+  'gives' => 
+  array (
+  ),
+  'giving' => 
+  array (
+  ),
+  'glade' => 
+  array (
+  ),
+  'glass' => 
+  array (
+  ),
+  'gle' => 
+  array (
+  ),
+  'global' => 
+  array (
+  ),
+  'globo' => 
+  array (
+  ),
+  'gmail' => 
+  array (
+  ),
+  'gmbh' => 
+  array (
+  ),
+  'gmo' => 
+  array (
+  ),
+  'gmx' => 
+  array (
+  ),
+  'godaddy' => 
+  array (
+  ),
+  'gold' => 
+  array (
+  ),
+  'goldpoint' => 
+  array (
+  ),
+  'golf' => 
+  array (
+  ),
+  'goo' => 
+  array (
+  ),
+  'goodhands' => 
+  array (
+  ),
+  'goodyear' => 
+  array (
+  ),
+  'goog' => 
+  array (
+    'cloud' => 
+    array (
+    ),
+  ),
+  'google' => 
+  array (
+  ),
+  'gop' => 
+  array (
+  ),
+  'got' => 
+  array (
+  ),
+  'grainger' => 
+  array (
+  ),
+  'graphics' => 
+  array (
+  ),
+  'gratis' => 
+  array (
+  ),
+  'green' => 
+  array (
+  ),
+  'gripe' => 
+  array (
+  ),
+  'grocery' => 
+  array (
+  ),
+  'group' => 
+  array (
+  ),
+  'guardian' => 
+  array (
+  ),
+  'gucci' => 
+  array (
+  ),
+  'guge' => 
+  array (
+  ),
+  'guide' => 
+  array (
+  ),
+  'guitars' => 
+  array (
+  ),
+  'guru' => 
+  array (
+  ),
+  'hair' => 
+  array (
+  ),
+  'hamburg' => 
+  array (
+  ),
+  'hangout' => 
+  array (
+  ),
+  'haus' => 
+  array (
+  ),
+  'hbo' => 
+  array (
+  ),
+  'hdfc' => 
+  array (
+  ),
+  'hdfcbank' => 
+  array (
+  ),
+  'health' => 
+  array (
+  ),
+  'healthcare' => 
+  array (
+  ),
+  'help' => 
+  array (
+  ),
+  'helsinki' => 
+  array (
+  ),
+  'here' => 
+  array (
+  ),
+  'hermes' => 
+  array (
+  ),
+  'hgtv' => 
+  array (
+  ),
+  'hiphop' => 
+  array (
+  ),
+  'hisamitsu' => 
+  array (
+  ),
+  'hitachi' => 
+  array (
+  ),
+  'hiv' => 
+  array (
+  ),
+  'hkt' => 
+  array (
+  ),
+  'hockey' => 
+  array (
+  ),
+  'holdings' => 
+  array (
+  ),
+  'holiday' => 
+  array (
+  ),
+  'homedepot' => 
+  array (
+  ),
+  'homegoods' => 
+  array (
+  ),
+  'homes' => 
+  array (
+  ),
+  'homesense' => 
+  array (
+  ),
+  'honda' => 
+  array (
+  ),
+  'honeywell' => 
+  array (
+  ),
+  'horse' => 
+  array (
+  ),
+  'hospital' => 
+  array (
+  ),
+  'host' => 
+  array (
+    'cloudaccess' => 
+    array (
+    ),
+    'freesite' => 
+    array (
+    ),
+  ),
+  'hosting' => 
+  array (
+    'opencraft' => 
+    array (
+    ),
+  ),
+  'hot' => 
+  array (
+  ),
+  'hoteles' => 
+  array (
+  ),
+  'hotels' => 
+  array (
+  ),
+  'hotmail' => 
+  array (
+  ),
+  'house' => 
+  array (
+  ),
+  'how' => 
+  array (
+  ),
+  'hsbc' => 
+  array (
+  ),
+  'hughes' => 
+  array (
+  ),
+  'hyatt' => 
+  array (
+  ),
+  'hyundai' => 
+  array (
+  ),
+  'ibm' => 
+  array (
+  ),
+  'icbc' => 
+  array (
+  ),
+  'ice' => 
+  array (
+  ),
+  'icu' => 
+  array (
+  ),
+  'ieee' => 
+  array (
+  ),
+  'ifm' => 
+  array (
+  ),
+  'ikano' => 
+  array (
+  ),
+  'imamat' => 
+  array (
+  ),
+  'imdb' => 
+  array (
+  ),
+  'immo' => 
+  array (
+  ),
+  'immobilien' => 
+  array (
+  ),
+  'industries' => 
+  array (
+  ),
+  'infiniti' => 
+  array (
+  ),
+  'ing' => 
+  array (
+  ),
+  'ink' => 
+  array (
+  ),
+  'institute' => 
+  array (
+  ),
+  'insurance' => 
+  array (
+  ),
+  'insure' => 
+  array (
+  ),
+  'intel' => 
+  array (
+  ),
+  'international' => 
+  array (
+  ),
+  'intuit' => 
+  array (
+  ),
+  'investments' => 
+  array (
+  ),
+  'ipiranga' => 
+  array (
+  ),
+  'irish' => 
+  array (
+  ),
+  'iselect' => 
+  array (
+  ),
+  'ismaili' => 
+  array (
+  ),
+  'ist' => 
+  array (
+  ),
+  'istanbul' => 
+  array (
+  ),
+  'itau' => 
+  array (
+  ),
+  'itv' => 
+  array (
+  ),
+  'iveco' => 
+  array (
+  ),
+  'iwc' => 
+  array (
+  ),
+  'jaguar' => 
+  array (
+  ),
+  'java' => 
+  array (
+  ),
+  'jcb' => 
+  array (
+  ),
+  'jcp' => 
+  array (
+  ),
+  'jeep' => 
+  array (
+  ),
+  'jetzt' => 
+  array (
+  ),
+  'jewelry' => 
+  array (
+  ),
+  'jio' => 
+  array (
+  ),
+  'jlc' => 
+  array (
+  ),
+  'jll' => 
+  array (
+  ),
+  'jmp' => 
+  array (
+  ),
+  'jnj' => 
+  array (
+  ),
+  'joburg' => 
+  array (
+  ),
+  'jot' => 
+  array (
+  ),
+  'joy' => 
+  array (
+  ),
+  'jpmorgan' => 
+  array (
+  ),
+  'jprs' => 
+  array (
+  ),
+  'juegos' => 
+  array (
+  ),
+  'juniper' => 
+  array (
+  ),
+  'kaufen' => 
+  array (
+  ),
+  'kddi' => 
+  array (
+  ),
+  'kerryhotels' => 
+  array (
+  ),
+  'kerrylogistics' => 
+  array (
+  ),
+  'kerryproperties' => 
+  array (
+  ),
+  'kfh' => 
+  array (
+  ),
+  'kia' => 
+  array (
+  ),
+  'kim' => 
+  array (
+  ),
+  'kinder' => 
+  array (
+  ),
+  'kindle' => 
+  array (
+  ),
+  'kitchen' => 
+  array (
+  ),
+  'kiwi' => 
+  array (
+  ),
+  'koeln' => 
+  array (
+  ),
+  'komatsu' => 
+  array (
+  ),
+  'kosher' => 
+  array (
+  ),
+  'kpmg' => 
+  array (
+  ),
+  'kpn' => 
+  array (
+  ),
+  'krd' => 
+  array (
+    'co' => 
+    array (
+    ),
+    'edu' => 
+    array (
+    ),
+  ),
+  'kred' => 
+  array (
+  ),
+  'kuokgroup' => 
+  array (
+  ),
+  'kyoto' => 
+  array (
+  ),
+  'lacaixa' => 
+  array (
+  ),
+  'ladbrokes' => 
+  array (
+  ),
+  'lamborghini' => 
+  array (
+  ),
+  'lamer' => 
+  array (
+  ),
+  'lancaster' => 
+  array (
+  ),
+  'lancia' => 
+  array (
+  ),
+  'lancome' => 
+  array (
+  ),
+  'land' => 
+  array (
+    'static' => 
+    array (
+      'dev' => 
+      array (
+      ),
+      'sites' => 
+      array (
+      ),
+    ),
+  ),
+  'landrover' => 
+  array (
+  ),
+  'lanxess' => 
+  array (
+  ),
+  'lasalle' => 
+  array (
+  ),
+  'lat' => 
+  array (
+  ),
+  'latino' => 
+  array (
+  ),
+  'latrobe' => 
+  array (
+  ),
+  'law' => 
+  array (
+  ),
+  'lawyer' => 
+  array (
+  ),
+  'lds' => 
+  array (
+  ),
+  'lease' => 
+  array (
+  ),
+  'leclerc' => 
+  array (
+  ),
+  'lefrak' => 
+  array (
+  ),
+  'legal' => 
+  array (
+  ),
+  'lego' => 
+  array (
+  ),
+  'lexus' => 
+  array (
+  ),
+  'lgbt' => 
+  array (
+  ),
+  'liaison' => 
+  array (
+  ),
+  'lidl' => 
+  array (
+  ),
+  'life' => 
+  array (
+  ),
+  'lifeinsurance' => 
+  array (
+  ),
+  'lifestyle' => 
+  array (
+  ),
+  'lighting' => 
+  array (
+  ),
+  'like' => 
+  array (
+  ),
+  'lilly' => 
+  array (
+  ),
+  'limited' => 
+  array (
+  ),
+  'limo' => 
+  array (
+  ),
+  'lincoln' => 
+  array (
+  ),
+  'linde' => 
+  array (
+  ),
+  'link' => 
+  array (
+    'cyon' => 
+    array (
+    ),
+    'mypep' => 
+    array (
+    ),
+  ),
+  'lipsy' => 
+  array (
+  ),
+  'live' => 
+  array (
+  ),
+  'living' => 
+  array (
+  ),
+  'lixil' => 
+  array (
+  ),
+  'loan' => 
+  array (
+  ),
+  'loans' => 
+  array (
+  ),
+  'locker' => 
+  array (
+  ),
+  'locus' => 
+  array (
+  ),
+  'loft' => 
+  array (
+  ),
+  'lol' => 
+  array (
+  ),
+  'london' => 
+  array (
+  ),
+  'lotte' => 
+  array (
+  ),
+  'lotto' => 
+  array (
+  ),
+  'love' => 
+  array (
+  ),
+  'lpl' => 
+  array (
+  ),
+  'lplfinancial' => 
+  array (
+  ),
+  'ltd' => 
+  array (
+  ),
+  'ltda' => 
+  array (
+  ),
+  'lundbeck' => 
+  array (
+  ),
+  'lupin' => 
+  array (
+  ),
+  'luxe' => 
+  array (
+  ),
+  'luxury' => 
+  array (
+  ),
+  'macys' => 
+  array (
+  ),
+  'madrid' => 
+  array (
+  ),
+  'maif' => 
+  array (
+  ),
+  'maison' => 
+  array (
+  ),
+  'makeup' => 
+  array (
+  ),
+  'man' => 
+  array (
+  ),
+  'management' => 
+  array (
+    'router' => 
+    array (
+    ),
+  ),
+  'mango' => 
+  array (
+  ),
+  'map' => 
+  array (
+  ),
+  'market' => 
+  array (
+  ),
+  'marketing' => 
+  array (
+  ),
+  'markets' => 
+  array (
+  ),
+  'marriott' => 
+  array (
+  ),
+  'marshalls' => 
+  array (
+  ),
+  'maserati' => 
+  array (
+  ),
+  'mattel' => 
+  array (
+  ),
+  'mba' => 
+  array (
+  ),
+  'mckinsey' => 
+  array (
+  ),
+  'med' => 
+  array (
+  ),
+  'media' => 
+  array (
+  ),
+  'meet' => 
+  array (
+  ),
+  'melbourne' => 
+  array (
+  ),
+  'meme' => 
+  array (
+  ),
+  'memorial' => 
+  array (
+  ),
+  'men' => 
+  array (
+  ),
+  'menu' => 
+  array (
+  ),
+  'meo' => 
+  array (
+  ),
+  'merckmsd' => 
+  array (
+  ),
+  'metlife' => 
+  array (
+  ),
+  'miami' => 
+  array (
+  ),
+  'microsoft' => 
+  array (
+  ),
+  'mini' => 
+  array (
+  ),
+  'mint' => 
+  array (
+  ),
+  'mit' => 
+  array (
+  ),
+  'mitsubishi' => 
+  array (
+  ),
+  'mlb' => 
+  array (
+  ),
+  'mls' => 
+  array (
+  ),
+  'mma' => 
+  array (
+  ),
+  'mobile' => 
+  array (
+  ),
+  'mobily' => 
+  array (
+  ),
+  'moda' => 
+  array (
+  ),
+  'moe' => 
+  array (
+  ),
+  'moi' => 
+  array (
+  ),
+  'mom' => 
+  array (
+  ),
+  'monash' => 
+  array (
+  ),
+  'money' => 
+  array (
+  ),
+  'monster' => 
+  array (
+  ),
+  'mopar' => 
+  array (
+  ),
+  'mormon' => 
+  array (
+  ),
+  'mortgage' => 
+  array (
+  ),
+  'moscow' => 
+  array (
+  ),
+  'moto' => 
+  array (
+  ),
+  'motorcycles' => 
+  array (
+  ),
+  'mov' => 
+  array (
+  ),
+  'movie' => 
+  array (
+  ),
+  'movistar' => 
+  array (
+  ),
+  'msd' => 
+  array (
+  ),
+  'mtn' => 
+  array (
+  ),
+  'mtpc' => 
+  array (
+  ),
+  'mtr' => 
+  array (
+  ),
+  'mutual' => 
+  array (
+  ),
+  'nab' => 
+  array (
+  ),
+  'nadex' => 
+  array (
+  ),
+  'nagoya' => 
+  array (
+  ),
+  'nationwide' => 
+  array (
+  ),
+  'natura' => 
+  array (
+  ),
+  'navy' => 
+  array (
+  ),
+  'nba' => 
+  array (
+  ),
+  'nec' => 
+  array (
+  ),
+  'netbank' => 
+  array (
+  ),
+  'netflix' => 
+  array (
+  ),
+  'network' => 
+  array (
+    'alces' => 
+    array (
+      '*' => 
+      array (
+      ),
+    ),
+  ),
+  'neustar' => 
+  array (
+  ),
+  'new' => 
+  array (
+  ),
+  'newholland' => 
+  array (
+  ),
+  'news' => 
+  array (
+  ),
+  'next' => 
+  array (
+  ),
+  'nextdirect' => 
+  array (
+  ),
+  'nexus' => 
+  array (
+  ),
+  'nfl' => 
+  array (
+  ),
+  'ngo' => 
+  array (
+  ),
+  'nhk' => 
+  array (
+  ),
+  'nico' => 
+  array (
+  ),
+  'nike' => 
+  array (
+  ),
+  'nikon' => 
+  array (
+  ),
+  'ninja' => 
+  array (
+  ),
+  'nissan' => 
+  array (
+  ),
+  'nissay' => 
+  array (
+  ),
+  'nokia' => 
+  array (
+  ),
+  'northwesternmutual' => 
+  array (
+  ),
+  'norton' => 
+  array (
+  ),
+  'now' => 
+  array (
+  ),
+  'nowruz' => 
+  array (
+  ),
+  'nowtv' => 
+  array (
+  ),
+  'nra' => 
+  array (
+  ),
+  'nrw' => 
+  array (
+  ),
+  'ntt' => 
+  array (
+  ),
+  'nyc' => 
+  array (
+  ),
+  'obi' => 
+  array (
+  ),
+  'observer' => 
+  array (
+  ),
+  'off' => 
+  array (
+  ),
+  'office' => 
+  array (
+  ),
+  'okinawa' => 
+  array (
+  ),
+  'olayan' => 
+  array (
+  ),
+  'olayangroup' => 
+  array (
+  ),
+  'oldnavy' => 
+  array (
+  ),
+  'ollo' => 
+  array (
+  ),
+  'omega' => 
+  array (
+  ),
+  'one' => 
+  array (
+    'homelink' => 
+    array (
+    ),
+  ),
+  'ong' => 
+  array (
+  ),
+  'onl' => 
+  array (
+  ),
+  'online' => 
+  array (
+    'barsy' => 
+    array (
+    ),
+  ),
+  'onyourside' => 
+  array (
+  ),
+  'ooo' => 
+  array (
+  ),
+  'open' => 
+  array (
+  ),
+  'oracle' => 
+  array (
+  ),
+  'orange' => 
+  array (
+  ),
+  'organic' => 
+  array (
+  ),
+  'origins' => 
+  array (
+  ),
+  'osaka' => 
+  array (
+  ),
+  'otsuka' => 
+  array (
+  ),
+  'ott' => 
+  array (
+  ),
+  'ovh' => 
+  array (
+    'nerdpol' => 
+    array (
+    ),
+  ),
+  'page' => 
+  array (
+  ),
+  'panasonic' => 
+  array (
+  ),
+  'panerai' => 
+  array (
+  ),
+  'paris' => 
+  array (
+  ),
+  'pars' => 
+  array (
+  ),
+  'partners' => 
+  array (
+  ),
+  'parts' => 
+  array (
+  ),
+  'party' => 
+  array (
+    'ybo' => 
+    array (
+    ),
+  ),
+  'passagens' => 
+  array (
+  ),
+  'pay' => 
+  array (
+  ),
+  'pccw' => 
+  array (
+  ),
+  'pet' => 
+  array (
+  ),
+  'pfizer' => 
+  array (
+  ),
+  'pharmacy' => 
+  array (
+  ),
+  'phd' => 
+  array (
+  ),
+  'philips' => 
+  array (
+  ),
+  'phone' => 
+  array (
+  ),
+  'photo' => 
+  array (
+  ),
+  'photography' => 
+  array (
+  ),
+  'photos' => 
+  array (
+  ),
+  'physio' => 
+  array (
+  ),
+  'piaget' => 
+  array (
+  ),
+  'pics' => 
+  array (
+  ),
+  'pictet' => 
+  array (
+  ),
+  'pictures' => 
+  array (
+    1337 => 
+    array (
+    ),
+  ),
+  'pid' => 
+  array (
+  ),
+  'pin' => 
+  array (
+  ),
+  'ping' => 
+  array (
+  ),
+  'pink' => 
+  array (
+  ),
+  'pioneer' => 
+  array (
+  ),
+  'pizza' => 
+  array (
+  ),
+  'place' => 
+  array (
+  ),
+  'play' => 
+  array (
+  ),
+  'playstation' => 
+  array (
+  ),
+  'plumbing' => 
+  array (
+  ),
+  'plus' => 
+  array (
+  ),
+  'pnc' => 
+  array (
+  ),
+  'pohl' => 
+  array (
+  ),
+  'poker' => 
+  array (
+  ),
+  'politie' => 
+  array (
+  ),
+  'porn' => 
+  array (
+  ),
+  'pramerica' => 
+  array (
+  ),
+  'praxi' => 
+  array (
+  ),
+  'press' => 
+  array (
+  ),
+  'prime' => 
+  array (
+  ),
+  'prod' => 
+  array (
+  ),
+  'productions' => 
+  array (
+  ),
+  'prof' => 
+  array (
+  ),
+  'progressive' => 
+  array (
+  ),
+  'promo' => 
+  array (
+  ),
+  'properties' => 
+  array (
+  ),
+  'property' => 
+  array (
+  ),
+  'protection' => 
+  array (
+  ),
+  'pru' => 
+  array (
+  ),
+  'prudential' => 
+  array (
+  ),
+  'pub' => 
+  array (
+  ),
+  'pwc' => 
+  array (
+  ),
+  'qpon' => 
+  array (
+  ),
+  'quebec' => 
+  array (
+  ),
+  'quest' => 
+  array (
+  ),
+  'qvc' => 
+  array (
+  ),
+  'racing' => 
+  array (
+  ),
+  'radio' => 
+  array (
+  ),
+  'raid' => 
+  array (
+  ),
+  'read' => 
+  array (
+  ),
+  'realestate' => 
+  array (
+  ),
+  'realtor' => 
+  array (
+  ),
+  'realty' => 
+  array (
+  ),
+  'recipes' => 
+  array (
+  ),
+  'red' => 
+  array (
+  ),
+  'redstone' => 
+  array (
+  ),
+  'redumbrella' => 
+  array (
+  ),
+  'rehab' => 
+  array (
+  ),
+  'reise' => 
+  array (
+  ),
+  'reisen' => 
+  array (
+  ),
+  'reit' => 
+  array (
+  ),
+  'reliance' => 
+  array (
+  ),
+  'ren' => 
+  array (
+  ),
+  'rent' => 
+  array (
+  ),
+  'rentals' => 
+  array (
+  ),
+  'repair' => 
+  array (
+  ),
+  'report' => 
+  array (
+  ),
+  'republican' => 
+  array (
+  ),
+  'rest' => 
+  array (
+  ),
+  'restaurant' => 
+  array (
+  ),
+  'review' => 
+  array (
+    'ybo' => 
+    array (
+    ),
+  ),
+  'reviews' => 
+  array (
+  ),
+  'rexroth' => 
+  array (
+  ),
+  'rich' => 
+  array (
+  ),
+  'richardli' => 
+  array (
+  ),
+  'ricoh' => 
+  array (
+  ),
+  'rightathome' => 
+  array (
+  ),
+  'ril' => 
+  array (
+  ),
+  'rio' => 
+  array (
+  ),
+  'rip' => 
+  array (
+    'clan' => 
+    array (
+    ),
+  ),
+  'rmit' => 
+  array (
+  ),
+  'rocher' => 
+  array (
+  ),
+  'rocks' => 
+  array (
+    'myddns' => 
+    array (
+    ),
+    'lima-city' => 
+    array (
+    ),
+    'webspace' => 
+    array (
+    ),
+  ),
+  'rodeo' => 
+  array (
+  ),
+  'rogers' => 
+  array (
+  ),
+  'room' => 
+  array (
+  ),
+  'rsvp' => 
+  array (
+  ),
+  'rugby' => 
+  array (
+  ),
+  'ruhr' => 
+  array (
+  ),
+  'run' => 
+  array (
+  ),
+  'rwe' => 
+  array (
+  ),
+  'ryukyu' => 
+  array (
+  ),
+  'saarland' => 
+  array (
+  ),
+  'safe' => 
+  array (
+  ),
+  'safety' => 
+  array (
+  ),
+  'sakura' => 
+  array (
+  ),
+  'sale' => 
+  array (
+  ),
+  'salon' => 
+  array (
+  ),
+  'samsclub' => 
+  array (
+  ),
+  'samsung' => 
+  array (
+  ),
+  'sandvik' => 
+  array (
+  ),
+  'sandvikcoromant' => 
+  array (
+  ),
+  'sanofi' => 
+  array (
+  ),
+  'sap' => 
+  array (
+  ),
+  'sapo' => 
+  array (
+  ),
+  'sarl' => 
+  array (
+  ),
+  'sas' => 
+  array (
+  ),
+  'save' => 
+  array (
+  ),
+  'saxo' => 
+  array (
+  ),
+  'sbi' => 
+  array (
+  ),
+  'sbs' => 
+  array (
+  ),
+  'sca' => 
+  array (
+  ),
+  'scb' => 
+  array (
+  ),
+  'schaeffler' => 
+  array (
+  ),
+  'schmidt' => 
+  array (
+  ),
+  'scholarships' => 
+  array (
+  ),
+  'school' => 
+  array (
+  ),
+  'schule' => 
+  array (
+  ),
+  'schwarz' => 
+  array (
+  ),
+  'science' => 
+  array (
+    'ybo' => 
+    array (
+    ),
+  ),
+  'scjohnson' => 
+  array (
+  ),
+  'scor' => 
+  array (
+  ),
+  'scot' => 
+  array (
+  ),
+  'search' => 
+  array (
+  ),
+  'seat' => 
+  array (
+  ),
+  'secure' => 
+  array (
+  ),
+  'security' => 
+  array (
+  ),
+  'seek' => 
+  array (
+  ),
+  'select' => 
+  array (
+  ),
+  'sener' => 
+  array (
+  ),
+  'services' => 
+  array (
+  ),
+  'ses' => 
+  array (
+  ),
+  'seven' => 
+  array (
+  ),
+  'sew' => 
+  array (
+  ),
+  'sex' => 
+  array (
+  ),
+  'sexy' => 
+  array (
+  ),
+  'sfr' => 
+  array (
+  ),
+  'shangrila' => 
+  array (
+  ),
+  'sharp' => 
+  array (
+  ),
+  'shaw' => 
+  array (
+  ),
+  'shell' => 
+  array (
+  ),
+  'shia' => 
+  array (
+  ),
+  'shiksha' => 
+  array (
+  ),
+  'shoes' => 
+  array (
+  ),
+  'shop' => 
+  array (
+  ),
+  'shopping' => 
+  array (
+  ),
+  'shouji' => 
+  array (
+  ),
+  'show' => 
+  array (
+  ),
+  'showtime' => 
+  array (
+  ),
+  'shriram' => 
+  array (
+  ),
+  'silk' => 
+  array (
+  ),
+  'sina' => 
+  array (
+  ),
+  'singles' => 
+  array (
+  ),
+  'site' => 
+  array (
+    'cyon' => 
+    array (
+    ),
+    'platformsh' => 
+    array (
+      '*' => 
+      array (
+      ),
+    ),
+    'byen' => 
+    array (
+    ),
+  ),
+  'ski' => 
+  array (
+  ),
+  'skin' => 
+  array (
+  ),
+  'sky' => 
+  array (
+  ),
+  'skype' => 
+  array (
+  ),
+  'sling' => 
+  array (
+  ),
+  'smart' => 
+  array (
+  ),
+  'smile' => 
+  array (
+  ),
+  'sncf' => 
+  array (
+  ),
+  'soccer' => 
+  array (
+  ),
+  'social' => 
+  array (
+  ),
+  'softbank' => 
+  array (
+  ),
+  'software' => 
+  array (
+  ),
+  'sohu' => 
+  array (
+  ),
+  'solar' => 
+  array (
+  ),
+  'solutions' => 
+  array (
+  ),
+  'song' => 
+  array (
+  ),
+  'sony' => 
+  array (
+  ),
+  'soy' => 
+  array (
+  ),
+  'space' => 
+  array (
+    'stackspace' => 
+    array (
+    ),
+    'uber' => 
+    array (
+    ),
+    'xs4all' => 
+    array (
+    ),
+  ),
+  'spiegel' => 
+  array (
+  ),
+  'spot' => 
+  array (
+  ),
+  'spreadbetting' => 
+  array (
+  ),
+  'srl' => 
+  array (
+  ),
+  'srt' => 
+  array (
+  ),
+  'stada' => 
+  array (
+  ),
+  'staples' => 
+  array (
+  ),
+  'star' => 
+  array (
+  ),
+  'starhub' => 
+  array (
+  ),
+  'statebank' => 
+  array (
+  ),
+  'statefarm' => 
+  array (
+  ),
+  'statoil' => 
+  array (
+  ),
+  'stc' => 
+  array (
+  ),
+  'stcgroup' => 
+  array (
+  ),
+  'stockholm' => 
+  array (
+  ),
+  'storage' => 
+  array (
+  ),
+  'store' => 
+  array (
+  ),
+  'stream' => 
+  array (
+  ),
+  'studio' => 
+  array (
+  ),
+  'study' => 
+  array (
+  ),
+  'style' => 
+  array (
+  ),
+  'sucks' => 
+  array (
+  ),
+  'supplies' => 
+  array (
+  ),
+  'supply' => 
+  array (
+  ),
+  'support' => 
+  array (
+    'barsy' => 
+    array (
+    ),
+  ),
+  'surf' => 
+  array (
+  ),
+  'surgery' => 
+  array (
+  ),
+  'suzuki' => 
+  array (
+  ),
+  'swatch' => 
+  array (
+  ),
+  'swiftcover' => 
+  array (
+  ),
+  'swiss' => 
+  array (
+  ),
+  'sydney' => 
+  array (
+  ),
+  'symantec' => 
+  array (
+  ),
+  'systems' => 
+  array (
+    'knightpoint' => 
+    array (
+    ),
+  ),
+  'tab' => 
+  array (
+  ),
+  'taipei' => 
+  array (
+  ),
+  'talk' => 
+  array (
+  ),
+  'taobao' => 
+  array (
+  ),
+  'target' => 
+  array (
+  ),
+  'tatamotors' => 
+  array (
+  ),
+  'tatar' => 
+  array (
+  ),
+  'tattoo' => 
+  array (
+  ),
+  'tax' => 
+  array (
+  ),
+  'taxi' => 
+  array (
+  ),
+  'tci' => 
+  array (
+  ),
+  'tdk' => 
+  array (
+  ),
+  'team' => 
+  array (
+  ),
+  'tech' => 
+  array (
+  ),
+  'technology' => 
+  array (
+  ),
+  'telecity' => 
+  array (
+  ),
+  'telefonica' => 
+  array (
+  ),
+  'temasek' => 
+  array (
+  ),
+  'tennis' => 
+  array (
+  ),
+  'teva' => 
+  array (
+  ),
+  'thd' => 
+  array (
+  ),
+  'theater' => 
+  array (
+  ),
+  'theatre' => 
+  array (
+  ),
+  'tiaa' => 
+  array (
+  ),
+  'tickets' => 
+  array (
+  ),
+  'tienda' => 
+  array (
+  ),
+  'tiffany' => 
+  array (
+  ),
+  'tips' => 
+  array (
+  ),
+  'tires' => 
+  array (
+  ),
+  'tirol' => 
+  array (
+  ),
+  'tjmaxx' => 
+  array (
+  ),
+  'tjx' => 
+  array (
+  ),
+  'tkmaxx' => 
+  array (
+  ),
+  'tmall' => 
+  array (
+  ),
+  'today' => 
+  array (
+  ),
+  'tokyo' => 
+  array (
+  ),
+  'tools' => 
+  array (
+  ),
+  'top' => 
+  array (
+  ),
+  'toray' => 
+  array (
+  ),
+  'toshiba' => 
+  array (
+  ),
+  'total' => 
+  array (
+  ),
+  'tours' => 
+  array (
+  ),
+  'town' => 
+  array (
+  ),
+  'toyota' => 
+  array (
+  ),
+  'toys' => 
+  array (
+  ),
+  'trade' => 
+  array (
+    'ybo' => 
+    array (
+    ),
+  ),
+  'trading' => 
+  array (
+  ),
+  'training' => 
+  array (
+  ),
+  'travelchannel' => 
+  array (
+  ),
+  'travelers' => 
+  array (
+  ),
+  'travelersinsurance' => 
+  array (
+  ),
+  'trust' => 
+  array (
+  ),
+  'trv' => 
+  array (
+  ),
+  'tube' => 
+  array (
+  ),
+  'tui' => 
+  array (
+  ),
+  'tunes' => 
+  array (
+  ),
+  'tushu' => 
+  array (
+  ),
+  'tvs' => 
+  array (
+  ),
+  'ubank' => 
+  array (
+  ),
+  'ubs' => 
+  array (
+  ),
+  'uconnect' => 
+  array (
+  ),
+  'unicom' => 
+  array (
+  ),
+  'university' => 
+  array (
+  ),
+  'uno' => 
+  array (
+  ),
+  'uol' => 
+  array (
+  ),
+  'ups' => 
+  array (
+  ),
+  'vacations' => 
+  array (
+  ),
+  'vana' => 
+  array (
+  ),
+  'vanguard' => 
+  array (
+  ),
+  'vegas' => 
+  array (
+  ),
+  'ventures' => 
+  array (
+  ),
+  'verisign' => 
+  array (
+  ),
+  'versicherung' => 
+  array (
+  ),
+  'vet' => 
+  array (
+  ),
+  'viajes' => 
+  array (
+  ),
+  'video' => 
+  array (
+  ),
+  'vig' => 
+  array (
+  ),
+  'viking' => 
+  array (
+  ),
+  'villas' => 
+  array (
+  ),
+  'vin' => 
+  array (
+  ),
+  'vip' => 
+  array (
+  ),
+  'virgin' => 
+  array (
+  ),
+  'visa' => 
+  array (
+  ),
+  'vision' => 
+  array (
+  ),
+  'vista' => 
+  array (
+  ),
+  'vistaprint' => 
+  array (
+  ),
+  'viva' => 
+  array (
+  ),
+  'vivo' => 
+  array (
+  ),
+  'vlaanderen' => 
+  array (
+  ),
+  'vodka' => 
+  array (
+  ),
+  'volkswagen' => 
+  array (
+  ),
+  'volvo' => 
+  array (
+  ),
+  'vote' => 
+  array (
+  ),
+  'voting' => 
+  array (
+  ),
+  'voto' => 
+  array (
+  ),
+  'voyage' => 
+  array (
+  ),
+  'vuelos' => 
+  array (
+  ),
+  'wales' => 
+  array (
+  ),
+  'walmart' => 
+  array (
+  ),
+  'walter' => 
+  array (
+  ),
+  'wang' => 
+  array (
+  ),
+  'wanggou' => 
+  array (
+  ),
+  'warman' => 
+  array (
+  ),
+  'watch' => 
+  array (
+  ),
+  'watches' => 
+  array (
+  ),
+  'weather' => 
+  array (
+  ),
+  'weatherchannel' => 
+  array (
+  ),
+  'webcam' => 
+  array (
+  ),
+  'weber' => 
+  array (
+  ),
+  'website' => 
+  array (
+  ),
+  'wed' => 
+  array (
+  ),
+  'wedding' => 
+  array (
+  ),
+  'weibo' => 
+  array (
+  ),
+  'weir' => 
+  array (
+  ),
+  'whoswho' => 
+  array (
+  ),
+  'wien' => 
+  array (
+  ),
+  'wiki' => 
+  array (
+  ),
+  'williamhill' => 
+  array (
+  ),
+  'win' => 
+  array (
+  ),
+  'windows' => 
+  array (
+  ),
+  'wine' => 
+  array (
+  ),
+  'winners' => 
+  array (
+  ),
+  'wme' => 
+  array (
+  ),
+  'wolterskluwer' => 
+  array (
+  ),
+  'woodside' => 
+  array (
+  ),
+  'work' => 
+  array (
+  ),
+  'works' => 
+  array (
+  ),
+  'world' => 
+  array (
+  ),
+  'wow' => 
+  array (
+  ),
+  'wtc' => 
+  array (
+  ),
+  'wtf' => 
+  array (
+  ),
+  'xbox' => 
+  array (
+  ),
+  'xerox' => 
+  array (
+  ),
+  'xfinity' => 
+  array (
+  ),
+  'xihuan' => 
+  array (
+  ),
+  'xin' => 
+  array (
+  ),
+  'कॉम' => 
+  array (
+  ),
+  'セール' => 
+  array (
+  ),
+  '佛山' => 
+  array (
+  ),
+  '慈善' => 
+  array (
+  ),
+  '集团' => 
+  array (
+  ),
+  '在线' => 
+  array (
+  ),
+  '大众汽车' => 
+  array (
+  ),
+  '点看' => 
+  array (
+  ),
+  'คอม' => 
+  array (
+  ),
+  '八卦' => 
+  array (
+  ),
+  'موقع' => 
+  array (
+  ),
+  '公益' => 
+  array (
+  ),
+  '公司' => 
+  array (
+  ),
+  '香格里拉' => 
+  array (
+  ),
+  '网站' => 
+  array (
+  ),
+  '移动' => 
+  array (
+  ),
+  '我爱你' => 
+  array (
+  ),
+  'москва' => 
+  array (
+  ),
+  'католик' => 
+  array (
   ),
   'онлайн' => 
   array (
@@ -18922,964 +25424,295 @@ return array (
   'сайт' => 
   array (
   ),
-  'شبكة' => 
+  '联通' => 
   array (
   ),
-  '游戏' => 
+  'קום' => 
   array (
   ),
-  '企业' => 
+  '时尚' => 
   array (
   ),
-  'camera' => 
+  '微博' => 
   array (
   ),
-  'clothing' => 
+  '淡马锡' => 
   array (
   ),
-  'lighting' => 
-  array (
-  ),
-  'singles' => 
-  array (
-  ),
-  'ventures' => 
-  array (
-  ),
-  'voyage' => 
-  array (
-  ),
-  'guru' => 
-  array (
-  ),
-  'holdings' => 
-  array (
-  ),
-  'equipment' => 
-  array (
-  ),
-  'bike' => 
-  array (
-  ),
-  'estate' => 
-  array (
-  ),
-  'tattoo' => 
-  array (
-  ),
-  '在线' => 
-  array (
-  ),
-  '中文网' => 
-  array (
-  ),
-  'land' => 
-  array (
-  ),
-  'plumbing' => 
-  array (
-  ),
-  'contractors' => 
-  array (
-  ),
-  'sexy' => 
-  array (
-  ),
-  'menu' => 
-  array (
-  ),
-  '世界' => 
-  array (
-  ),
-  'uno' => 
-  array (
-  ),
-  'gallery' => 
-  array (
-  ),
-  'technology' => 
-  array (
-  ),
-  '集团' => 
-  array (
-  ),
-  'reviews' => 
-  array (
-  ),
-  'guide' => 
-  array (
-  ),
-  '我爱你' => 
-  array (
-  ),
-  'graphics' => 
-  array (
-  ),
-  'construction' => 
-  array (
-  ),
-  'onl' => 
-  array (
-  ),
-  'みんな' => 
-  array (
-  ),
-  'diamonds' => 
-  array (
-  ),
-  'kiwi' => 
-  array (
-  ),
-  'enterprises' => 
-  array (
-  ),
-  'today' => 
-  array (
-  ),
-  'futbol' => 
-  array (
-  ),
-  'photography' => 
-  array (
-  ),
-  'tips' => 
-  array (
-  ),
-  'directory' => 
-  array (
-  ),
-  'kitchen' => 
-  array (
-  ),
-  '移动' => 
-  array (
-  ),
-  'kim' => 
-  array (
-  ),
-  '삼성' => 
-  array (
-  ),
-  'monash' => 
-  array (
-  ),
-  'wed' => 
-  array (
-  ),
-  'pink' => 
-  array (
-  ),
-  'ruhr' => 
-  array (
-  ),
-  'buzz' => 
-  array (
-  ),
-  'careers' => 
-  array (
-  ),
-  'shoes' => 
-  array (
-  ),
-  'موقع' => 
-  array (
-  ),
-  'career' => 
-  array (
-  ),
-  'otsuka' => 
-  array (
-  ),
-  '中信' => 
-  array (
-  ),
-  'gift' => 
-  array (
-  ),
-  'recipes' => 
-  array (
-  ),
-  'coffee' => 
-  array (
-  ),
-  'luxury' => 
-  array (
-  ),
-  'domains' => 
-  array (
-  ),
-  'photos' => 
-  array (
-  ),
-  'limo' => 
-  array (
-  ),
-  'viajes' => 
-  array (
-  ),
-  'wang' => 
-  array (
-  ),
-  'democrat' => 
-  array (
-  ),
-  'mango' => 
-  array (
-  ),
-  'cab' => 
-  array (
-  ),
-  'support' => 
-  array (
-  ),
-  'dance' => 
-  array (
-  ),
-  'nagoya' => 
-  array (
-  ),
-  'computer' => 
-  array (
-  ),
-  'wien' => 
-  array (
-  ),
-  'berlin' => 
-  array (
-  ),
-  'codes' => 
-  array (
-  ),
-  'email' => 
-  array (
-  ),
-  'بازار' => 
-  array (
-  ),
-  'repair' => 
-  array (
-  ),
-  'holiday' => 
-  array (
-  ),
-  'center' => 
-  array (
-  ),
-  'systems' => 
-  array (
-  ),
-  'wiki' => 
-  array (
-  ),
-  'ceo' => 
-  array (
-  ),
-  'international' => 
-  array (
-  ),
-  'solar' => 
-  array (
-  ),
-  'company' => 
-  array (
-  ),
-  'education' => 
-  array (
-  ),
-  'training' => 
-  array (
-  ),
-  'academy' => 
-  array (
-  ),
-  'marketing' => 
-  array (
-  ),
-  'florist' => 
-  array (
-  ),
-  'solutions' => 
-  array (
-  ),
-  'build' => 
-  array (
-  ),
-  'institute' => 
-  array (
-  ),
-  'builders' => 
-  array (
-  ),
-  'red' => 
-  array (
-  ),
-  'blue' => 
-  array (
-  ),
-  'ninja' => 
-  array (
-  ),
-  'business' => 
-  array (
-  ),
-  'gal' => 
-  array (
-  ),
-  'social' => 
-  array (
-  ),
-  'house' => 
-  array (
-  ),
-  'camp' => 
-  array (
-  ),
-  'immobilien' => 
-  array (
-  ),
-  'moda' => 
-  array (
-  ),
-  'glass' => 
-  array (
-  ),
-  'management' => 
-  array (
-  ),
-  'kaufen' => 
-  array (
-  ),
-  'farm' => 
-  array (
-  ),
-  '公益' => 
-  array (
-  ),
-  '政务' => 
-  array (
-  ),
-  'club' => 
-  array (
-  ),
-  'voting' => 
-  array (
-  ),
-  'tokyo' => 
-  array (
-  ),
-  'moe' => 
-  array (
-  ),
-  'guitars' => 
-  array (
-  ),
-  'bargains' => 
-  array (
-  ),
-  '组织机构' => 
-  array (
-  ),
-  'desi' => 
-  array (
-  ),
-  'cool' => 
-  array (
-  ),
-  'boutique' => 
-  array (
-  ),
-  'pics' => 
+  'ファッション' => 
   array (
   ),
   'орг' => 
   array (
   ),
-  '公司' => 
+  'नेट' => 
   array (
   ),
-  '网络' => 
+  'ストア' => 
   array (
   ),
-  'cheap' => 
-  array (
-  ),
-  '广东' => 
-  array (
-  ),
-  'photo' => 
-  array (
-  ),
-  'network' => 
-  array (
-  ),
-  'zone' => 
-  array (
-  ),
-  '机构' => 
-  array (
-  ),
-  'link' => 
-  array (
-  ),
-  'qpon' => 
-  array (
-  ),
-  'संगठन' => 
-  array (
-  ),
-  'agency' => 
-  array (
-  ),
-  'tienda' => 
-  array (
-  ),
-  'works' => 
-  array (
-  ),
-  'london' => 
-  array (
-  ),
-  'watch' => 
-  array (
-  ),
-  'rocks' => 
-  array (
-  ),
-  'shiksha' => 
-  array (
-  ),
-  'дети' => 
-  array (
-  ),
-  'budapest' => 
-  array (
-  ),
-  'nrw' => 
-  array (
-  ),
-  'vote' => 
-  array (
-  ),
-  'fishing' => 
-  array (
-  ),
-  'expert' => 
-  array (
-  ),
-  'horse' => 
-  array (
-  ),
-  'christmas' => 
-  array (
-  ),
-  'cooking' => 
-  array (
-  ),
-  '商城' => 
-  array (
-  ),
-  'casa' => 
-  array (
-  ),
-  'rich' => 
-  array (
-  ),
-  'voto' => 
-  array (
-  ),
-  'tools' => 
-  array (
-  ),
-  '八卦' => 
-  array (
-  ),
-  'praxi' => 
-  array (
-  ),
-  'events' => 
-  array (
-  ),
-  'flights' => 
-  array (
-  ),
-  'report' => 
-  array (
-  ),
-  'partners' => 
-  array (
-  ),
-  'neustar' => 
-  array (
-  ),
-  'rentals' => 
-  array (
-  ),
-  'catering' => 
-  array (
-  ),
-  'community' => 
-  array (
-  ),
-  'maison' => 
-  array (
-  ),
-  'parts' => 
-  array (
-  ),
-  'cleaning' => 
-  array (
-  ),
-  'okinawa' => 
-  array (
-  ),
-  'foundation' => 
-  array (
-  ),
-  'properties' => 
-  array (
-  ),
-  'vacations' => 
-  array (
-  ),
-  'productions' => 
-  array (
-  ),
-  'industries' => 
-  array (
-  ),
-  'haus' => 
-  array (
-  ),
-  'vision' => 
-  array (
-  ),
-  'mormon' => 
-  array (
-  ),
-  'cards' => 
-  array (
-  ),
-  'ink' => 
-  array (
-  ),
-  'villas' => 
-  array (
-  ),
-  'consulting' => 
-  array (
-  ),
-  'cruises' => 
-  array (
-  ),
-  'krd' => 
-  array (
-  ),
-  'xyz' => 
-  array (
-  ),
-  'dating' => 
-  array (
-  ),
-  'exposed' => 
-  array (
-  ),
-  'condos' => 
-  array (
-  ),
-  'eus' => 
-  array (
-  ),
-  'caravan' => 
-  array (
-  ),
-  'actor' => 
-  array (
-  ),
-  'saarland' => 
-  array (
-  ),
-  'yokohama' => 
-  array (
-  ),
-  'pub' => 
-  array (
-  ),
-  'рус' => 
-  array (
-  ),
-  'ren' => 
-  array (
-  ),
-  'fish' => 
-  array (
-  ),
-  'bar' => 
-  array (
-  ),
-  'dnp' => 
-  array (
-  ),
-  'bid' => 
-  array (
-  ),
-  'supply' => 
-  array (
-  ),
-  'miami' => 
-  array (
-  ),
-  'supplies' => 
-  array (
-  ),
-  'quebec' => 
-  array (
-  ),
-  'moscow' => 
-  array (
-  ),
-  'globo' => 
-  array (
-  ),
-  'axa' => 
-  array (
-  ),
-  'москва' => 
-  array (
-  ),
-  '商店' => 
-  array (
-  ),
-  'vodka' => 
-  array (
-  ),
-  'rest' => 
-  array (
-  ),
-  'frogans' => 
-  array (
-  ),
-  'wtc' => 
-  array (
-  ),
-  'rodeo' => 
-  array (
-  ),
-  'sohu' => 
-  array (
-  ),
-  'best' => 
-  array (
-  ),
-  'country' => 
-  array (
-  ),
-  'kred' => 
-  array (
-  ),
-  'feedback' => 
-  array (
-  ),
-  'work' => 
-  array (
-  ),
-  'luxe' => 
-  array (
-  ),
-  'ryukyu' => 
-  array (
-  ),
-  'autos' => 
-  array (
-  ),
-  'homes' => 
-  array (
-  ),
-  'jetzt' => 
-  array (
-  ),
-  'yachts' => 
-  array (
-  ),
-  'motorcycles' => 
-  array (
-  ),
-  'mini' => 
-  array (
-  ),
-  'ggee' => 
-  array (
-  ),
-  'beer' => 
-  array (
-  ),
-  '佛山' => 
-  array (
-  ),
-  'college' => 
-  array (
-  ),
-  'ovh' => 
-  array (
-  ),
-  'meet' => 
-  array (
-  ),
-  '网址' => 
-  array (
-  ),
-  'gop' => 
-  array (
-  ),
-  'blackfriday' => 
-  array (
-  ),
-  'lacaixa' => 
+  '삼성' => 
   array (
   ),
   '商标' => 
   array (
   ),
-  'vegas' => 
+  '商店' => 
   array (
   ),
-  'black' => 
+  '商城' => 
   array (
   ),
-  'soy' => 
+  'дети' => 
   array (
   ),
-  'trade' => 
+  'ポイント' => 
   array (
   ),
-  'gent' => 
+  '新闻' => 
   array (
   ),
-  'ing' => 
+  '工行' => 
   array (
   ),
-  'dad' => 
+  '家電' => 
   array (
   ),
-  'shriram' => 
+  'كوم' => 
   array (
   ),
-  'bayern' => 
+  '中文网' => 
   array (
   ),
-  'scot' => 
+  '中信' => 
   array (
   ),
-  'webcam' => 
+  '娱乐' => 
   array (
   ),
-  'foo' => 
+  '谷歌' => 
   array (
   ),
-  'eat' => 
+  '電訊盈科' => 
   array (
   ),
-  'nyc' => 
+  '购物' => 
   array (
   ),
-  'prod' => 
+  'クラウド' => 
   array (
   ),
-  'how' => 
+  '通販' => 
   array (
   ),
-  'day' => 
+  '网店' => 
   array (
   ),
-  'meme' => 
+  'संगठन' => 
   array (
   ),
-  'mov' => 
+  '餐厅' => 
   array (
   ),
-  'paris' => 
+  '网络' => 
   array (
   ),
-  'boo' => 
+  'ком' => 
   array (
   ),
-  'new' => 
+  '诺基亚' => 
   array (
   ),
-  'ifm' => 
+  '食品' => 
   array (
   ),
-  'life' => 
+  '飞利浦' => 
   array (
   ),
-  'archi' => 
-  array (
-  ),
-  'spiegel' => 
-  array (
-  ),
-  'brussels' => 
-  array (
-  ),
-  'church' => 
-  array (
-  ),
-  'here' => 
-  array (
-  ),
-  'dabur' => 
-  array (
-  ),
-  'vlaanderen' => 
-  array (
-  ),
-  'cologne' => 
+  '手表' => 
   array (
   ),
   '手机' => 
   array (
   ),
-  'wme' => 
+  'ارامكو' => 
   array (
   ),
-  'nhk' => 
+  'العليان' => 
   array (
   ),
-  'suzuki' => 
+  'اتصالات' => 
   array (
   ),
-  'whoswho' => 
+  'بازار' => 
   array (
   ),
-  'scb' => 
+  'موبايلي' => 
   array (
   ),
-  'hamburg' => 
+  'ابوظبي' => 
   array (
   ),
-  'services' => 
+  'كاثوليك' => 
   array (
   ),
-  'bzh' => 
+  'همراه' => 
   array (
   ),
-  'rio' => 
-  array (
-  ),
-  'cash' => 
-  array (
-  ),
-  'gives' => 
-  array (
-  ),
-  'hiphop' => 
-  array (
-  ),
-  'degree' => 
-  array (
-  ),
-  'digital' => 
-  array (
-  ),
-  'rehab' => 
-  array (
-  ),
-  'wtf' => 
-  array (
-  ),
-  'financial' => 
-  array (
-  ),
-  'limited' => 
-  array (
-  ),
-  'discount' => 
-  array (
-  ),
-  'fail' => 
-  array (
-  ),
-  'vet' => 
-  array (
-  ),
-  'ngo' => 
-  array (
-  ),
-  'fitness' => 
-  array (
-  ),
-  'schule' => 
-  array (
-  ),
-  'navy' => 
-  array (
-  ),
-  'bio' => 
-  array (
-  ),
-  'ong' => 
-  array (
-  ),
-  'town' => 
-  array (
-  ),
-  'toys' => 
-  array (
-  ),
-  'army' => 
-  array (
-  ),
-  'engineering' => 
-  array (
-  ),
-  'capital' => 
-  array (
-  ),
-  'exchange' => 
-  array (
-  ),
-  'fan' => 
-  array (
-  ),
-  'market' => 
-  array (
-  ),
-  'media' => 
-  array (
-  ),
-  'lease' => 
-  array (
-  ),
-  'university' => 
-  array (
-  ),
-  'reisen' => 
-  array (
-  ),
-  'airforce' => 
-  array (
-  ),
-  'pictures' => 
-  array (
-  ),
-  'gripe' => 
-  array (
-  ),
-  'associates' => 
+  '닷컴' => 
   array (
   ),
   '政府' => 
   array (
   ),
-  'williamhill' => 
+  'شبكة' => 
   array (
   ),
-  'hiv' => 
+  'بيتك' => 
   array (
   ),
-  'sca' => 
+  'عرب' => 
   array (
   ),
-  'reise' => 
+  '机构' => 
+  array (
+  ),
+  '组织机构' => 
+  array (
+  ),
+  '健康' => 
+  array (
+  ),
+  'рус' => 
+  array (
+  ),
+  '珠宝' => 
+  array (
+  ),
+  '大拿' => 
+  array (
+  ),
+  'みんな' => 
+  array (
+  ),
+  'グーグル' => 
+  array (
+  ),
+  '世界' => 
+  array (
+  ),
+  '書籍' => 
+  array (
+  ),
+  '网址' => 
+  array (
+  ),
+  '닷넷' => 
+  array (
+  ),
+  'コム' => 
+  array (
+  ),
+  '天主教' => 
+  array (
+  ),
+  '游戏' => 
+  array (
+  ),
+  'vermögensberater' => 
+  array (
+  ),
+  'vermögensberatung' => 
+  array (
+  ),
+  '企业' => 
+  array (
+  ),
+  '信息' => 
+  array (
+  ),
+  '嘉里大酒店' => 
+  array (
+  ),
+  '嘉里' => 
+  array (
+  ),
+  '广东' => 
+  array (
+  ),
+  '政务' => 
+  array (
+  ),
+  'xperia' => 
+  array (
+  ),
+  'xyz' => 
+  array (
+    'blogsite' => 
+    array (
+    ),
+    'fhapp' => 
+    array (
+    ),
+  ),
+  'yachts' => 
+  array (
+  ),
+  'yahoo' => 
+  array (
+  ),
+  'yamaxun' => 
+  array (
+  ),
+  'yandex' => 
+  array (
+  ),
+  'yodobashi' => 
+  array (
+  ),
+  'yoga' => 
+  array (
+  ),
+  'yokohama' => 
+  array (
+  ),
+  'you' => 
+  array (
+  ),
+  'youtube' => 
+  array (
+  ),
+  'yun' => 
+  array (
+  ),
+  'zappos' => 
+  array (
+  ),
+  'zara' => 
+  array (
+  ),
+  'zero' => 
+  array (
+  ),
+  'zip' => 
+  array (
+  ),
+  'zippo' => 
+  array (
+  ),
+  'zone' => 
+  array (
+    'triton' => 
+    array (
+      '*' => 
+      array (
+      ),
+    ),
+    'lima' => 
+    array (
+    ),
+  ),
+  'zuerich' => 
   array (
   ),
 );
