@@ -34,7 +34,7 @@ class QueryTest extends TestCase
     }
 
     /**
-     * @covers \Aura\Uri\Query::__toString
+     * @covers Query::__toString
      */
     public function test__toString()
     {
@@ -45,7 +45,7 @@ class QueryTest extends TestCase
     }
 
     /**
-     * @covers \Aura\Uri\Query::setFromString
+     * @covers Query::setFromString
      */
     public function testSetFromString()
     {

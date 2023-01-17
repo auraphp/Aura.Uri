@@ -34,7 +34,7 @@ class PathTest extends TestCase
     }
 
     /**
-     * @covers \Aura\Uri\Path::__toString
+     * @covers Path::__toString
      */
     public function test__toString()
     {
@@ -45,7 +45,7 @@ class PathTest extends TestCase
     }
 
     /**
-     * @covers \Aura\Uri\Path::setFromString
+     * @covers Path::setFromString
      */
     public function testSetFromString()
     {
@@ -61,8 +61,8 @@ class PathTest extends TestCase
     }
 
     /**
-     * @covers \Aura\Uri\Path::setFormat
-     * @covers \Aura\Uri\Path::getFormat
+     * @covers Path::setFormat
+     * @covers Path::getFormat
      */
     public function testSetAndGetFormat()
     {

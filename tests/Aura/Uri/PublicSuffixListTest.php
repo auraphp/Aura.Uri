@@ -8,7 +8,7 @@ use PHPUnit\Framework\TestCase;
 class PublicSuffixListTest extends TestCase
 {
     /**
-     * @var \Aura\Uri\PublicSuffixList
+     * @var PublicSuffixList
      */
     protected $psl;
 

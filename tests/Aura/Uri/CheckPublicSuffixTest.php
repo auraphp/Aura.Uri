@@ -13,7 +13,7 @@ use PHPUnit\Framework\TestCase;
 class CheckPublicSuffixTest extends TestCase
 {
     /**
-     * @var \Aura\Uri\PublicSuffixList
+     * @var PublicSuffixList
      */
     protected $psl;
 

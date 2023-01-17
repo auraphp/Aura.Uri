@@ -17,8 +17,8 @@
         "phpunit/phpunit": "^8"
     },
     "autoload": {
-        "psr-0": {
-            "Aura\\Uri": "src/"
+        "psr-4": {
+            "Aura\\Uri\\": "src/"
         }
     },
     "conflict": {

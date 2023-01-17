@@ -37,7 +37,6 @@ instantiate a URL factory object:
 ```php
 <?php
 use Aura\Uri\Url\Factory as UrlFactory;
-use Aura\Uri\PublicSuffixList;
 
 $psl = new PublicSuffixList(require '/path/to/Aura.Uri/data/public-suffix-list.php');
 $url_factory = new UrlFactory($_SERVER, $psl);

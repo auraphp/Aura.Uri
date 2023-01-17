@@ -1,8 +1,8 @@
 <?php
 namespace Aura\Uri;
 
-use PHPUnit\Framework\TestCase;
 use Aura\Uri\Url\Factory as UrlFactory;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Test class for Url.
@@ -73,7 +73,7 @@ class UrlTest extends TestCase
     }
 
     /**
-     * @covers \Aura\Uri\Url::__toString
+     * @covers Url::__toString
      */
     public function test__toString()
     {
@@ -82,7 +82,7 @@ class UrlTest extends TestCase
     }
 
     /**
-     * @covers \Aura\Uri\Url::__get
+     * @covers Url::__get
      */
     public function test__get()
     {
@@ -101,7 +101,7 @@ class UrlTest extends TestCase
     }
 
     /**
-     * @covers \Aura\Uri\Url::get
+     * @covers Url::get
      */
     public function testGet()
     {
@@ -111,7 +111,7 @@ class UrlTest extends TestCase
     }
 
     /**
-     * @covers \Aura\Uri\Url::getFull
+     * @covers Url::getFull
      */
     public function testGetFull()
     {
@@ -120,7 +120,7 @@ class UrlTest extends TestCase
     }
 
     /**
-     * @covers \Aura\Uri\Url::getSchemeless
+     * @covers Url::getSchemeless
      */
     public function testGetSchemeless()
     {
@@ -130,7 +130,7 @@ class UrlTest extends TestCase
     }
 
     /**
-     * @covers \Aura\Uri\Url::setScheme
+     * @covers Url::setScheme
      */
     public function testSetScheme()
     {
@@ -140,7 +140,7 @@ class UrlTest extends TestCase
     }
 
     /**
-     * @covers \Aura\Uri\Url::setUser
+     * @covers Url::setUser
      */
     public function testSetUser()
     {
@@ -150,7 +150,7 @@ class UrlTest extends TestCase
     }
 
     /**
-     * @covers \Aura\Uri\Url::setPass
+     * @covers Url::setPass
      */
     public function testSetPass()
     {
@@ -160,7 +160,7 @@ class UrlTest extends TestCase
     }
 
     /**
-     * @covers \Aura\Uri\Url::setHost
+     * @covers Url::setHost
      */
     public function testSetHost()
     {
@@ -170,7 +170,7 @@ class UrlTest extends TestCase
     }
 
     /**
-     * @covers \Aura\Uri\Url::setPort
+     * @covers Url::setPort
      */
     public function testSetPort()
     {
@@ -180,7 +180,7 @@ class UrlTest extends TestCase
     }
 
     /**
-     * @covers \Aura\Uri\Url::setPath
+     * @covers Url::setPath
      */
     public function testSetPath()
     {
@@ -190,7 +190,7 @@ class UrlTest extends TestCase
     }
 
     /**
-     * @covers \Aura\Uri\Url::setQuery
+     * @covers Url::setQuery
      */
     public function testSetQuery()
     {
@@ -200,7 +200,7 @@ class UrlTest extends TestCase
     }
 
     /**
-     * @covers \Aura\Uri\Url::setFragment
+     * @covers Url::setFragment
      */
     public function testSetFragment()
     {

@@ -7,7 +7,7 @@ use PHPUnit\Framework\TestCase;
 class HostTest extends TestCase
 {
     /**
-     * @var \Aura\Uri\Host
+     * @var Host
      */
     protected $host;
 
