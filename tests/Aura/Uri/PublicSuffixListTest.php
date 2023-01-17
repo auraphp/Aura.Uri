@@ -2,14 +2,17 @@
 
 namespace Aura\Uri;
 
-class PublicSuffixListTest extends \PHPUnit_Framework_TestCase
+
+use PHPUnit\Framework\TestCase;
+
+class PublicSuffixListTest extends TestCase
 {
     /**
      * @var \Aura\Uri\PublicSuffixList
      */
     protected $psl;
 
-    protected function setUp()
+    public function setUp() : void
     {
         parent::setUp();
         $file = dirname(dirname(dirname(__DIR__))) . DIRECTORY_SEPARATOR

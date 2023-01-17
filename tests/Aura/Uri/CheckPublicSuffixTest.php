@@ -2,20 +2,22 @@
 
 namespace Aura\Uri;
 
+use PHPUnit\Framework\TestCase;
+
 /**
  * This test case is based on the test data linked at
  * http://publicsuffix.org/list/ and provided by Rob Strading of Comodo.
  * @link
  * http://mxr.mozilla.org/mozilla-central/source/netwerk/test/unit/data/test_psl.txt?raw=1
  */
-class CheckPublicSuffixTest extends \PHPUnit_Framework_TestCase
+class CheckPublicSuffixTest extends TestCase
 {
     /**
      * @var \Aura\Uri\PublicSuffixList
      */
     protected $psl;
 
-    protected function setUp()
+    public function setUp() : void
     {
         parent::setUp();
         $file = dirname(dirname(dirname(__DIR__))) . DIRECTORY_SEPARATOR

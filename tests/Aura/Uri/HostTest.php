@@ -2,14 +2,16 @@
 
 namespace Aura\Uri;
 
-class HostTest extends \PHPUnit_Framework_TestCase
+use PHPUnit\Framework\TestCase;
+
+class HostTest extends TestCase
 {
     /**
      * @var \Aura\Uri\Host
      */
     protected $host;
 
-    protected function setUp()
+    public function setUp() : void
     {
         parent::setUp();
 
@@ -21,7 +23,7 @@ class HostTest extends \PHPUnit_Framework_TestCase
         $this->host = new Host($psl);
     }
 
-    protected function tearDown()
+    protected function tearDown() : void
     {
         $this->host = null;
         parent::tearDown();

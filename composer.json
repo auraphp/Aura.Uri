@@ -12,11 +12,11 @@
         }
     ],
     "require": {
-        "php": ">=5.4.0",
+        "php": "^7.2",
         "aura/installer-default": "1.0.0"
     },
     "require-dev": {
-        "phpunit/phpunit": "~5.7 || ~4.8"
+        "phpunit/phpunit": "^8"
     },
     "autoload": {
         "psr-0": {
@@ -29,6 +29,11 @@
             "config": {
                 "common": "Aura\\Uri\\_Config\\Common"
             }
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "aura/installer-default": false
         }
     }
 }

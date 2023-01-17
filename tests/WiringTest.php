@@ -2,12 +2,13 @@
 namespace Aura\Uri;
 
 use Aura\Framework\Test\WiringAssertionsTrait;
+use PHPUnit\Framework\TestCase;
 
-class WiringTest extends \PHPUnit_Framework_TestCase
+class WiringTest extends TestCase
 {
     use WiringAssertionsTrait;
 
-    protected function setUp()
+    public function setUp() : void
     {
         $this->loadDi();
     }
