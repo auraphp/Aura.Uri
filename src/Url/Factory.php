@@ -15,7 +15,6 @@ use Aura\Uri\Path;
 use Aura\Uri\Query;
 use Aura\Uri\Host;
 use Aura\Uri\PublicSuffixList;
-use ArrayObject;
 
 /**
  *

@@ -1,9 +1,8 @@
 {
-    "name": "aura/uri",
-    "type": "aura-package",
-    "description": "The Aura Uri package provides objects to build and manipulate URL strings.",
+    "name": "otobank/aura-uri",
+    "type": "library",
+    "description": "A fork of The Aura Uri package provides objects to build and manipulate URL strings.",
     "keywords": [ "uri", "url" ],
-    "homepage": "http://auraphp.github.com/Aura.Uri",
     "license": "BSD-2-Clause",
     "authors": [
         {
@@ -12,23 +11,22 @@
         }
     ],
     "require": {
-        "php": ">=5.4.0",
-        "aura/installer-default": "1.0.0"
+        "php": "^7.2"
     },
     "require-dev": {
-        "phpunit/phpunit": "~5.7 || ~4.8"
+        "phpunit/phpunit": "^8"
     },
     "autoload": {
-        "psr-0": {
-            "Aura\\Uri": "src/"
+        "psr-4": {
+            "Aura\\Uri\\": "src/"
         }
     },
-    "extra": {
-        "aura": {
-            "type": "library",
-            "config": {
-                "common": "Aura\\Uri\\_Config\\Common"
-            }
+    "autoload-dev": {
+        "psr-4": {
+            "Aura\\Uri\\": "tests/"
         }
+    },
+    "conflict": {
+        "aura/uri": "*"
     }
 }

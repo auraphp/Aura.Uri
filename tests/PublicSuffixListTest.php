@@ -2,17 +2,20 @@
 
 namespace Aura\Uri;
 
-class PublicSuffixListTest extends \PHPUnit_Framework_TestCase
+
+use PHPUnit\Framework\TestCase;
+
+class PublicSuffixListTest extends TestCase
 {
     /**
-     * @var \Aura\Uri\PublicSuffixList
+     * @var PublicSuffixList
      */
     protected $psl;
 
-    protected function setUp()
+    public function setUp() : void
     {
         parent::setUp();
-        $file = dirname(dirname(dirname(__DIR__))) . DIRECTORY_SEPARATOR
+        $file = dirname(__DIR__) . DIRECTORY_SEPARATOR
               . 'data' . DIRECTORY_SEPARATOR
               . 'public-suffix-list.php';
         $this->psl = new PublicSuffixList(require $file);

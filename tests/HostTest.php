@@ -2,18 +2,20 @@
 
 namespace Aura\Uri;
 
-class HostTest extends \PHPUnit_Framework_TestCase
+use PHPUnit\Framework\TestCase;
+
+class HostTest extends TestCase
 {
     /**
-     * @var \Aura\Uri\Host
+     * @var Host
      */
     protected $host;
 
-    protected function setUp()
+    public function setUp() : void
     {
         parent::setUp();
 
-        $file = dirname(dirname(dirname(__DIR__))) . DIRECTORY_SEPARATOR
+        $file = dirname(__DIR__) . DIRECTORY_SEPARATOR
               . 'data' . DIRECTORY_SEPARATOR
               . 'public-suffix-list.php';
         $psl = new PublicSuffixList(require $file);
@@ -21,7 +23,7 @@ class HostTest extends \PHPUnit_Framework_TestCase
         $this->host = new Host($psl);
     }
 
-    protected function tearDown()
+    protected function tearDown() : void
     {
         $this->host = null;
         parent::tearDown();
