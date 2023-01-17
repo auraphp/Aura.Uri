@@ -12,7 +12,7 @@
 
     <testsuites>
         <testsuite name="testsuite for Uri">
-            <directory>./tests/Aura/Uri</directory>
+            <directory>./tests/</directory>
         </testsuite>
     </testsuites>
     <filter>

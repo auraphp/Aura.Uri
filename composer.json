@@ -21,6 +21,11 @@
             "Aura\\Uri\\": "src/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Aura\\Uri\\": "tests/"
+        }
+    },
     "conflict": {
         "aura/uri": "*"
     }
