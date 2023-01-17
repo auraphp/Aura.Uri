@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<phpunit bootstrap="./bootstrap.php">
+<phpunit bootstrap="./tests/bootstrap.php">
     <testsuites>
         <testsuite name="testsuite for Uri">
-            <directory>./Aura/Uri</directory>
+            <directory>./tests/Aura/Uri</directory>
         </testsuite>
     </testsuites>
     <filter>
         <whitelist>
-            <directory suffix=".php">../src/Aura/Uri</directory>
+            <directory suffix=".php">src/Aura/Uri</directory>
         </whitelist>
     </filter>
 </phpunit>
