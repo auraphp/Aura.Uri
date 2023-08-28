@@ -1,7 +1,7 @@
 Aura.Uri
 ========
 
-[![Build Status](https://travis-ci.org/auraphp/Aura.Uri.png?branch=develop)](https://travis-ci.org/auraphp/Aura.Uri)
+[![Continuous Integration](https://github.com/auraphp/Aura.Uri/actions/workflows/continuous-integration.yml/badge.svg)](https://github.com/auraphp/Aura.Uri/actions/workflows/continuous-integration.yml)
 
 The `Auri.Uri` package provides objects to help you create and manipulate URLs,
 including query strings and path elements. It does so by splitting up the pieces
