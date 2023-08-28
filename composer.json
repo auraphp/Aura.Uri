@@ -1,19 +1,17 @@
 {
     "name": "aura/uri",
-    "type": "aura-package",
     "description": "The Aura Uri package provides objects to build and manipulate URL strings.",
     "keywords": [ "uri", "url" ],
     "homepage": "http://auraphp.github.com/Aura.Uri",
     "license": "BSD-2-Clause",
     "authors": [
         {
-            "name": "Aura Contributors",
+            "name": "Aura.Uri Contributors",
             "homepage": "https://github.com/auraphp/Aura.Uri/contributors"
         }
     ],
     "require": {
-        "php": ">=5.4.0",
-        "aura/installer-default": "1.0.0"
+        "php": ">=5.4.0"
     },
     "require-dev": {
         "phpunit/phpunit": "~5.7 || ~4.8 || ^9.5",
@@ -21,25 +19,7 @@
     },
     "autoload": {
         "psr-0": {
-            "Aura\\Uri": "src/"
-        }
-    },
-    "autoload-dev": {
-        "psr-0": {
-            "Aura\\Uri": "src/"
-        }
-    },
-    "extra": {
-        "aura": {
-            "type": "library",
-            "config": {
-                "common": "Aura\\Uri\\_Config\\Common"
-            }
-        }
-    },
-    "config": {
-        "allow-plugins": {
-            "aura/installer-default": true
+            "Aura\\Uri\\": "src/"
         }
     }
 }
