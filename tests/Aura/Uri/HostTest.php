@@ -2,16 +2,18 @@
 
 namespace Aura\Uri;
 
-class HostTest extends \PHPUnit_Framework_TestCase
+use Yoast\PHPUnitPolyfills\TestCases\TestCase;
+
+class HostTest extends TestCase
 {
     /**
      * @var \Aura\Uri\Host
      */
     protected $host;
 
-    protected function setUp()
+    protected function set_up()
     {
-        parent::setUp();
+        parent::set_up();
 
         $file = dirname(dirname(dirname(__DIR__))) . DIRECTORY_SEPARATOR
               . 'data' . DIRECTORY_SEPARATOR
@@ -21,10 +23,10 @@ class HostTest extends \PHPUnit_Framework_TestCase
         $this->host = new Host($psl);
     }
 
-    protected function tearDown()
+    protected function tear_down()
     {
         $this->host = null;
-        parent::tearDown();
+        parent::tear_down();
     }
 
     /**

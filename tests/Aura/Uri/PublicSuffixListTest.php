@@ -2,16 +2,18 @@
 
 namespace Aura\Uri;
 
-class PublicSuffixListTest extends \PHPUnit_Framework_TestCase
+use Yoast\PHPUnitPolyfills\TestCases\TestCase;
+
+class PublicSuffixListTest extends TestCase
 {
     /**
      * @var \Aura\Uri\PublicSuffixList
      */
     protected $psl;
 
-    protected function setUp()
+    protected function set_up()
     {
-        parent::setUp();
+        parent::set_up();
         $file = dirname(dirname(dirname(__DIR__))) . DIRECTORY_SEPARATOR
               . 'data' . DIRECTORY_SEPARATOR
               . 'public-suffix-list.php';
