@@ -92,7 +92,7 @@ class HostTest extends TestCase
             array('cea-law.co.il', 'co.il', 'cea-law.co.il', null),
             array('edition.cnn.com', 'com', 'cnn.com', 'edition'),
             array('en.wikipedia.org', 'org', 'wikipedia.org', 'en'),
-            array('a.b.c.cy', 'c.cy', 'b.c.cy', 'a'),
+            array('a.b.c.cy', 'cy', 'c.cy', 'a.b'),
             array('test.k12.ak.us', 'k12.ak.us', 'test.k12.ak.us', null),
             array('www.scottwills.co.uk', 'co.uk', 'scottwills.co.uk', 'www'),
             array('b.ide.kyoto.jp', 'ide.kyoto.jp', 'b.ide.kyoto.jp', null),
