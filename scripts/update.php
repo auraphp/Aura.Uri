@@ -40,7 +40,7 @@ function build(array &$data, array $parts)
  */
 
 // get the origin text file
-$text = file_get_contents('http://mxr.mozilla.org/mozilla-central/source/netwerk/dns/effective_tld_names.dat?raw=1');
+$text = file_get_contents('https://publicsuffix.org/list/public_suffix_list.dat');
 $lines = explode("\n", $text);
 
 // convert text lines to data
