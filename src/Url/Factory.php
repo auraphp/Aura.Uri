@@ -24,7 +24,7 @@ use ArrayObject;
  * @package Aura.Uri
  *
  */
-class UrlFactory
+class Factory
 {
     /**
      *

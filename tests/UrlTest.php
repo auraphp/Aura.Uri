@@ -1,7 +1,7 @@
 <?php
 namespace Aura\Uri;
 
-use Aura\Uri\Url\Factory as UrlFactory;
+use Aura\Uri\Url\Factory;
 use Yoast\PHPUnitPolyfills\TestCases\TestCase;
 
 /**
@@ -32,11 +32,11 @@ class UrlTest extends TestCase
     protected function set_up()
     {
         parent::set_up();
-        $file = dirname(dirname(dirname(__DIR__))) . DIRECTORY_SEPARATOR
+        $file = dirname(__DIR__) . DIRECTORY_SEPARATOR
               . 'data' . DIRECTORY_SEPARATOR
               . 'public-suffix-list.php';
         $this->psl = new PublicSuffixList(require $file);
-        $factory = new UrlFactory([], $this->psl);
+        $factory = new Factory([], $this->psl);
         $this->url = $factory->newInstance($this->spec);
     }
 

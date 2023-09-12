@@ -45,9 +45,9 @@ The easiest way to instantiate a URL object is with the _UrlFactory_:
 
 ```php
 <?php
-use Aura\Uri\UrlFactory;
+use Aura\Uri\Url\Factory;
 
-$url_factory = new UrlFactory;
+$url_factory = new Factory;
 ?>
 ```
 

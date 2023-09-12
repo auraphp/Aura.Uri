@@ -3,6 +3,8 @@
 namespace Aura\Uri;
 
 use Yoast\PHPUnitPolyfills\TestCases\TestCase;
+use function dirname;
+use const DIRECTORY_SEPARATOR;
 
 /**
  * This test case is based on the test data linked at
@@ -21,7 +23,7 @@ class CheckPublicSuffixTest extends TestCase
     protected function set_up()
     {
         parent::set_up();
-        $file = dirname(dirname(dirname(__DIR__))) . DIRECTORY_SEPARATOR
+        $file = dirname(__DIR__) . DIRECTORY_SEPARATOR
               . 'data' . DIRECTORY_SEPARATOR
               . 'public-suffix-list.php';
         $this->psl = new PublicSuffixList(require $file);

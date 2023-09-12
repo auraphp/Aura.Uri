@@ -18,7 +18,7 @@ class Common extends Config
         /**
          * Aura\Uri\Url\Factory
          */
-        $di->params['Aura\Uri\UrlFactory']['server'] = $_SERVER;
-        $di->params['Aura\Uri\UrlFactory']['psl'] = $di->lazyNew('Aura\Uri\PublicSuffixList');
+        $di->params['Aura\Uri\Factory']['server'] = $_SERVER;
+        $di->params['Aura\Uri\Factory']['psl'] = $di->lazyNew('Aura\Uri\PublicSuffixList');
     }
 }

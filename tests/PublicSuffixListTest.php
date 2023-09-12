@@ -14,7 +14,7 @@ class PublicSuffixListTest extends TestCase
     protected function set_up()
     {
         parent::set_up();
-        $file = dirname(dirname(dirname(__DIR__))) . DIRECTORY_SEPARATOR
+        $file = dirname(__DIR__) . DIRECTORY_SEPARATOR
               . 'data' . DIRECTORY_SEPARATOR
               . 'public-suffix-list.php';
         $this->psl = new PublicSuffixList(require $file);

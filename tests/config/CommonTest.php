@@ -8,7 +8,7 @@ class WiringTest extends TestCase
 {
     public function testInstances()
     {
-        $file = dirname(__DIR__) . DIRECTORY_SEPARATOR
+        $file = dirname(__DIR__, 2) . DIRECTORY_SEPARATOR
             . 'data' . DIRECTORY_SEPARATOR
             . 'public-suffix-list.php';
         $psl = new PublicSuffixList(require $file);

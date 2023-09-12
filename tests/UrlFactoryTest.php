@@ -1,7 +1,8 @@
 <?php
-namespace Aura\Uri\Url;
+namespace Aura\Uri;
 
-use Aura\Uri\PublicSuffixList;
+
+use Aura\Uri\Url\Factory;
 
 /**
  * Test class for Factory.
