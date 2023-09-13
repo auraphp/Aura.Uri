@@ -2,22 +2,25 @@
 
 namespace Aura\Uri;
 
+use Yoast\PHPUnitPolyfills\TestCases\TestCase;
+
 /**
  * This test case is based on the test data linked at
  * http://publicsuffix.org/list/ and provided by Rob Strading of Comodo.
+ *
  * @link
  * http://mxr.mozilla.org/mozilla-central/source/netwerk/test/unit/data/test_psl.txt?raw=1
  */
-class CheckPublicSuffixTest extends \PHPUnit_Framework_TestCase
+class CheckPublicSuffixTest extends TestCase
 {
     /**
      * @var \Aura\Uri\PublicSuffixList
      */
     protected $psl;
 
-    protected function setUp()
+    protected function set_up()
     {
-        parent::setUp();
+        parent::set_up();
         $file = dirname(dirname(dirname(__DIR__))) . DIRECTORY_SEPARATOR
               . 'data' . DIRECTORY_SEPARATOR
               . 'public-suffix-list.php';
@@ -64,9 +67,9 @@ class CheckPublicSuffixTest extends \PHPUnit_Framework_TestCase
         $this->checkPublicSuffix('test.ac', 'test.ac');
         // TLD with only 1 (wildcard) rule.
         $this->checkPublicSuffix('cy', null);
-        $this->checkPublicSuffix('c.cy', null);
-        $this->checkPublicSuffix('b.c.cy', 'b.c.cy');
-        $this->checkPublicSuffix('a.b.c.cy', 'b.c.cy');
+        $this->checkPublicSuffix('c.cy', 'c.cy');
+        $this->checkPublicSuffix('b.c.cy', 'c.cy');
+        $this->checkPublicSuffix('a.b.c.cy', 'c.cy');
         // More complex TLD.
         $this->checkPublicSuffix('jp', null);
         $this->checkPublicSuffix('test.jp', 'test.jp');

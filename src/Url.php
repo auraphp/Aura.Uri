@@ -94,7 +94,7 @@ class Url
      * @var string
      *
      */
-    protected $fragment;
+    protected $fragment = '';
 
     // authority = userinfo@host:port
 

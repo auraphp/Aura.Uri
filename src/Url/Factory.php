@@ -110,13 +110,13 @@ class Factory
         $elem = (array) $parts + $elem;
 
         $path = new Path([]);
-        $path->setFromString($elem['path']);
+        $path->setFromString((string) $elem['path']);
 
         $query = new Query([]);
-        $query->setFromString($elem['query']);
+        $query->setFromString((string) $elem['query']);
 
         $host = new Host($this->psl, []);
-        $host->setFromString($elem['host']);
+        $host->setFromString((string) $elem['host']);
 
         return new Url(
             $elem['scheme'],
@@ -126,7 +126,7 @@ class Factory
             $elem['port'],
             $path,
             $query,
-            $elem['fragment']
+            (string) $elem['fragment']
         );
     }
 

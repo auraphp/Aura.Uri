@@ -2,16 +2,18 @@
 
 namespace Aura\Uri;
 
-class PublicSuffixListTest extends \PHPUnit_Framework_TestCase
+use Yoast\PHPUnitPolyfills\TestCases\TestCase;
+
+class PublicSuffixListTest extends TestCase
 {
     /**
      * @var \Aura\Uri\PublicSuffixList
      */
     protected $psl;
 
-    protected function setUp()
+    protected function set_up()
     {
-        parent::setUp();
+        parent::set_up();
         $file = dirname(dirname(dirname(__DIR__))) . DIRECTORY_SEPARATOR
               . 'data' . DIRECTORY_SEPARATOR
               . 'public-suffix-list.php';
@@ -60,7 +62,7 @@ class PublicSuffixListTest extends \PHPUnit_Framework_TestCase
             array('cea-law.co.il', 'co.il', 'cea-law.co.il', null, 'cea-law.co.il'),
             array('http://edition.cnn.com/WORLD/', 'com', 'cnn.com', 'edition', 'edition.cnn.com'),
             array('http://en.wikipedia.org/', 'org', 'wikipedia.org', 'en', 'en.wikipedia.org'),
-            array('a.b.c.cy', 'c.cy', 'b.c.cy', 'a', 'a.b.c.cy'),
+            array('a.b.c.cy', 'cy', 'c.cy', 'a.b', 'a.b.c.cy'),
             array('https://test.k12.ak.us', 'k12.ak.us', 'test.k12.ak.us', null, 'test.k12.ak.us'),
             array('www.scottwills.co.uk', 'co.uk', 'scottwills.co.uk', 'www', 'www.scottwills.co.uk'),
             array('b.ide.kyoto.jp', 'ide.kyoto.jp', 'b.ide.kyoto.jp', null, 'b.ide.kyoto.jp'),

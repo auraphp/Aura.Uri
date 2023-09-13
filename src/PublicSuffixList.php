@@ -104,7 +104,7 @@ class PublicSuffixList
      */
     public function getRegisterableDomain($host)
     {
-        if (strpos($host, '.') === false) {
+        if (strpos((string) $host, '.') === false) {
             return null;
         }
 

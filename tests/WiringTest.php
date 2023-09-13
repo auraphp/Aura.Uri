@@ -1,21 +1,18 @@
 <?php
 namespace Aura\Uri;
 
-use Aura\Framework\Test\WiringAssertionsTrait;
+use Aura\Uri\Url\Factory;
+use Yoast\PHPUnitPolyfills\TestCases\TestCase;
 
-class WiringTest extends \PHPUnit_Framework_TestCase
+class WiringTest extends TestCase
 {
-    use WiringAssertionsTrait;
-
-    protected function setUp()
-    {
-        $this->loadDi();
-    }
-
     public function testInstances()
     {
-        $this->assertNewInstance('Aura\Uri\PublicSuffixList');
-        $factory = $this->assertNewInstance('Aura\Uri\Url\Factory');
+        $file = dirname(__DIR__) . DIRECTORY_SEPARATOR
+            . 'data' . DIRECTORY_SEPARATOR
+            . 'public-suffix-list.php';
+        $psl = new PublicSuffixList(require $file);
+        $factory = new Factory([], $psl);
         $this->assertInstanceOf('Aura\Uri\Url', $factory->newInstance('http://example.com'));
         $this->assertInstanceOf('Aura\Uri\Url', $factory->newCurrent());
     }

@@ -1,1 +1,4 @@
 tests/tmp
+vendor
+.phpunit.result.cache
+composer.lock

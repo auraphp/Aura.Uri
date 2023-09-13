@@ -1,7 +1,7 @@
 Aura.Uri
 ========
 
-[![Build Status](https://travis-ci.org/auraphp/Aura.Uri.png?branch=develop)](https://travis-ci.org/auraphp/Aura.Uri)
+[![Continuous Integration](https://github.com/auraphp/Aura.Uri/actions/workflows/continuous-integration.yml/badge.svg)](https://github.com/auraphp/Aura.Uri/actions/workflows/continuous-integration.yml)
 
 The `Auri.Uri` package provides objects to help you create and manipulate URLs,
 including query strings and path elements. It does so by splitting up the pieces
@@ -22,17 +22,7 @@ Getting Started
 Instantiation
 -------------
 
-The easiest way to instantiate a URL object is to use the factory instance
-script, like so:
-
-```php
-<?php
-$url_factory = require '/path/to/Aura.Uri/scripts/instance.php';
-$url = $url_factory->newCurrent();
-```
-
-Alternatively, you can add the `src/` directory to your autoloader and
-instantiate a URL factory object:
+The easiest way to get started is to use the _UrlFactory_ to create a _Url_ object.
 
 ```php
 <?php
@@ -44,7 +34,7 @@ $url_factory = new UrlFactory($_SERVER, $psl);
 $url = $url_factory->newCurrent();
 ```
 
-When using the factory, you can populate the URL properties from a URL
+You can populate the URL properties from a URL
 string:
 
 ```php
